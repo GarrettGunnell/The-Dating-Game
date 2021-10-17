@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-public class KnowledgeManager {
+public class Knowledge {
 
     private Hashtable knowledge;
 
-    public KnowledgeManager() {
+    public Knowledge() {
         knowledge = new Hashtable();
         knowledge.Add("Hobbies", new List<string>());
         knowledge.Add("Attributes", new List<string>());

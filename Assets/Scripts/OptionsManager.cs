@@ -6,10 +6,12 @@ public class OptionsManager : MonoBehaviour {
 
     public DialogueManager dialogueManager;
 
-    private KnowledgeManager knowledge;
+    private Knowledge knowledge;
+    private Questions questions;
 
     void Start() {
-        knowledge = new KnowledgeManager();
+        knowledge = new Knowledge();
+        questions = new Questions();
     }
 
     // Update is called once per frame
@@ -22,5 +24,9 @@ public class OptionsManager : MonoBehaviour {
 
         if (t == null)
             dialogueManager.noKnowledgeEnd();
+    }
+
+    public void Ask() {
+
     }
 }
