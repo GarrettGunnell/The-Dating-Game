@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class KnowledgeManager : MonoBehaviour {
+public class KnowledgeManager {
 
     private Hashtable knowledge;
 
-    void Start() {
+    public KnowledgeManager() {
         knowledge = new Hashtable();
         knowledge.Add("Hobbies", new List<string>());
         knowledge.Add("Attributes", new List<string>());
