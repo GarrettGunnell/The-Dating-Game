@@ -42,7 +42,16 @@ public class DialogueManager : MonoBehaviour {
     public void populateOptions(List<string> options) {
         for (int i = 0; i < options.Count; ++i) {
             Text box = optionTextBoxes[i];
-            box.text = options[i];
+            StartCoroutine(TypeSentence(box, options[i]));
         }
     }
+
+    IEnumerator TypeSentence(Text box, string sentence) {
+        box.text = "";
+        foreach (char letter in sentence.ToCharArray()) {
+            box.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+    }
+
 }
