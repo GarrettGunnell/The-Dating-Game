@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class StateManager : MonoBehaviour {
+
+    void Start() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Input.GetMouseButtonDown(0)) {
+            if (Physics.Raycast(ray, out hit)) {
+                if (hit.transform.name == "Talk") {
+                    Debug.Log("Talk");
+                }
+
+                if (hit.transform.name == "Ask") {
+                    Debug.Log("Ask");
+                }
+
+                if (hit.transform.name == "Girl") {
+                    Debug.Log("Girl");
+                }
+            }
+        }
     }
 }
