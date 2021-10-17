@@ -41,6 +41,8 @@ public class StateManager : MonoBehaviour {
                         
                         Debug.Log("Chose option: " + chosenOption);
                         Debug.Log(optionsManager.getOption(chosenOption - 1));
+
+                        optionsManager.Choose(chosenOption - 1);
                         setIdle(false);
                     }
                 }

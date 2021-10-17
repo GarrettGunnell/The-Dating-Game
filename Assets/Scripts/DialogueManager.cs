@@ -52,6 +52,10 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
+    public void Converse(string guySentence, string girlSentence) {
+        Debug.Log("Conversing");
+    }
+
     IEnumerator TypeSentence(Text box, string sentence) {
         box.text = "";
         foreach (char letter in sentence.ToCharArray()) {

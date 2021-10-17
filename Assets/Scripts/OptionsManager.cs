@@ -5,6 +5,7 @@ using UnityEngine;
 public class OptionsManager : MonoBehaviour {
 
     public DialogueManager dialogueManager;
+    public Girl girl;
 
     private Knowledge knowledge;
     private Questions questions;
@@ -33,6 +34,14 @@ public class OptionsManager : MonoBehaviour {
         currentOptions = questions.generateQuestions();
 
         dialogueManager.populateOptions(currentOptions);
+    }
+
+    public void Choose(int n) {
+        string sentence = currentOptions[n];
+
+        string response = girl.GetResponse(sentence);
+
+        dialogueManager.Converse(sentence, response);
     }
 
     public string getOption(int n) {
