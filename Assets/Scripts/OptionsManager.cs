@@ -18,6 +18,9 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk() {
-        Debug.Log(knowledge.generateTalkingPoint());
+        string t = knowledge.generateTalkingPoint();
+
+        if (t == null)
+            dialogueManager.noKnowledgeEnd();
     }
 }
