@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OptionsManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class OptionsManager : MonoBehaviour {
+
+    private KnowledgeManager knowledge;
+
+    void Start() {
+        knowledge = new KnowledgeManager();
     }
 
     // Update is called once per frame
