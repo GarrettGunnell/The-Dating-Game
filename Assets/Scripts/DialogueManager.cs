@@ -53,7 +53,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Converse(string guySentence, string girlSentence) {
-        Debug.Log("Conversing");
+        StartCoroutine(TypeSentence(guyDialogue, guySentence));
+        StartCoroutine(TypeSentence(girlDialogue, girlSentence));
     }
 
     IEnumerator TypeSentence(Text box, string sentence) {
