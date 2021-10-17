@@ -34,4 +34,8 @@ public class OptionsManager : MonoBehaviour {
 
         dialogueManager.populateOptions(currentOptions);
     }
+
+    public string getOption(int n) {
+        return currentOptions[n];
+    }
 }
