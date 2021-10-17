@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,9 @@ public class DialogueManager : MonoBehaviour {
     public Text option6;
 
     private List<Text> optionTextBoxes = null;
+    private List<bool> optionBoxFinished;
+
+    private bool populatingOptions = false;
 
     void Start() {
         optionTextBoxes = new List<Text>();
@@ -28,6 +32,8 @@ public class DialogueManager : MonoBehaviour {
         optionTextBoxes.Add(option5);
         optionTextBoxes.Add(option6);
 
+        optionBoxFinished = new List<bool> {false, false, false, false, false, false};
+
         guyDialogue.text = "";
         girlDialogue.text = "";
         foreach (Text box in optionTextBoxes) {
@@ -36,7 +42,12 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void Update() {
-        
+        if (populatingOptions) {
+            if (!optionBoxFinished.Any(x => x == false)) {
+                populatingOptions = false;
+                stateManager.setIdle(true);
+            }
+        }
     }
 
     public void noKnowledgeEnd() {
@@ -46,10 +57,17 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void populateOptions(List<string> options) {
+
+        for (int i = 0; i < optionBoxFinished.Count; ++i) {
+            optionBoxFinished[i] = false;
+        }
+
         for (int i = 0; i < options.Count; ++i) {
             Text box = optionTextBoxes[i];
-            StartCoroutine(TypeSentence(box, options[i]));
+            StartCoroutine(FillOption(box, options[i], i));
         }
+
+        populatingOptions = true;
     }
 
     public void Converse(string guySentence, string girlSentence) {
@@ -63,6 +81,16 @@ public class DialogueManager : MonoBehaviour {
             box.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
+    }
+
+    IEnumerator FillOption(Text optionBox, string optionText, int optionNum) {
+        optionBox.text = "";
+        foreach (char letter in optionText.ToCharArray()) {
+            optionBox.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        optionBoxFinished[optionNum] = true;
     }
 
 }

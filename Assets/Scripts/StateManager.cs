@@ -23,14 +23,12 @@ public class StateManager : MonoBehaviour {
             if (idle) {
                 if (collided && !talking) {
                     if (hit.transform.name == "Talk") {
-                        Debug.Log("Talk");
                         optionsManager.Talk();
-                        //setIdle(false);
+                        setIdle(false);
                         talking = true;
                     } else if (hit.transform.name == "Ask") {
-                        Debug.Log("Ask");
                         optionsManager.Ask();
-                        //setIdle(false);
+                        setIdle(false);
                         talking = true;
                     } else if (hit.transform.name == "Girl") {
                         Debug.Log("Girl");
@@ -51,6 +49,7 @@ public class StateManager : MonoBehaviour {
     }
 
     public void setIdle(bool state) {
+        Debug.Log("Setting idle to: " + state);
         idle = state;
     }
 
