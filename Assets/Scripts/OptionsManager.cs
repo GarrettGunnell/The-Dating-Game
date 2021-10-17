@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OptionsManager : MonoBehaviour {
 
+    public DialogueManager dialogueManager;
+
     private KnowledgeManager knowledge;
 
     void Start() {
@@ -13,5 +15,9 @@ public class OptionsManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         
+    }
+
+    public void Talk() {
+        Debug.Log(knowledge.generateTalkingPoint());
     }
 }

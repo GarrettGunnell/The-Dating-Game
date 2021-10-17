@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour {
 
+    public OptionsManager optionsManager;
+
     void Start() {
         
     }
@@ -16,6 +18,7 @@ public class StateManager : MonoBehaviour {
             if (Physics.Raycast(ray, out hit)) {
                 if (hit.transform.name == "Talk") {
                     Debug.Log("Talk");
+                    optionsManager.Talk();
                 }
 
                 if (hit.transform.name == "Ask") {
