@@ -37,7 +37,7 @@
 
             fixed4 fp(v2f i) : SV_TARGET {
                 float4 col = tex2D(_MainTex, i.uv);
-
+                clip(-(1 - col.a));
                 return col;
             }
 
