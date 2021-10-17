@@ -27,6 +27,8 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Ask() {
+        List<string> qs = questions.generateQuestions();
 
+        dialogueManager.populateOptions(qs);
     }
 }

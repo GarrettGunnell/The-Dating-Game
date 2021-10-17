@@ -23,6 +23,7 @@ public class StateManager : MonoBehaviour {
 
                 if (hit.transform.name == "Ask") {
                     Debug.Log("Ask");
+                    optionsManager.Ask();
                 }
 
                 if (hit.transform.name == "Girl") {
