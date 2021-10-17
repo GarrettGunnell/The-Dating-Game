@@ -31,4 +31,8 @@ public class StateManager : MonoBehaviour {
             }
         }
     }
+
+    public void endGame() {
+        Debug.Log("Game Over!");
+    }
 }

@@ -19,5 +19,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void noKnowledgeEnd() {
         guyDialogue.text = "Um... uh...";
+
+        stateManager.endGame();
     }
 }
