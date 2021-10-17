@@ -9,9 +9,12 @@ public class OptionsManager : MonoBehaviour {
     private Knowledge knowledge;
     private Questions questions;
 
+    private List<string> currentOptions;
+
     void Start() {
         knowledge = new Knowledge();
         questions = new Questions();
+        currentOptions = new List<string>();
     }
 
     // Update is called once per frame
@@ -27,8 +30,8 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Ask() {
-        List<string> qs = questions.generateQuestions();
+        currentOptions = questions.generateQuestions();
 
-        dialogueManager.populateOptions(qs);
+        dialogueManager.populateOptions(currentOptions);
     }
 }

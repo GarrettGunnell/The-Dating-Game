@@ -1425,6 +1425,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateManager: {fileID: 1336107596}
   guyDialogue: {fileID: 1834749692}
+  girlDialogue: {fileID: 426571672}
+  option1: {fileID: 1745194190}
+  option2: {fileID: 1548948928}
+  option3: {fileID: 347251759}
+  option4: {fileID: 246555244}
+  option5: {fileID: 691857337}
+  option6: {fileID: 1004812429}
 --- !u!1 &1083639922
 GameObject:
   m_ObjectHideFlags: 0
