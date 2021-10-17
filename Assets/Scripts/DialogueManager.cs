@@ -27,6 +27,12 @@ public class DialogueManager : MonoBehaviour {
         optionTextBoxes.Add(option4);
         optionTextBoxes.Add(option5);
         optionTextBoxes.Add(option6);
+
+        guyDialogue.text = "";
+        girlDialogue.text = "";
+        foreach (Text box in optionTextBoxes) {
+            box.text = "";
+        }
     }
 
     void Update() {
@@ -34,7 +40,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void noKnowledgeEnd() {
-        guyDialogue.text = "Um... uh...";
+        StartCoroutine(TypeSentence(guyDialogue, "Um... uh..."));
 
         stateManager.endGame();
     }
