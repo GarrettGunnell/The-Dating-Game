@@ -31,7 +31,8 @@ public class OptionsManager : MonoBehaviour {
             return;
         }
 
-        Debug.Log(points[0]);
+        currentOptions = points;
+        dialogueManager.populateOptions(currentOptions);
     }
 
     public void Ask() {

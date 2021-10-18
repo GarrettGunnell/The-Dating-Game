@@ -61,10 +61,27 @@ public class Knowledge {
             return null;
         }
 
+        List<string> options = new List<string>();
+
         string correctOption = generateTalkingPoint(girlName, findKnowledge());
 
+        options.Add(correctOption);
+
         List<string> fakeKnowledge = findRandomKnowledge();
-        return new List<string> {correctOption};
+        List<string> fakeOptions = new List<string>();
+
+        for (int i = 0; i < fakeKnowledge.Count; ++i) {
+            fakeOptions.Add(generateTalkingPoint(girlName, fakeKnowledge[i]));
+        }
+
+        fakeOptions = fakeOptions.OrderBy(x => Random.value).ToList();
+
+        for (int i = 0; i < 5; ++i) {
+            options.Add(fakeOptions[0]);
+            fakeOptions.RemoveAt(0);
+        }
+
+        return options;
     }
 
     private string generateTalkingPoint(string name, string k) {
