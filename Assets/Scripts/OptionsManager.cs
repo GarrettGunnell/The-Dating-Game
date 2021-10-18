@@ -42,6 +42,10 @@ public class OptionsManager : MonoBehaviour {
 
         List<string> response = girl.GetResponse(sentence);
 
+        knowledge.gainKnowledge(response[1]);
+
+        //Debug.Log(response[1]);
+
         dialogueManager.Converse(sentence, response[0]);
     }
 
