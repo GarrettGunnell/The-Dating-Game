@@ -20,7 +20,11 @@ public class Girl : MonoBehaviour {
     
     }
 
-    public List<string> GetResponse(string inquery) {
+    public List<string> GetQuestionResponse(string inquery) {
         return (List<string>)questionResponses[inquery];
+    }
+
+    public string GetTalkResponse(string inquery) {
+        return "Fake talk response";
     }
 }

@@ -45,18 +45,23 @@ public class OptionsManager : MonoBehaviour {
         dialogueManager.EmptyOptions();
         string sentence = currentOptions[n];
 
-        List<string> response = girl.GetResponse(sentence);
 
-        if (response[1] == null) {
-            dialogueManager.endGame(response[0]);
-            return;
+        if (asking) {
+            List<string> response = girl.GetQuestionResponse(sentence);
+
+            if (response[1] == null) {
+                dialogueManager.endGame(response[0]);
+                return;
+            }
+
+            knowledge.gainKnowledge(response[1]);
+
+            dialogueManager.Converse(sentence, response[0]);
+        } else {
+            string response = girl.GetTalkResponse(sentence);
+
+            dialogueManager.Converse(sentence, response);
         }
-
-        knowledge.gainKnowledge(response[1]);
-
-        //Debug.Log(response[1]);
-
-        dialogueManager.Converse(sentence, response[0]);
     }
 
     public string getOption(int n) {
