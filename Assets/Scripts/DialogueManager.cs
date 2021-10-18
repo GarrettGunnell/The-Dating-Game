@@ -22,7 +22,6 @@ public class DialogueManager : MonoBehaviour {
     private List<bool> optionBoxFinished;
 
     private bool populatingOptions = false;
-    private bool conversing = false;
 
     void Start() {
         optionTextBoxes = new List<Text>();
@@ -70,8 +69,16 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Converse(string guySentence, string girlSentence) {
-        conversing = true;
         StartCoroutine(StartConversation(guySentence, girlSentence));
+    }
+
+    private void Reset() {
+        stateManager.setIdle(true);
+        guyDialogue.text = "";
+        girlDialogue.text = "";
+        foreach (Text box in optionTextBoxes) {
+            box.text = "";
+        }
     }
 
     IEnumerator TypeSentence(Text box, string sentence) {
@@ -100,7 +107,8 @@ public class DialogueManager : MonoBehaviour {
             yield return new WaitForSecondsRealtime(0.05f);
         }
 
-        conversing = false;
+        yield return new WaitForSecondsRealtime(1.0f);
+        Reset();
     }
 
     IEnumerator FillOption(Text optionBox, string optionText, int optionNum) {
