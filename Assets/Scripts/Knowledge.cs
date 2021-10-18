@@ -56,9 +56,9 @@ public class Knowledge {
         this.girlName = girlName;
     }
 
-    public List<string> generateTalkingPoints() {
+    public (List<string>, int) generateTalkingPoints() {
         if (noKnowledge()) {
-            return null;
+            return (new List<string>(), 0);
         }
 
         List<string> options = new List<string>();
@@ -81,7 +81,7 @@ public class Knowledge {
             fakeOptions.RemoveAt(0);
         }
 
-        return options;
+        return (options, options.IndexOf(correctOption) + 1);
     }
 
     private string generateTalkingPoint(string name, string k) {

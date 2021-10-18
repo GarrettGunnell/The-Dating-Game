@@ -11,6 +11,7 @@ public class OptionsManager : MonoBehaviour {
     private Questions questions;
 
     private List<string> currentOptions;
+    private int correctOption = 0;
 
     void Start() {
         knowledge = new Knowledge(girl.girlName);
@@ -24,14 +25,15 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk() {
-        List<string> points = knowledge.generateTalkingPoints();
+        (currentOptions, correctOption) = knowledge.generateTalkingPoints();
 
-        if (points == null) {
+        if (currentOptions.Count == 0) {
             dialogueManager.noKnowledgeEnd();
             return;
         }
 
-        currentOptions = points;
+        Debug.Log(correctOption);
+
         dialogueManager.populateOptions(currentOptions);
     }
 
