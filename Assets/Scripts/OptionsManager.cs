@@ -26,8 +26,10 @@ public class OptionsManager : MonoBehaviour {
     public void Talk() {
         List<string> points = knowledge.generateTalkingPoints();
 
-        if (points == null)
+        if (points == null) {
             dialogueManager.noKnowledgeEnd();
+            return;
+        }
 
         Debug.Log(points[0]);
     }

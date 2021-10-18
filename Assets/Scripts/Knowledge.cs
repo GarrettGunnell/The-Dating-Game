@@ -7,6 +7,13 @@ public class Knowledge {
 
     private Hashtable knowledge;
 
+    private HashSet<string> Hobbies;
+    private HashSet<string> Attributes;
+    private HashSet<string> Media;
+    private HashSet<string> Future;
+    private HashSet<string> Accomplishments;
+    private HashSet<string> Vacations;
+
     private HashSet<string> allHobbies;
     private HashSet<string> allAttributes;
     private HashSet<string> allMedia;
@@ -24,12 +31,20 @@ public class Knowledge {
     private string girlName = null;
 
     public Knowledge(string girlName) {
-        allHobbies = new HashSet<string> {"music"};
-        allAttributes = new HashSet<string> {"night"};
-        allMedia = new HashSet<string> {"Drive"};
-        allFuture = new HashSet<string>();
-        allAccomplishments = new HashSet<string>();
-        allVacations = new HashSet<string> {"all over the world"};
+        Hobbies = new HashSet<string> {"music"};
+        Attributes = new HashSet<string> {"night"};
+        Media = new HashSet<string> {"Drive"};
+        Future = new HashSet<string>();
+        Accomplishments = new HashSet<string>();
+        Vacations = new HashSet<string> {"all over the world"};
+
+
+        allHobbies = new HashSet<string>(Hobbies);
+        allAttributes = new HashSet<string>(Attributes);
+        allMedia = new HashSet<string>(Media);
+        allFuture = new HashSet<string>(Future);
+        allAccomplishments = new HashSet<string>(Accomplishments);
+        allVacations = new HashSet<string>(Vacations);
 
         knownHobbies = new HashSet<string>();
         knownAttributes = new HashSet<string>();
@@ -53,7 +68,22 @@ public class Knowledge {
     private string generateTalkingPoint() {
         string k = findKnowledge();
 
-        return k;
+        string point = girlName + ", ";
+
+        if (Hobbies.Contains(k))
+            point += $"you said you like {k}?";
+        else if (Attributes.Contains(k))
+            point += $"you said you'd consider yourself a {k} person?";
+        else if (Media.Contains(k))
+            point += $"I've not heard of {k}, what's so interesting about it?";
+        else if (Future.Contains(k))
+            point += "";
+        else if (Accomplishments.Contains(k))
+            point += "";
+        else if (Vacations.Contains(k))
+            point += $"you said you've been to {k}? How was that?";
+
+        return point;
     }
 
     private string findKnowledge() {
