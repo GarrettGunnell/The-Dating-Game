@@ -37,6 +37,7 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Choose(int n) {
+        dialogueManager.EmptyOptions();
         string sentence = currentOptions[n];
 
         string response = girl.GetResponse(sentence);

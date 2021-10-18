@@ -42,6 +42,7 @@ public class StateManager : MonoBehaviour {
 
                         optionsManager.Choose(chosenOption - 1);
                         setIdle(false);
+                        talking = false;
                     }
                 }
             }

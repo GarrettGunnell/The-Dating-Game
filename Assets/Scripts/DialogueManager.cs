@@ -36,9 +36,7 @@ public class DialogueManager : MonoBehaviour {
 
         guyDialogue.text = "";
         girlDialogue.text = "";
-        foreach (Text box in optionTextBoxes) {
-            box.text = "";
-        }
+        EmptyOptions();
     }
 
     void Update() {
@@ -76,6 +74,10 @@ public class DialogueManager : MonoBehaviour {
         stateManager.setIdle(true);
         guyDialogue.text = "";
         girlDialogue.text = "";
+        EmptyOptions();
+    }
+
+    public void EmptyOptions() {
         foreach (Text box in optionTextBoxes) {
             box.text = "";
         }
