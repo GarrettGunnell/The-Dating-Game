@@ -31,7 +31,7 @@ public class Knowledge {
     private string girlName = null;
 
     public Knowledge(string girlName) {
-        Hobbies = new HashSet<string> {"music". "fake"};
+        Hobbies = new HashSet<string> {"music", "fake"};
         Attributes = new HashSet<string> {"night", "fake"};
         Media = new HashSet<string> {"Drive", "fake"};
         Future = new HashSet<string> {"fake"};
@@ -99,7 +99,10 @@ public class Knowledge {
 
         HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
 
-        return chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
+        string chosenKnowledge = chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
+        chosenCategory.Remove(chosenKnowledge);
+
+        return chosenKnowledge;
     }
 
     private List<string> findRandomKnowledge() {
