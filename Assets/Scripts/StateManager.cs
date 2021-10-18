@@ -6,12 +6,11 @@ public class StateManager : MonoBehaviour {
 
     public OptionsManager optionsManager;
 
-    private bool idle;
-    private bool talking;
+    private bool idle, talking, asking;
 
     void Start() {
         idle = true;
-        talking = false;
+        talking = asking = false;
     }
 
     void Update() {
@@ -21,7 +20,7 @@ public class StateManager : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
             if (idle) {
-                if (collided && !talking) {
+                if (collided && !(talking || asking)) {
                     if (hit.transform.name == "Talk") {
                         optionsManager.Talk();
                         setIdle(false);
@@ -29,20 +28,16 @@ public class StateManager : MonoBehaviour {
                     } else if (hit.transform.name == "Ask") {
                         optionsManager.Ask();
                         setIdle(false);
-                        talking = true;
+                        asking = true;
                     } else if (hit.transform.name == "Girl") {
                         Debug.Log("Girl");
                     }
-                } else if (collided && talking) {
+                } else if (collided && (talking || asking)) {
                     if (hit.transform.name.Contains("Option")) {
                         int chosenOption = int.Parse(hit.transform.name.Split(' ')[1]);
-                        
-                        //Debug.Log("Chose option: " + chosenOption);
-                        //Debug.Log(optionsManager.getOption(chosenOption - 1));
-
-                        optionsManager.Choose(chosenOption - 1);
+                        optionsManager.Choose(chosenOption - 1, asking);
                         setIdle(false);
-                        talking = false;
+                        talking = asking = false;
                     }
                 }
             }

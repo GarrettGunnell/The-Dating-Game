@@ -6,6 +6,8 @@ public class Girl : MonoBehaviour {
 
     private Hashtable questionResponses;
 
+    public string girlName = "Molly";
+
     void Start() {
         questionResponses = new Hashtable();
 

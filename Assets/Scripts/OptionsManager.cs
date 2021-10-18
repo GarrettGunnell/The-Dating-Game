@@ -13,7 +13,7 @@ public class OptionsManager : MonoBehaviour {
     private List<string> currentOptions;
 
     void Start() {
-        knowledge = new Knowledge();
+        knowledge = new Knowledge(girl.girlName);
         questions = new Questions();
         currentOptions = new List<string>();
     }
@@ -36,7 +36,7 @@ public class OptionsManager : MonoBehaviour {
         dialogueManager.populateOptions(currentOptions);
     }
 
-    public void Choose(int n) {
+    public void Choose(int n, bool asking) {
         dialogueManager.EmptyOptions();
         string sentence = currentOptions[n];
 

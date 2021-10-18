@@ -19,7 +19,9 @@ public class Knowledge {
     private HashSet<string> knownAccomplishments;
     private HashSet<string> knownVacations;
 
-    public Knowledge() {
+    private string girlName = null;
+
+    public Knowledge(string girlName) {
         allHobbies = new HashSet<string> {"music"};
         allAttributes = new HashSet<string> {"night"};
         allMedia = new HashSet<string> {"Drive"};
@@ -33,6 +35,8 @@ public class Knowledge {
         knownFuture = new HashSet<string>();
         knownAccomplishments = new HashSet<string>();
         knownVacations = new HashSet<string>();
+
+        this.girlName = girlName;
     }
 
     public string generateTalkingPoint() {
