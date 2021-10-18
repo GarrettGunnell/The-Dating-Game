@@ -40,9 +40,9 @@ public class OptionsManager : MonoBehaviour {
         dialogueManager.EmptyOptions();
         string sentence = currentOptions[n];
 
-        string response = girl.GetResponse(sentence);
+        List<string> response = girl.GetResponse(sentence);
 
-        dialogueManager.Converse(sentence, response);
+        dialogueManager.Converse(sentence, response[0]);
     }
 
     public string getOption(int n) {
