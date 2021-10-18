@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1037311816}
+  girl: {fileID: 1557576072}
 --- !u!1 &183204204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a673acf1a66674fb5e44859199ce80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  girlName: Molly
 --- !u!1 &1574581350
 GameObject:
   m_ObjectHideFlags: 0

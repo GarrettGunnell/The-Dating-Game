@@ -47,7 +47,6 @@ public class OptionsManager : MonoBehaviour {
         dialogueManager.EmptyOptions();
         string sentence = currentOptions[n];
 
-
         if (asking) {
             List<string> response = girl.GetQuestionResponse(sentence);
 
@@ -60,7 +59,11 @@ public class OptionsManager : MonoBehaviour {
 
             dialogueManager.Converse(sentence, response[0]);
         } else {
-            string response = girl.GetTalkResponse(sentence);
+            string response;
+            if (n != correctOption)
+                response = "When did I say that?";
+            else
+                response = girl.GetTalkResponse(sentence);
 
             dialogueManager.Converse(sentence, response);
         }

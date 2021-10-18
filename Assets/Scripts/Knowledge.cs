@@ -81,7 +81,7 @@ public class Knowledge {
             fakeOptions.RemoveAt(0);
         }
 
-        return (options, options.IndexOf(correctOption) + 1);
+        return (options, options.IndexOf(correctOption));
     }
 
     private string generateTalkingPoint(string name, string k) {
