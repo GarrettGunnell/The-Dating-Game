@@ -37,8 +37,8 @@ public class StateManager : MonoBehaviour {
                     if (hit.transform.name.Contains("Option")) {
                         int chosenOption = int.Parse(hit.transform.name.Split(' ')[1]);
                         
-                        Debug.Log("Chose option: " + chosenOption);
-                        Debug.Log(optionsManager.getOption(chosenOption - 1));
+                        //Debug.Log("Chose option: " + chosenOption);
+                        //Debug.Log(optionsManager.getOption(chosenOption - 1));
 
                         optionsManager.Choose(chosenOption - 1);
                         setIdle(false);

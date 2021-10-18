@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour {
     private List<bool> optionBoxFinished;
 
     private bool populatingOptions = false;
+    private bool conversing = false;
 
     void Start() {
         optionTextBoxes = new List<Text>();
@@ -57,10 +58,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void populateOptions(List<string> options) {
-
-        for (int i = 0; i < optionBoxFinished.Count; ++i) {
+        for (int i = 0; i < optionBoxFinished.Count; ++i)
             optionBoxFinished[i] = false;
-        }
 
         for (int i = 0; i < options.Count; ++i) {
             Text box = optionTextBoxes[i];
@@ -71,8 +70,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Converse(string guySentence, string girlSentence) {
-        StartCoroutine(TypeSentence(guyDialogue, guySentence));
-        StartCoroutine(TypeSentence(girlDialogue, girlSentence));
+        conversing = true;
+        StartCoroutine(StartConversation(guySentence, girlSentence));
     }
 
     IEnumerator TypeSentence(Text box, string sentence) {
@@ -81,6 +80,27 @@ public class DialogueManager : MonoBehaviour {
             box.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
+    }
+
+    IEnumerator StartConversation(string guySentence, string girlSentence) {
+        guyDialogue.text = "";
+        foreach (char letter in guySentence.ToCharArray()) {
+            guyDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        yield return new WaitForSecondsRealtime(1.0f);
+        StartCoroutine(Response(girlSentence));
+    }
+
+    IEnumerator Response(string response) {
+        girlDialogue.text = "";
+        foreach (char letter in response.ToCharArray()) {
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        conversing = false;
     }
 
     IEnumerator FillOption(Text optionBox, string optionText, int optionNum) {
