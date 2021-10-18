@@ -31,12 +31,12 @@ public class Knowledge {
     private string girlName = null;
 
     public Knowledge(string girlName) {
-        Hobbies = new HashSet<string> {"music"};
-        Attributes = new HashSet<string> {"night"};
-        Media = new HashSet<string> {"Drive"};
-        Future = new HashSet<string>();
-        Accomplishments = new HashSet<string>();
-        Vacations = new HashSet<string> {"all over the world"};
+        Hobbies = new HashSet<string> {"music". "fake"};
+        Attributes = new HashSet<string> {"night", "fake"};
+        Media = new HashSet<string> {"Drive", "fake"};
+        Future = new HashSet<string> {"fake"};
+        Accomplishments = new HashSet<string> {"fake"};
+        Vacations = new HashSet<string> {"all over the world", "fake"};
 
 
         allHobbies = new HashSet<string>(Hobbies);
@@ -61,13 +61,13 @@ public class Knowledge {
             return null;
         }
 
-        string correctOption = generateTalkingPoint();
+        string correctOption = generateTalkingPoint(girlName, findKnowledge());
+
+        List<string> fakeKnowledge = findRandomKnowledge();
         return new List<string> {correctOption};
     }
 
-    private string generateTalkingPoint() {
-        string k = findKnowledge();
-
+    private string generateTalkingPoint(string name, string k) {
         string point = girlName + ", ";
 
         if (Hobbies.Contains(k))
@@ -100,6 +100,19 @@ public class Knowledge {
         HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
 
         return chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
+    }
+
+    private List<string> findRandomKnowledge() {
+        List<string> rk = new List<string>();
+
+        rk.Add(allHobbies.ElementAt(Random.Range(0, allHobbies.Count)));
+        rk.Add(allAttributes.ElementAt(Random.Range(0, allAttributes.Count)));
+        rk.Add(allMedia.ElementAt(Random.Range(0, allMedia.Count)));
+        rk.Add(allFuture.ElementAt(Random.Range(0, allFuture.Count)));
+        rk.Add(allAccomplishments.ElementAt(Random.Range(0, allAccomplishments.Count)));
+        rk.Add(allVacations.ElementAt(Random.Range(0, allVacations.Count)));
+
+        return rk;
     }
 
     public void gainKnowledge(string k) {
