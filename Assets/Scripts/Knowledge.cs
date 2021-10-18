@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class Knowledge {
 
@@ -39,11 +41,35 @@ public class Knowledge {
         this.girlName = girlName;
     }
 
-    public string generateTalkingPoint() {
+    public List<string> generateTalkingPoints() {
         if (noKnowledge()) {
             return null;
         }
-        return "";
+
+        string correctOption = generateTalkingPoint();
+        return new List<string> {correctOption};
+    }
+
+    private string generateTalkingPoint() {
+        string k = findKnowledge();
+
+        return k;
+    }
+
+    private string findKnowledge() {
+        List<HashSet<string>> knownCategories = new List<HashSet<string>>();
+
+        if (knownHobbies.Count != 0) knownCategories.Add(knownHobbies);
+        if (knownAttributes.Count != 0) knownCategories.Add(knownAttributes);
+        if (knownMedia.Count != 0) knownCategories.Add(knownMedia);
+        if (knownFuture.Count != 0) knownCategories.Add(knownFuture);
+        if (knownAccomplishments.Count != 0) knownCategories.Add(knownAccomplishments);
+        if (knownVacations.Count != 0) knownCategories.Add(knownVacations);
+
+
+        HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
+
+        return chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
     }
 
     public void gainKnowledge(string k) {

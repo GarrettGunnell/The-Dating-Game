@@ -24,10 +24,12 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk() {
-        string t = knowledge.generateTalkingPoint();
+        List<string> points = knowledge.generateTalkingPoints();
 
-        if (t == null)
+        if (points == null)
             dialogueManager.noKnowledgeEnd();
+
+        Debug.Log(points[0]);
     }
 
     public void Ask() {
