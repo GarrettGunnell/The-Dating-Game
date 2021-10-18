@@ -48,16 +48,23 @@ public class OptionsManager : MonoBehaviour {
         string sentence = currentOptions[n];
 
         if (asking) {
-            List<string> response = girl.GetQuestionResponse(sentence);
+            if (questions.IsQuestionAsked(sentence)) {
+                string response = "You already asked me that...";
 
-            if (response[1] == null) {
-                dialogueManager.endGame(response[0]);
-                return;
+                dialogueManager.Converse(sentence, response);
+            } else {
+                List<string> response = girl.GetQuestionResponse(sentence);
+
+                if (response[1] == null) {
+                    dialogueManager.endGame(response[0]);
+                    return;
+                }
+
+                knowledge.gainKnowledge(response[1]);
+                questions.AddAskedQuestion(sentence);
+
+                dialogueManager.Converse(sentence, response[0]);
             }
-
-            knowledge.gainKnowledge(response[1]);
-
-            dialogueManager.Converse(sentence, response[0]);
         } else {
             string response;
             if (n != correctOption)

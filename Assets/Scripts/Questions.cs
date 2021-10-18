@@ -3,8 +3,18 @@ using System.Collections.Generic;
 
 public class Questions {
 
+    private HashSet<string> askedQuestions;
+
     public Questions() {
-        
+        askedQuestions = new HashSet<string>();
+    }
+
+    public void AddAskedQuestion(string q) {
+        askedQuestions.Add(q);
+    }
+
+    public bool IsQuestionAsked(string q) {
+        return askedQuestions.Contains(q);
     }
 
     public List<string> generateQuestions() {
