@@ -20,12 +20,12 @@ public class Knowledge {
     private HashSet<string> knownVacations;
 
     public Knowledge() {
-        allHobbies = new HashSet<string>();
-        allAttributes = new HashSet<string>();
-        allMedia = new HashSet<string>();
+        allHobbies = new HashSet<string> {"music"};
+        allAttributes = new HashSet<string> {"night"};
+        allMedia = new HashSet<string> {"Drive"};
         allFuture = new HashSet<string>();
         allAccomplishments = new HashSet<string>();
-        allVacations = new HashSet<string>();
+        allVacations = new HashSet<string> {"all over the world"};
 
         knownHobbies = new HashSet<string>();
         knownAttributes = new HashSet<string>();
@@ -43,7 +43,25 @@ public class Knowledge {
     }
 
     public void gainKnowledge(string k) {
-
+        if (allHobbies.Contains(k)) {
+            knownHobbies.Add(k);
+            allHobbies.Remove(k);
+        } else if (allAttributes.Contains(k)) {
+            knownAttributes.Add(k);
+            allAttributes.Remove(k);
+        } else if (allMedia.Contains(k)) {
+            knownMedia.Add(k);
+            allMedia.Remove(k);
+        } else if (allFuture.Contains(k)) {
+            knownFuture.Add(k);
+            allFuture.Remove(k);
+        } else if (allAccomplishments.Contains(k)) {
+            knownAccomplishments.Add(k);
+            allAccomplishments.Remove(k);
+        } else if (allVacations.Contains(k)) {
+            knownVacations.Add(k);
+            allVacations.Remove(k);
+        }
     }
 
     private bool noKnowledge() {
