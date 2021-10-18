@@ -42,6 +42,11 @@ public class OptionsManager : MonoBehaviour {
 
         List<string> response = girl.GetResponse(sentence);
 
+        if (response[1] == null) {
+            dialogueManager.endGame(response[0]);
+            return;
+        }
+
         knowledge.gainKnowledge(response[1]);
 
         //Debug.Log(response[1]);

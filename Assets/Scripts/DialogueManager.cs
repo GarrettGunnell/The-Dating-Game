@@ -54,6 +54,11 @@ public class DialogueManager : MonoBehaviour {
         stateManager.endGame();
     }
 
+    public void endGame(string dialogue) {
+        StartCoroutine(TypeSentence(girlDialogue, dialogue));
+        stateManager.endGame();
+    }
+
     public void populateOptions(List<string> options) {
         for (int i = 0; i < optionBoxFinished.Count; ++i)
             optionBoxFinished[i] = false;
