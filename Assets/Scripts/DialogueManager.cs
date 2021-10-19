@@ -99,14 +99,6 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    IEnumerator TypeSentence(Text box, string sentence) {
-        box.text = "";
-        foreach (char letter in sentence.ToCharArray()) {
-            box.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
-        }
-    }
-
     IEnumerator StartConversation(string guySentence, string girlSentence) {
         guyDialogue.text = "";
         foreach (char letter in guySentence.ToCharArray()) {
@@ -115,12 +107,9 @@ public class DialogueManager : MonoBehaviour {
         }
 
         yield return new WaitForSecondsRealtime(1.0f);
-        StartCoroutine(Response(girlSentence));
-    }
 
-    IEnumerator Response(string response) {
         girlDialogue.text = "";
-        foreach (char letter in response.ToCharArray()) {
+        foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }

@@ -20,11 +20,6 @@ public class OptionsManager : MonoBehaviour {
         currentOptions = new List<string>();
     }
 
-    // Update is called once per frame
-    void Update() {
-        
-    }
-
     public void Talk() {
         (currentOptions, displayedKnowledge, correctOption) = knowledge.generateTalkingPoints();
 
@@ -32,8 +27,6 @@ public class OptionsManager : MonoBehaviour {
             dialogueManager.endGame("Um... uh...", "...", "You had nothing to talk about.");
             return;
         }
-
-        //Debug.Log(correctOption);
 
         dialogueManager.populateOptions(currentOptions);
     }

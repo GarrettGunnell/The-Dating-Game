@@ -167,12 +167,10 @@ public class Knowledge {
     }
 
     public void addTalkedAbout(string k) {
-        Debug.Log("Talked about: " + k);
         talkedAbout.Add(k);
     }
 
     public bool hasBeenTalkedAbout(string k) {
-        Debug.Log("Has this been talked about: " + k);
         return talkedAbout.Contains(k);
     }
 
