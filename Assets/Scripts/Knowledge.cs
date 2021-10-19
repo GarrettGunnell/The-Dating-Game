@@ -58,9 +58,9 @@ public class Knowledge {
         this.girlName = girlName;
     }
 
-    public (List<string>, string, int) generateTalkingPoints() {
+    public (List<string>, List<string>, int) generateTalkingPoints() {
         if (noKnowledge()) {
-            return (new List<string>(), null, 0);
+            return (new List<string>(), new List<string>(), 0);
         }
 
         List<string> options = new List<string>();
@@ -72,22 +72,18 @@ public class Knowledge {
         options.Add(correctOption);
 
         List<string> fakeKnowledge = findRandomKnowledge();
-        List<string> fakeOptions = new List<string>();
-
-        for (int i = 0; i < fakeKnowledge.Count; ++i) {
-            fakeOptions.Add(generateTalkingPoint(girlName, fakeKnowledge[i]));
-        }
-
-        fakeOptions = fakeOptions.OrderBy(x => Random.value).ToList();
 
         for (int i = 0; i < 5; ++i) {
-            options.Add(fakeOptions[0]);
-            fakeOptions.RemoveAt(0);
+            options.Add(generateTalkingPoint(girlName, fakeKnowledge[i]));
         }
 
-        options = options.OrderBy(x => Random.value).ToList();
+        fakeKnowledge.Insert(0, correctKnowledge);
+        var joined = options.Zip(fakeKnowledge, (x, y) => new {x, y}).ToList();
+        var shuffled = joined.OrderBy(x => Random.value).ToList();
+        options = shuffled.Select(pair => pair.x).ToList();
+        fakeKnowledge = shuffled.Select(pair => pair.y).ToList();
 
-        return (options, correctKnowledge, options.IndexOf(correctOption));
+        return (options, fakeKnowledge, options.IndexOf(correctOption));
     }
 
     private string generateTalkingPoint(string name, string k) {
@@ -138,7 +134,14 @@ public class Knowledge {
         rk.Add(allAccomplishments.ElementAt(Random.Range(0, allAccomplishments.Count)));
         rk.Add(allVacations.ElementAt(Random.Range(0, allVacations.Count)));
 
-        return rk;
+        string[] talkedAboutArray = talkedAbout.ToArray();
+        for (int i = 0; i < talkedAbout.Count; ++i) {
+            rk.Add(talkedAboutArray[Random.Range(0, talkedAbout.Count)]);
+        }
+
+        rk = rk.OrderBy(x => Random.value).ToList();
+
+        return rk.GetRange(0, 5);
     }
 
     public void gainKnowledge(string k) {
@@ -164,10 +167,12 @@ public class Knowledge {
     }
 
     public void addTalkedAbout(string k) {
+        Debug.Log("Talked about: " + k);
         talkedAbout.Add(k);
     }
 
     public bool hasBeenTalkedAbout(string k) {
+        Debug.Log("Has this been talked about: " + k);
         return talkedAbout.Contains(k);
     }
 

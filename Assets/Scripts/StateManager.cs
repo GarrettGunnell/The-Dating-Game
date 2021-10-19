@@ -45,7 +45,7 @@ public class StateManager : MonoBehaviour {
     }
 
     public void setIdle(bool state) {
-        Debug.Log("Setting idle to: " + state);
+        //Debug.Log("Setting idle to: " + state);
         idle = state;
     }
 

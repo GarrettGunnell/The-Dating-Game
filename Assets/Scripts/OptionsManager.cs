@@ -11,7 +11,7 @@ public class OptionsManager : MonoBehaviour {
     private Questions questions;
 
     private List<string> currentOptions;
-    private string correctKnowledge = null;
+    private List<string> displayedKnowledge = null;
     private int correctOption = 0;
 
     void Start() {
@@ -26,14 +26,14 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk() {
-        (currentOptions, correctKnowledge, correctOption) = knowledge.generateTalkingPoints();
+        (currentOptions, displayedKnowledge, correctOption) = knowledge.generateTalkingPoints();
 
         if (currentOptions.Count == 0) {
             dialogueManager.noKnowledgeEnd();
             return;
         }
 
-        Debug.Log(correctOption);
+        //Debug.Log(correctOption);
 
         dialogueManager.populateOptions(currentOptions);
     }
@@ -68,14 +68,16 @@ public class OptionsManager : MonoBehaviour {
             }
         } else {
             string response;
+            string pickedKnowledge = displayedKnowledge[n];
             if (n != correctOption) {
-                if (knowledge.hasBeenTalkedAbout(correctKnowledge))
+
+                if (knowledge.hasBeenTalkedAbout(pickedKnowledge))
                     response = "We already talked about that...";
                 else
                     response = "When did I say that?";
             } else {
-                response = girl.GetTalkResponse(correctKnowledge);
-                knowledge.addTalkedAbout(correctKnowledge);
+                response = girl.GetTalkResponse(pickedKnowledge);
+                knowledge.addTalkedAbout(pickedKnowledge);
             }
 
             dialogueManager.Converse(sentence, response);
