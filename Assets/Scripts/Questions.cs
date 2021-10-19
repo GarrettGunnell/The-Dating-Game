@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class Questions {
 
@@ -19,6 +21,7 @@ public class Questions {
     }
 
     public void AddAskedQuestion(string q) {
+        allQuestions.Remove(q);
         askedQuestions.Add(q);
     }
 
@@ -28,14 +31,21 @@ public class Questions {
 
     public List<string> generateQuestions() {
         List<string> qs = new List<string>();
+        List<string> unaskedQuestionsList = allQuestions.ToList().OrderBy(x => Random.value).ToList();
+        List<string> askedQuestionsList = askedQuestions.ToList();
+        askedQuestionsList = askedQuestionsList.OrderBy(x => Random.value).ToList();
 
-        qs.Add("What's your name?");
-        qs.Add("What do you like to do in your free time?");
-        qs.Add("What's a movie you really enjoyed?");
-        qs.Add("Do you have any pets?");
-        qs.Add("Have you ever been out of the country?");
-        qs.Add("Are you a morning person?");
+        if (askedQuestions.Count < 6) {
+            int numRealQuestions = 6 - askedQuestions.Count;
+            qs = unaskedQuestionsList.GetRange(0, numRealQuestions);
+            for (int i = 0; i < askedQuestions.Count; ++i) {
+                qs.Add(askedQuestionsList[i]);
+            }
+        } else {
+            qs = askedQuestionsList.GetRange(0, 5);
+            qs.Add(unaskedQuestionsList[0]);
+        }
 
-        return qs;
+        return qs.OrderBy(x => Random.value).ToList();
     }
 }
