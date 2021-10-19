@@ -81,6 +81,8 @@ public class Knowledge {
             fakeOptions.RemoveAt(0);
         }
 
+        options = options.OrderBy(x => Random.value).ToList();
+
         return (options, options.IndexOf(correctOption));
     }
 
