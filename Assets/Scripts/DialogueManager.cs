@@ -48,19 +48,8 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    public void noKnowledgeEnd() {
-        StartCoroutine(TypeSentence(guyDialogue, "Um... uh..."));
-
-        //stateManager.endGame();
-    }
-
-    public void endGame(string dialogue) {
-        StartCoroutine(TypeSentence(girlDialogue, dialogue));
-        //stateManager.endGame();
-    }
-
-    public void incorrectTalkEnd(string guySentence, string girlSentence) {
-        StartCoroutine(badEnd(guySentence, girlSentence, "Incorrect talk option"));
+    public void endGame(string guySentence, string girlSentence, string endReason) {
+        StartCoroutine(badEnd(guySentence, girlSentence, endReason));
     }
 
     private IEnumerator badEnd(string guySentence, string girlSentence, string endReason) {

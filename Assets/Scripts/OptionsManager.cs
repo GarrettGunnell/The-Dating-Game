@@ -29,7 +29,7 @@ public class OptionsManager : MonoBehaviour {
         (currentOptions, displayedKnowledge, correctOption) = knowledge.generateTalkingPoints();
 
         if (currentOptions.Count == 0) {
-            dialogueManager.noKnowledgeEnd();
+            dialogueManager.endGame("Um... uh...", "...", "You had nothing to talk about.");
             return;
         }
 
@@ -52,12 +52,12 @@ public class OptionsManager : MonoBehaviour {
             if (questions.IsQuestionAsked(sentence)) {
                 string response = "You already asked me that...";
 
-                dialogueManager.Converse(sentence, response);
+                dialogueManager.endGame(sentence, response, "Duplicate question");
             } else {
                 List<string> response = girl.GetQuestionResponse(sentence);
 
                 if (response[1] == null) {
-                    dialogueManager.endGame(response[0]);
+                    dialogueManager.endGame(sentence, response[0], "Bad question");
                     return;
                 }
 
@@ -76,7 +76,7 @@ public class OptionsManager : MonoBehaviour {
                 else
                     response = "When did I say that?";
                 
-                dialogueManager.incorrectTalkEnd(sentence, response);
+                dialogueManager.endGame(sentence, response, "Incorrect talk option");
             } else {
                 response = girl.GetTalkResponse(pickedKnowledge);
                 knowledge.addTalkedAbout(pickedKnowledge);
