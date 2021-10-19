@@ -49,7 +49,8 @@ public class StateManager : MonoBehaviour {
         idle = state;
     }
 
-    public void endGame() {
+    public void endGame(string reason) {
         Debug.Log("Game Over!");
+        Debug.Log("Reason: " + reason);
     }
 }

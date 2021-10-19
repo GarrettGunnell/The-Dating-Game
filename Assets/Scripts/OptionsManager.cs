@@ -75,12 +75,14 @@ public class OptionsManager : MonoBehaviour {
                     response = "We already talked about that...";
                 else
                     response = "When did I say that?";
+                
+                dialogueManager.incorrectTalkEnd(sentence, response);
             } else {
                 response = girl.GetTalkResponse(pickedKnowledge);
                 knowledge.addTalkedAbout(pickedKnowledge);
-            }
 
-            dialogueManager.Converse(sentence, response);
+                dialogueManager.Converse(sentence, response);
+            }
         }
     }
 
