@@ -11,6 +11,7 @@ public class OptionsManager : MonoBehaviour {
     private Questions questions;
 
     private List<string> currentOptions;
+    private string correctKnowledge = null;
     private int correctOption = 0;
 
     void Start() {
@@ -25,7 +26,7 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk() {
-        (currentOptions, correctOption) = knowledge.generateTalkingPoints();
+        (currentOptions, correctKnowledge, correctOption) = knowledge.generateTalkingPoints();
 
         if (currentOptions.Count == 0) {
             dialogueManager.noKnowledgeEnd();
@@ -67,10 +68,15 @@ public class OptionsManager : MonoBehaviour {
             }
         } else {
             string response;
-            if (n != correctOption)
-                response = "When did I say that?";
-            else
-                response = girl.GetTalkResponse(sentence);
+            if (n != correctOption) {
+                if (knowledge.hasBeenTalkedAbout(correctKnowledge))
+                    response = "We already talked about that...";
+                else
+                    response = "When did I say that?";
+            } else {
+                response = girl.GetTalkResponse(correctKnowledge);
+                knowledge.addTalkedAbout(correctKnowledge);
+            }
 
             dialogueManager.Converse(sentence, response);
         }

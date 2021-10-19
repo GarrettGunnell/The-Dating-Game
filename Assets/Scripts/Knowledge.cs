@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Knowledge {
 
-    private Hashtable knowledge;
+    private HashSet<string> talkedAbout;
 
     private HashSet<string> Hobbies;
     private HashSet<string> Attributes;
@@ -31,6 +31,8 @@ public class Knowledge {
     private string girlName = null;
 
     public Knowledge(string girlName) {
+        talkedAbout = new HashSet<string>();
+
         Hobbies = new HashSet<string> {"music", "fake"};
         Attributes = new HashSet<string> {"night", "fake"};
         Media = new HashSet<string> {"Drive", "fake"};
@@ -56,14 +58,16 @@ public class Knowledge {
         this.girlName = girlName;
     }
 
-    public (List<string>, int) generateTalkingPoints() {
+    public (List<string>, string, int) generateTalkingPoints() {
         if (noKnowledge()) {
-            return (new List<string>(), 0);
+            return (new List<string>(), null, 0);
         }
 
         List<string> options = new List<string>();
 
-        string correctOption = generateTalkingPoint(girlName, findKnowledge());
+        string correctKnowledge = findKnowledge();
+
+        string correctOption = generateTalkingPoint(girlName, correctKnowledge);
 
         options.Add(correctOption);
 
@@ -83,7 +87,7 @@ public class Knowledge {
 
         options = options.OrderBy(x => Random.value).ToList();
 
-        return (options, options.IndexOf(correctOption));
+        return (options, correctKnowledge, options.IndexOf(correctOption));
     }
 
     private string generateTalkingPoint(string name, string k) {
@@ -157,6 +161,14 @@ public class Knowledge {
             knownVacations.Add(k);
             allVacations.Remove(k);
         }
+    }
+
+    public void addTalkedAbout(string k) {
+        talkedAbout.Add(k);
+    }
+
+    public bool hasBeenTalkedAbout(string k) {
+        return talkedAbout.Contains(k);
     }
 
     private bool noKnowledge() {
