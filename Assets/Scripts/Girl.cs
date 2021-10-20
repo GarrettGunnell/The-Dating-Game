@@ -24,6 +24,10 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("So, what's your name?", "Did you really forget my name?", null);
         addQuestionResponse("So, what's your name?", "Did you really just ask what my name is?", null);
         
+        addQuestionResponse("What do you like doing with your free time?", "I love drawing, I just wish I was better at it.", "drawing");
+        addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "Youtube");
+        
+    
     /*
         questionResponses.Add("What's your name?", new List<string> {"Did you really forget my name?", null});
         questionResponses.Add("What do you like to do in your free time?", new List<string> {"I like making music, perhaps you've heard of my band.", "music"});

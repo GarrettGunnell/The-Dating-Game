@@ -33,12 +33,12 @@ public class Knowledge {
     public Knowledge(string girlName) {
         talkedAbout = new HashSet<string>();
 
-        Hobbies = new HashSet<string> {"music", "fake"};
-        Attributes = new HashSet<string> {"night", "fake"};
-        Media = new HashSet<string> {"Drive", "fake"};
+        Hobbies = new HashSet<string> {"drawing", "YouTube"};
+        Attributes = new HashSet<string> {"fake"};
+        Media = new HashSet<string> {"fake"};
         Future = new HashSet<string> {"fake"};
         Accomplishments = new HashSet<string> {"fake"};
-        Vacations = new HashSet<string> {"all over the world", "fake"};
+        Vacations = new HashSet<string> {"fake"};
 
 
         allHobbies = new HashSet<string>(Hobbies);
