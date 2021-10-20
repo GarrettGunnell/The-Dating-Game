@@ -5,6 +5,7 @@ using UnityEngine;
 public class Girl : MonoBehaviour {
 
     private Hashtable questionResponses;
+    private Hashtable talkResponses;
 
     public string girlName = "Molly";
 
@@ -20,14 +21,16 @@ public class Girl : MonoBehaviour {
 
     void Start() {
         questionResponses = new Hashtable();
+        talkResponses = new Hashtable();
 
         addQuestionResponse("So, what's your name?", "Did you really forget my name?", null);
         addQuestionResponse("So, what's your name?", "Did you really just ask what my name is?", null);
         
         addQuestionResponse("What do you like doing with your free time?", "I love drawing, I just wish I was better at it.", "drawing");
-        addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "Youtube");
+        addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "YouTube");
         
-    
+        addTalkResponse("drawing", "Yes, I particularly enjoy drawing portraits. Perhaps I could draw you!");
+        addTalkResponse("YouTube", "I spend too much time on YouTube, my favorite YouTuber is Acerola_t. You should check him out!");
     /*
         questionResponses.Add("What's your name?", new List<string> {"Did you really forget my name?", null});
         questionResponses.Add("What do you like to do in your free time?", new List<string> {"I like making music, perhaps you've heard of my band.", "music"});
@@ -48,6 +51,10 @@ public class Girl : MonoBehaviour {
         }
     }
 
+    private void addTalkResponse(string knowledge, string response) {
+        talkResponses.Add(knowledge, response);
+    }
+
     public List<string> GetQuestionResponse(string inquery) {
         List<QuestionResponse> responses = (List<QuestionResponse>)questionResponses[inquery];
 
@@ -57,6 +64,6 @@ public class Girl : MonoBehaviour {
     }
 
     public string GetTalkResponse(string inquery) {
-        return "Fake talk response";
+        return (string)talkResponses[inquery];
     }
 }
