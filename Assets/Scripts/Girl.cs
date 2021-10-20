@@ -41,8 +41,24 @@ public class Girl : MonoBehaviour {
     
         addTalkResponse("La La Land", "I think it's tragic how often we must choose between our careers and those we love.");
         addTalkResponse("Whiplash", "Absolute perfection requires absolute sacrifice, wouldn't you agree? I quite enjoy the obsessed artist motif.");
-        addTalkResponse("The Green Knight", "The ending never fails to make me cry, to see Gawain take responsibility and acknowledge his fallibility is quite powerful.");
+        addTalkResponse("The Green Knight", "The ending never fails to make me cry, to see Gawain take responsibility and acknowledge his fallibility is so powerful!");
         addTalkResponse("The Lighthouse", "I love the promethean allegory, it's quite similar to the situation we're in right now.");
+    
+        addQuestionResponse("Do you have any pets?", "I've got two dogs.", "two dogs");
+        addQuestionResponse("Do you have any pets?", "I've got three dogs.", "three dogs");
+        addQuestionResponse("Do you have any pets?", "I've got a cat.", "a cat");
+
+        addTalkResponse("two dogs", "Their names are Sigma and Phi, they're both corgis!");
+        addTalkResponse("three dogs", "Yes, I have a doberman, a chocolate lab, and a beagle!");
+        addTalkResponse("a cat", "His name is Oliver, he doesn't like people very much.");
+    
+        addQuestionResponse("Have you traveled anywhere interesting?", "I've been to Italy!", "Italy");
+
+        addTalkResponse("Italy", "It was a fun trip but this one weird guy approached me asking if I knew where he could find 'Italian Plan B'. I didn't know what to say.");
+
+        addQuestionResponse("Are you a morning person?", "No, I hate waking up early. I prefer staying up late.", "night");
+    
+        addTalkResponse("night", "It's nice and quiet at night, don't you think?");
     /*
         questionResponses.Add("What's your name?", new List<string> {"Did you really forget my name?", null});
         questionResponses.Add("What do you like to do in your free time?", new List<string> {"I like making music, perhaps you've heard of my band.", "music"});

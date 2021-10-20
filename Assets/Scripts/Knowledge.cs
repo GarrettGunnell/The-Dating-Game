@@ -13,6 +13,7 @@ public class Knowledge {
     private HashSet<string> Future;
     private HashSet<string> Accomplishments;
     private HashSet<string> Vacations;
+    private HashSet<string> Pets;
 
     private HashSet<string> allHobbies;
     private HashSet<string> allAttributes;
@@ -20,6 +21,7 @@ public class Knowledge {
     private HashSet<string> allFuture;
     private HashSet<string> allAccomplishments;
     private HashSet<string> allVacations;
+    private HashSet<string> allPets;
 
     private HashSet<string> knownHobbies;
     private HashSet<string> knownAttributes;
@@ -27,6 +29,7 @@ public class Knowledge {
     private HashSet<string> knownFuture;
     private HashSet<string> knownAccomplishments;
     private HashSet<string> knownVacations;
+    private HashSet<string> knownPets;
 
     private string girlName = null;
 
@@ -34,11 +37,12 @@ public class Knowledge {
         talkedAbout = new HashSet<string>();
 
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
-        Attributes = new HashSet<string> {"fake"};
+        Attributes = new HashSet<string> {"fake", "night"};
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse"};
         Future = new HashSet<string> {"fake"};
         Accomplishments = new HashSet<string> {"fake"};
-        Vacations = new HashSet<string> {"fake"};
+        Vacations = new HashSet<string> {"Italy", "fake"};
+        Pets = new HashSet<string> {"two dogs", "three dogs", "a cat"};
 
 
         allHobbies = new HashSet<string>(Hobbies);
@@ -47,6 +51,7 @@ public class Knowledge {
         allFuture = new HashSet<string>(Future);
         allAccomplishments = new HashSet<string>(Accomplishments);
         allVacations = new HashSet<string>(Vacations);
+        allPets = new HashSet<string>(Pets);
 
         knownHobbies = new HashSet<string>();
         knownAttributes = new HashSet<string>();
@@ -54,6 +59,7 @@ public class Knowledge {
         knownFuture = new HashSet<string>();
         knownAccomplishments = new HashSet<string>();
         knownVacations = new HashSet<string>();
+        knownPets = new HashSet<string>();
 
         this.girlName = girlName;
     }
@@ -101,6 +107,8 @@ public class Knowledge {
             point += "";
         else if (Vacations.Contains(k))
             point += $"you said you've been to {k}? How was that?";
+        else if (Pets.Contains(k))
+            point += $"you have {k}?";
 
         return point;
     }
@@ -114,6 +122,7 @@ public class Knowledge {
         if (knownFuture.Count != 0) knownCategories.Add(knownFuture);
         if (knownAccomplishments.Count != 0) knownCategories.Add(knownAccomplishments);
         if (knownVacations.Count != 0) knownCategories.Add(knownVacations);
+        if (knownPets.Count != 0) knownCategories.Add(knownPets);
 
 
         HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
@@ -133,6 +142,7 @@ public class Knowledge {
         rk.Add(allFuture.ElementAt(Random.Range(0, allFuture.Count)));
         rk.Add(allAccomplishments.ElementAt(Random.Range(0, allAccomplishments.Count)));
         rk.Add(allVacations.ElementAt(Random.Range(0, allVacations.Count)));
+        rk.Add(allPets.ElementAt(Random.Range(0, allPets.Count)));
 
         string[] talkedAboutArray = talkedAbout.ToArray();
         for (int i = 0; i < talkedAbout.Count; ++i) {
@@ -164,6 +174,9 @@ public class Knowledge {
         } else if (allVacations.Contains(k)) {
             knownVacations.Add(k);
             allVacations.Remove(k);
+        } else if (allPets.Contains(k)) {
+            knownPets.Add(k);
+            allPets.Remove(k);
         }
     }
 
@@ -182,6 +195,7 @@ public class Knowledge {
         if (knownFuture.Count != 0) return false;
         if (knownAccomplishments.Count != 0) return false;
         if (knownVacations.Count != 0) return false;
+        if (knownPets.Count != 0) return false;
 
         return true;
     }
