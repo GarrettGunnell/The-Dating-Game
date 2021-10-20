@@ -18,6 +18,12 @@ public class Questions {
         allQuestions.Add("Do you have any pets?");
         allQuestions.Add("Have you traveled anywhere interesting?");
         allQuestions.Add("Are you a morning person?");
+        allQuestions.Add("Are you interested in outdoor activities?");
+        allQuestions.Add("What's your favorite book?");
+        allQuestions.Add("Have you ever met anyone famous?");
+        allQuestions.Add("Do you happen to have a favorite cocktail?");
+        allQuestions.Add("What's your favorite beverage?");
+        allQuestions.Add("Alright, what's your favorite item on the Taco Bell menu?");
     }
 
     public void AddAskedQuestion(string q) {
@@ -32,8 +38,7 @@ public class Questions {
     public List<string> generateQuestions() {
         List<string> qs = new List<string>();
         List<string> unaskedQuestionsList = allQuestions.ToList().OrderBy(x => Random.value).ToList();
-        List<string> askedQuestionsList = askedQuestions.ToList();
-        askedQuestionsList = askedQuestionsList.OrderBy(x => Random.value).ToList();
+        List<string> askedQuestionsList = askedQuestions.ToList().OrderBy(x => Random.value).ToList();
 
         if (askedQuestions.Count < 6) {
             int numRealQuestions = 6 - askedQuestions.Count;
