@@ -38,9 +38,10 @@ public class Knowledge {
 
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
         Attributes = new HashSet<string> {"fake", "indoors"};
-        Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", "the naked chicken chalupa"};
-        Future = new HashSet<string> {"fake"};
-        Accomplishments = new HashSet<string> {"fake", "met Hungrybox"};
+        Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
+        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays"};
+        Future = new HashSet<string> {"fake", "be a therapist"};
+        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox"};
         Vacations = new HashSet<string> {"Italy", "fake"};
         Pets = new HashSet<string> {"two dogs", "three dogs", "a cat"};
 
@@ -102,7 +103,7 @@ public class Knowledge {
         else if (Media.Contains(k))
             point += $"what do you like about {k}?";
         else if (Future.Contains(k))
-            point += $"";
+            point += $"you want to {k}?";
         else if (Accomplishments.Contains(k))
             point += $"you {k}?";
         else if (Vacations.Contains(k))

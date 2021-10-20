@@ -74,7 +74,7 @@ public class Girl : MonoBehaviour {
 
         addQuestionResponse("Do you happen to have a favorite cocktail?", "My favorite is probably... just vodka and water.", "vodka and water");
 
-        addTalkResponse("vodka and water", "Well, you see, it hydrates you at the same time as getting you drunk. It's just efficient. Also I might be an alcoholic.");
+        addTalkResponse("vodka and water", "Well, you see, it hydrates you at the same time as getting you drunk. It's just efficient. Also, I might be an alcoholic.");
 
         addQuestionResponse("What's your favorite beverage?", "Nothing beats Mountain Dew Baja Blast.", "Baja Blast");
 
@@ -83,6 +83,30 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("Alright, what's your favorite item on the Taco Bell menu?", "For me, it's the naked chicken chalupa.", "the naked chicken chalupa");
     
         addTalkResponse("the naked chicken chalupa", "It really changed the game in terms of fried chicken.. but you have to try it yourself to really understand its depth.");
+    
+        addQuestionResponse("Do you have a dream job?", "I always wanted to be a therapist.", "be a therapist");
+    
+        addTalkResponse("be a therapist", "My friends constantly dump their problems on me, so why not do it for a living?");
+    
+        addQuestionResponse("Who's your favorite author?", "If I had to choose, probably Clive Barker.", "Clive Barker");
+
+        addTalkResponse("Clive Barker", "Well, I mean, he's an incredibly influential horror writer. But I myself love his Abarat series, you should read it!");
+
+        addQuestionResponse("What's your favorite TV show?", "Breaking Bad without a doubt.", "Breaking Bad");
+
+        addTalkResponse("Breaking Bad", "Ever since I watched it years ago I find myself constantly reminiscing on many moments in the show.");
+
+        addQuestionResponse("What's your favorite song?", "There's a lot of songs I'd consider my favorite, but if I had to choose, it would be Blue Honey by Lunar Vacation", "Blue Honey");
+
+        addTalkResponse("Blue Honey", "It isn't really the song, rather, I spent a very important moment with someone while listening to it.");
+
+        addQuestionResponse("Who's your favorite band?", "Alvvays, no competition.", "Alvvays");
+
+        addTalkResponse("Alvvays", "Don't even get me started. Every single Alvvays song is an absolute banger, they are the pinnacle of synth pop. I could talk about them for hours, and I have.");
+
+        addQuestionResponse("What's your proudest achievement?", "I got first place in a marathon.", "ran a marathon");
+
+        addTalkResponse("ran a marathon", "Yeah, I run a lot in my free time for fun and exercise.");
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {
