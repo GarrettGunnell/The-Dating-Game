@@ -30,9 +30,9 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "YouTube");
         addQuestionResponse("What do you like doing with your free time?", "I don't really do anything at all.", "doing nothing");
         
-        addTalkResponse("drawing", "Yes, I particularly enjoy drawing portraits. Perhaps I could draw you!");
-        addTalkResponse("YouTube", "I spend too much time on YouTube, my favorite YouTuber is Acerola_t. You should check him out!");
-        addTalkResponse("doing nothing", "No, I don't like doing nothing. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
+        addTalkResponse("drawing", "Being able to draw is a great creative outlet, I particularly enjoy drawing portraits. Perhaps I could draw you!");
+        addTalkResponse("YouTube", "There's so much to learn on there. My favorite YouTuber is Acerola_t, you should check him out!");
+        addTalkResponse("doing nothing", "It's not very fun. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
         
         addQuestionResponse("Watched any cool movies lately?", "My friend recommended me La La Land.", "La La Land");
         addQuestionResponse("Watched any cool movies lately?", "I just saw Whiplash.", "Whiplash");
@@ -59,14 +59,30 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("Are you a morning person?", "No, I hate waking up early. I prefer staying up late.", "night");
     
         addTalkResponse("night", "It's nice and quiet at night, don't you think?");
-    /*
-        questionResponses.Add("What's your name?", new List<string> {"Did you really forget my name?", null});
-        questionResponses.Add("What do you like to do in your free time?", new List<string> {"I like making music, perhaps you've heard of my band.", "music"});
-        questionResponses.Add("What's a movie you really enjoyed?", new List<string> {"My favorite movie is Drive.", "Drive"});
-        questionResponses.Add("Do you have any pets?", new List<string> {"Yes I have a pet bird!", "bird"});
-        questionResponses.Add("Have you ever been out of the country?", new List<string> {"I've toured all over the world!", "all over the world"});
-        questionResponses.Add("Are you a morning person?", new List<string> {"No I prefer the solitude of night time.", "night"});
-    */
+    
+        addQuestionResponse("What's your favorite book?", "Probably 'Pale Fire' if I had to choose.", "Pale Fire");
+
+        addTalkResponse("Pale Fire", "Dreadfully distinct.");
+
+        addQuestionResponse("Are you interested in outdoor activities?", "No, I definitely prefer staying inside.", "indoors");
+
+        addTalkResponse("indoors", "As embarrassing as it is, I used to be a little afraid of going outside.");
+    
+        addQuestionResponse("Have you ever met anyone famous?", "I met Hungrybox at a grocery store in Los Angeles.", "met Hungrybox");
+    
+        addTalkResponse("met Hungrybox", "Yeah, he was kind of a real asshole about it though.");
+
+        addQuestionResponse("Do you happen to have a favorite cocktail?", "My favorite is probably... just vodka and water.", "vodka and water");
+
+        addTalkResponse("vodka and water", "Well, you see, it hydrates you at the same time as getting you drunk. It's just efficient. Also I might be an alcoholic.");
+
+        addQuestionResponse("What's your favorite beverage?", "Nothing beats Mountain Dew Baja Blast.", "Baja Blast");
+
+        addTalkResponse("Baja Blast", "What isn't there to like about it?");
+
+        addQuestionResponse("Alright, what's your favorite item on the Taco Bell menu?", "For me, it's the naked chicken chalupa.", "the naked chicken chalupa");
+    
+        addTalkResponse("the naked chicken chalupa", "It really changed the game in terms of fried chicken.. but you have to try it yourself to really understand its depth.");
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {
