@@ -28,9 +28,21 @@ public class Girl : MonoBehaviour {
         
         addQuestionResponse("What do you like doing with your free time?", "I love drawing, I just wish I was better at it.", "drawing");
         addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "YouTube");
+        addQuestionResponse("What do you like doing with your free time?", "I don't really do anything at all.", "doing nothing");
         
         addTalkResponse("drawing", "Yes, I particularly enjoy drawing portraits. Perhaps I could draw you!");
         addTalkResponse("YouTube", "I spend too much time on YouTube, my favorite YouTuber is Acerola_t. You should check him out!");
+        addTalkResponse("doing nothing", "No, I don't like doing nothing. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
+        
+        addQuestionResponse("Watched any cool movies lately?", "My friend recommended me La La Land.", "La La Land");
+        addQuestionResponse("Watched any cool movies lately?", "I just saw Whiplash.", "Whiplash");
+        addQuestionResponse("Watched any cool movies lately?", "Yes! I recently watched The Green Knight.", "The Green Knight");
+        addQuestionResponse("Watched any cool movies lately?", "I saw The Lighthouse a few days ago.", "The Lighthouse");
+    
+        addTalkResponse("La La Land", "I think it's tragic how often we must choose between our careers and those we love.");
+        addTalkResponse("Whiplash", "Absolute perfection requires absolute sacrifice, wouldn't you agree? I quite enjoy the obsessed artist motif.");
+        addTalkResponse("The Green Knight", "The ending never fails to make me cry, to see Gawain take responsibility and acknowledge his fallibility is quite powerful.");
+        addTalkResponse("The Lighthouse", "I love the promethean allegory, it's quite similar to the situation we're in right now.");
     /*
         questionResponses.Add("What's your name?", new List<string> {"Did you really forget my name?", null});
         questionResponses.Add("What do you like to do in your free time?", new List<string> {"I like making music, perhaps you've heard of my band.", "music"});

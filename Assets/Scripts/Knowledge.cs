@@ -33,9 +33,9 @@ public class Knowledge {
     public Knowledge(string girlName) {
         talkedAbout = new HashSet<string>();
 
-        Hobbies = new HashSet<string> {"drawing", "YouTube"};
+        Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
         Attributes = new HashSet<string> {"fake"};
-        Media = new HashSet<string> {"fake"};
+        Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse"};
         Future = new HashSet<string> {"fake"};
         Accomplishments = new HashSet<string> {"fake"};
         Vacations = new HashSet<string> {"fake"};
@@ -94,7 +94,7 @@ public class Knowledge {
         else if (Attributes.Contains(k))
             point += $"you said you'd consider yourself a {k} person?";
         else if (Media.Contains(k))
-            point += $"I've not heard of {k}, what's so interesting about it?";
+            point += $"what did you like about {k}?";
         else if (Future.Contains(k))
             point += "";
         else if (Accomplishments.Contains(k))
