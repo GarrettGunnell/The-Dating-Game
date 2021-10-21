@@ -255,24 +255,43 @@ public class Girl : MonoBehaviour {
         addTalkResponse("Jodie Foster", "Her performance alongside Anthony Hopkins in The Silence of the Lambs is one for the ages!");
 
         addQuestionResponse("What's your favorite food?", "I could spend the rest of my life eating fried rice.", "fried rice");
+        addQuestionResponse("What's your favorite food?", "I eat pasta nearly every night, it's almost a problem.", "pasta");
+        addQuestionResponse("What's your favorite food?", "I'm kind of poor, so all I ever eat is top ramen.", "ramen");
+        
 
         addTalkResponse("fried rice", "I call it friend rice!");
+        addTalkResponse("pasta", "So, basically, it's amazing because you have dozens of shapes, and hundreds of sauces and ways to cook them, combined " +
+        "with hundreds of side dishes, sometimes the pasta is the side dish! It's easy to make, so it has a low floor but a high ceiling in terms of skill. " +
+        "It's truly the food for both beginners and the most excellent of chefs.");
+        addTalkResponse("ramen", "I'm getting a little tired of it, but I really love poaching eggs in my ramen.");
 
         addQuestionResponse("What's an interest you're kind of embarrassed to admit?", "I watch Ludwig on twitch..", "Ludwig");
 
         addTalkResponse("Ludwig", "I watch nearly every stream! I redeemed the twitter follow reward but he scammed me..");
 
         addQuestionResponse("What's your favorite band name?", "I've always really liked TV On The Radio, what a cool name!", "TV On The Radio");
+        addQuestionResponse("What's your favorite band name?", "I think Mars Argo sounds cool.", "Mars Argo");
+        addQuestionResponse("What's your favorite band name?", "Ummm... I Monster is a cool band name, but it's a reference.", "I Monster");
+        addQuestionResponse("What's your favorite band name?", "Gesaffelstein sounds cool.", "Gesaffelstein");
 
         addTalkResponse("TV On The Radio", "My favorite song of theirs is Staring At The Sun.");
+        addTalkResponse("Mars Argo", "It's such a shame she hasn't made any music, her songs are so great.");
+        addTalkResponse("I Monster", "You should listen to their song Lust for a Vampyr, it bangs.");
+        addTalkResponse("Gesaffelstein", "I've listen to his song Opr more times than I can count.");
 
         addQuestionResponse("What's the worst job you've had?", "I got hired at a Spirit Halloween a few days before halloween weekend.", "worked at Spirit Halloween");
+        addQuestionResponse("What's the worst job you've had?", "I didn't actually work the job, but the worst interview I had was at a Dairy Queen.", "interviewed at Dairy Queen");
 
         addTalkResponse("worked at Spirit Halloween", "It was so busy the day before Halloween, the line was about a 2 hour wait. Several people offered me money to skip the line!");
+        addTalkResponse("interviewed at Dairy Queen", "The guy interviewing me was just terrible, he insulted me several times even though I clearly had never been in an interview before..");
 
         addQuestionResponse("What do you go to school for?", "Right now I'm going to school for history, but it might change!", "history");
+        addQuestionResponse("What do you go to school for?", "I'm currently studying chemistry, I enjoy it.", "chemistry");
+        addQuestionResponse("What do you go to school for?", "I'm trying to become a nurse.", "nursing");
 
         addTalkResponse("history", "There's so many great stories from the past, fiction is great and all but nothing beats real experiences.");
+        addTalkResponse("chemistry", "The math is tough, but I love how everything is equal in reactions, nothing is being created from nothing. It's all a conversion.");
+        addTalkResponse("nursing", "I don't really like anything about it, but it's what all my friends are doing.. and my parents seem to like it.");
 
         addQuestionResponse("Do you want to learn any other languages?", "I'd love to learn latin.", "learn latin");
 
