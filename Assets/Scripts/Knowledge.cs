@@ -39,9 +39,9 @@ public class Knowledge {
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
         Attributes = new HashSet<string> {"fake", "indoors"};
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
-        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays"};
-        Future = new HashSet<string> {"fake", "be a therapist"};
-        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox"};
+        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter"};
+        Future = new HashSet<string> {"go to Japan", "be a therapist"};
+        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle"};
         Vacations = new HashSet<string> {"Italy", "fake"};
         Pets = new HashSet<string> {"two dogs", "three dogs", "a cat"};
 
@@ -99,7 +99,7 @@ public class Knowledge {
         if (Hobbies.Contains(k))
             point += $"what's so fun about {k}?";
         else if (Attributes.Contains(k))
-            point += $"you said you'd consider yourself a {k} person?";
+            point += $"you'd consider yourself a {k} person?";
         else if (Media.Contains(k))
             point += $"what do you like about {k}?";
         else if (Future.Contains(k))
@@ -107,7 +107,7 @@ public class Knowledge {
         else if (Accomplishments.Contains(k))
             point += $"you {k}?";
         else if (Vacations.Contains(k))
-            point += $"you said you've been to {k}? How was that?";
+            point += $"you've been to {k}? How was that?";
         else if (Pets.Contains(k))
             point += $"you have {k}?";
 

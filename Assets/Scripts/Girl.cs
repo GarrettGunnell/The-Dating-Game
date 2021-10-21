@@ -107,6 +107,31 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("What's your proudest achievement?", "I got first place in a marathon.", "ran a marathon");
 
         addTalkResponse("ran a marathon", "Yeah, I run a lot in my free time for fun and exercise.");
+    
+        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've always wanted to visit Japan.", "go to Japan");
+
+        addTalkResponse("go to Japan", "I would love to see the cherry blossoms.");
+
+        addQuestionResponse("What do you do for work?", "I'm a server at this restaurant.", "are a server");
+
+        addTalkResponse("are a server", "Yes, all my coworkers are watching us right now.");
+
+        addQuestionResponse("What's your toxic trait?", "To be honest, I care too much.", "care too much");
+
+        addTalkResponse("care too much", "No, not actually, I was just making fun of the people that say that in response to the question.");
+
+        addQuestionResponse("Do you play any video games?", "I've been playing this game called 'The Dating Game', it's really interesting and well made!", "The Dating Game");
+
+        addTalkResponse("The Dating Game", "I like how it's a new experience each playthrough, it's endless entertainment.");
+
+        addQuestionResponse("Are you on social media a lot?", "I can't help myself from mindlessly scrolling Twitter.", "Twitter");
+
+        addTalkResponse("Twitter", "Twitter ruins my day constantly, I should stop using it... but I can't.");
+
+        addQuestionResponse("Where are you from?", "I'm from Seattle, Washington originally but I moved here when I was young.", "are from Seattle");
+
+        addTalkResponse("are from Seattle", "I don't remember much about it, I've visited several times and I don't think I'd like to live there again.");
+
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {

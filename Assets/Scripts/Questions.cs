@@ -24,13 +24,19 @@ public class Questions {
         //allQuestions.Add("Do you happen to have a favorite cocktail?");
         //allQuestions.Add("What's your favorite beverage?");
         //allQuestions.Add("Alright, what's your favorite item on the Taco Bell menu?");
+        //allQuestions.Add("Do you have a dream job?");
+        //allQuestions.Add("Who's your favorite author?");
+        //allQuestions.Add("What's your favorite TV show?");
+        //allQuestions.Add("What's your favorite song?");
+        //allQuestions.Add("Who's your favorite band?");
+        //allQuestions.Add("What's your proudest achievement?");
 
-        allQuestions.Add("Do you have a dream job?");
-        allQuestions.Add("Who's your favorite author?");
-        allQuestions.Add("What's your favorite TV show?");
-        allQuestions.Add("What's your favorite song?");
-        allQuestions.Add("Who's your favorite band?");
-        allQuestions.Add("What's your proudest achievement?");
+        allQuestions.Add("Is there anywhere you'd really like to travel?");
+        allQuestions.Add("What do you do for work?");
+        allQuestions.Add("What's your toxic trait?");
+        allQuestions.Add("Do you play any video games?");
+        allQuestions.Add("Are you on social media a lot?");
+        allQuestions.Add("Where are you from?");
     }
 
     public void AddAskedQuestion(string q) {
