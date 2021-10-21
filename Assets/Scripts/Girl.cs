@@ -7,8 +7,6 @@ public class Girl : MonoBehaviour {
     private Hashtable questionResponses;
     private Hashtable talkResponses;
 
-    public string girlName = "Molly";
-
     struct QuestionResponse {
         public string response;
         public string knowledge;
@@ -317,7 +315,7 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("What's the most interesting piece of art you've seen?", "Have you seen 'Saturn Devouring His Son'? It's certainly something.", "Saturn Devouring His Son");
 
         addTalkResponse("Ivan the Terrible and His Son Ivan", "Our bouts of anger often have permanent, irreversible consequences.");
-        addTalkResponse("Saturn Devouring His Son", "The painting evokes are pretty interesting response.. it's horror in the most horrible sense.");
+        addTalkResponse("Saturn Devouring His Son", "The painting evokes an interesting response.. it's horror in the most horrible sense.");
 
         addQuestionResponse("Do you like the rain?", "I love the rain, I can't stand clear skies.", "the rain");
 

@@ -31,8 +31,6 @@ public class Knowledge {
     private HashSet<string> knownVacations;
     private HashSet<string> knownPets;
 
-    private string girlName = null;
-
     public Knowledge(string girlName) {
         talkedAbout = new HashSet<string>();
 
@@ -69,8 +67,6 @@ public class Knowledge {
         knownAccomplishments = new HashSet<string>();
         knownVacations = new HashSet<string>();
         knownPets = new HashSet<string>();
-
-        this.girlName = girlName;
     }
 
     public (List<string>, List<string>, int) generateTalkingPoints() {
@@ -82,14 +78,14 @@ public class Knowledge {
 
         string correctKnowledge = findKnowledge();
 
-        string correctOption = generateTalkingPoint(girlName, correctKnowledge);
+        string correctOption = generateTalkingPoint(correctKnowledge);
 
         options.Add(correctOption);
 
         List<string> fakeKnowledge = findRandomKnowledge();
 
         for (int i = 0; i < 5; ++i) {
-            options.Add(generateTalkingPoint(girlName, fakeKnowledge[i]));
+            options.Add(generateTalkingPoint(fakeKnowledge[i]));
         }
 
         fakeKnowledge.Insert(0, correctKnowledge);
@@ -101,23 +97,23 @@ public class Knowledge {
         return (options, fakeKnowledge, options.IndexOf(correctOption));
     }
 
-    private string generateTalkingPoint(string name, string k) {
-        string point = girlName + ", ";
+    private string generateTalkingPoint(string k) {
+        string point = "";
 
         if (Hobbies.Contains(k))
-            point += $"what's so fun about {k}?";
+            point += $"What's so fun about {k}?";
         else if (Attributes.Contains(k))
-            point += $"you'd consider yourself {k} person?";
+            point += $"You'd consider yourself {k} person?";
         else if (Media.Contains(k))
-            point += $"what do you like about {k}?";
+            point += $"What do you like about {k}?";
         else if (Future.Contains(k))
-            point += $"you want to {k}?";
+            point += $"You want to {k}?";
         else if (Accomplishments.Contains(k))
-            point += $"you {k}?";
+            point += $"You {k}?";
         else if (Vacations.Contains(k))
-            point += $"you've been to {k}?";
+            point += $"You've been to {k}?";
         else if (Pets.Contains(k))
-            point += $"you have {k}?";
+            point += $"You have {k}?";
 
         return point;
     }
