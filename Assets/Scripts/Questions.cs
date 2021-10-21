@@ -45,7 +45,7 @@ public class Questions {
         //allQuestions.Add("What's needlessly expensive but worth the money?");
         //allQuestions.Add("Would you want to be famous?");
         //allQuestions.Add("Who's your favorite actor?");
-        allQuestions.Add("What's your favorite food?");
+        //allQuestions.Add("What's your favorite food?");
         //allQuestions.Add("What's an interest you're kind of embarrassed to admit?");
         //allQuestions.Add("What's your favorite band name?");
         //allQuestions.Add("What's the worst job you've had?");
@@ -54,6 +54,7 @@ public class Questions {
         allQuestions.Add("Do you have a favorite poem?");
         allQuestions.Add("How often do you play sports?");
         allQuestions.Add("What's the most interesting piece of art you've seen?");
+        allQuestions.Add("Do you like the rain?");
     }
 
     public void AddAskedQuestion(string q) {

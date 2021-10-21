@@ -318,6 +318,10 @@ public class Girl : MonoBehaviour {
 
         addTalkResponse("Ivan the Terrible and His Son Ivan", "Our bouts of anger often have permanent, irreversible consequences.");
         addTalkResponse("Saturn Devouring His Son", "The painting evokes are pretty interesting response.. it's horror in the most horrible sense.");
+
+        addQuestionResponse("Do you like the rain?", "I love the rain, I can't stand clear skies.", "the rain");
+
+        addTalkResponse("the rain", "It's very comforting, clear skies on the other hand make me nauseous.");
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {
