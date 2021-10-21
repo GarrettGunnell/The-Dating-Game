@@ -135,44 +135,74 @@ public class Girl : MonoBehaviour {
         addTalkResponse("Spongebob", "A timeless classic, wouldn't you agree?");
 
         addQuestionResponse("What's your favorite song?", "There's a lot of songs I'd consider my favorite, but if I had to choose, it would be Blue Honey by Lunar Vacation", "Blue Honey");
+        addQuestionResponse("What's your favorite song?", "I really like The Barrel by Aldous Harding.", "The Barrel");
+        addQuestionResponse("What's your favorite song?", "I really like Disorder by Freak Slug.", "Disorder");
+        addQuestionResponse("What's your favorite song?", "Is there any song that can compete with Dancing Queen by ABBA?", "Dancing Queen");
 
         addTalkResponse("Blue Honey", "It isn't really the song, rather, I spent a very important moment with someone while listening to it.");
+        addTalkResponse("The Barrel", "The barrel, the barrel, the barrel, the barrel, the barrel, the barrel, the barrel, the barrel");
+        addTalkResponse("Disorder", "It's a cover of the Joy Division song, but I feel like this version is an overall improvement.");
+        addTalkResponse("Dancing Queen", "You can dance\nyou can jive\nhaving the time of your life.");
 
         addQuestionResponse("Who's your favorite band?", "Alvvays, no competition.", "Alvvays");
 
         addTalkResponse("Alvvays", "Don't even get me started. Every single Alvvays song is an absolute banger, they are the pinnacle of synth pop. I could talk about them for hours, and I have.");
 
-        addQuestionResponse("What's your proudest achievement?", "I got first place in a marathon.", "ran a marathon");
+        addQuestionResponse("What's your proudest achievement?", "I got first place in a marathon!", "ran a marathon");
+        addQuestionResponse("What's your proudest achievement?", "I have an honors diploma.", "have an honors diploma");
+        addQuestionResponse("What's your proudest achievement?", "I've made a lot of friends.", "made a lot of friends");
+        addQuestionResponse("What's your proudest achievement?", "I won the science fair in the sixth grade.", "won the science fair");
+        
 
         addTalkResponse("ran a marathon", "Yeah, I run a lot in my free time for fun and exercise.");
-    
+        addTalkResponse("have an honors diploma", "I worked very hard for it back in high school, turns out to not be very useful other than bragging about it in situations like this though!");
+        addTalkResponse("made a lot of friends", "More than I could ever ask for!");
+        addTalkResponse("won the science fair", "My project involved making circuits with salt, it was pretty fun!");
+
         addQuestionResponse("Is there anywhere you'd really like to travel?", "I've always wanted to visit Japan.", "go to Japan");
+        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've been interested in London.", "go to London");
 
         addTalkResponse("go to Japan", "I would love to see the cherry blossoms.");
+        addTalkResponse("go to London", "I don't really know why, seems like a cool place, I guess?");
 
         addQuestionResponse("What do you do for work?", "I'm a server at this restaurant.", "are a server");
 
-        addTalkResponse("are a server", "Yes, all my coworkers are watching us right now.");
+        addTalkResponse("are a server", "Yes, all my coworkers are watching us right now. You've also been on dates with other girls that work here as well, haven't you?");
 
         addQuestionResponse("What's your toxic trait?", "To be honest, I care too much.", "care too much");
+        addQuestionResponse("What's your toxic trait?", "I can be unintentionally manipulative.", "a manipulative");
+        addQuestionResponse("What's your toxic trait?", "I give up quite quickly sometimes..", "a self-defeating");
+        
 
         addTalkResponse("care too much", "No, not actually, I was just making fun of the people that say that in response to the question.");
+        addTalkResponse("a manipulative", "I learned it from my mother, I've spent a lot of time trying to unlearn it..");
+        addTalkResponse("a self-defeating", "It's all too much sometimes, you know? I'd rather just do nothing.");
 
         addQuestionResponse("Do you play any video games?", "I've been playing this game called 'The Dating Game', it's really interesting and well made!", "The Dating Game");
 
         addTalkResponse("The Dating Game", "I like how it's a new experience each playthrough, it's endless entertainment.");
 
         addQuestionResponse("Are you on social media a lot?", "I can't help myself from mindlessly scrolling Twitter.", "Twitter");
+        addQuestionResponse("Are you on social media a lot?", "I'm a little obsessed with posting pictures I take on Instagram..", "Instagram");
+        addQuestionResponse("Are you on social media a lot?", "No, I tend to stay away from all of that.");
 
         addTalkResponse("Twitter", "Twitter ruins my day constantly, I should stop using it... but I can't.");
+        addTalkResponse("Instagram", "There's a lot of talented people on there, it's a bit overwhelming.");
+        addTalkResponse("not a social media", "I deleted all my social media accounts a few years ago!");
 
         addQuestionResponse("Where are you from?", "I'm from Seattle, Washington originally but I moved here when I was young.", "are from Seattle");
+        addQuestionResponse("Where are you from?", "I'm from a small town in Michigan.", "are from Michigan");
 
         addTalkResponse("are from Seattle", "I don't remember much about it, I've visited several times and I don't think I'd like to live there again.");
+        addTalkResponse("are from Michigan", "My family still lives there, so I visit quite often. Perhaps you could come with me!");
 
         addQuestionResponse("Do you have a favorite animal?", "I love cats!", "cats");
+        addQuestionResponse("Do you have a favorite animal?", "I think turtles are neat.", "turtles");
+        addQuestionResponse("Do you have a favorite animal?", "I like to think of myself as a dog person.", "a dog");
 
         addTalkResponse("cats", "While I was growing up my family was allergic to cats, I couldn't wait to move out and get one myself.");
+        addTalkResponse("turtles", "Turtles are much faster than people think, did you know that?");
+        addTalkResponse("a dog", "I've always liked dogs, I'd love to have a samoyed someday!");
 
         addQuestionResponse("What's your biggest fear?", "I used to have a major fear of bees.", "a fear of bees");
 
