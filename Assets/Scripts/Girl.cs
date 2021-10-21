@@ -294,20 +294,30 @@ public class Girl : MonoBehaviour {
         addTalkResponse("nursing", "I don't really like anything about it, but it's what all my friends are doing.. and my parents seem to like it.");
 
         addQuestionResponse("Do you want to learn any other languages?", "I'd love to learn latin.", "learn latin");
+        addQuestionResponse("Do you want to learn any other languages?", "It's a little embarrassing, but I think learning Japanese would be cool.", "learn Japanese");
+        addQuestionResponse("Do you want to learn any other languages?", "Chinese seems like a good idea to learn.", "learn Chinese");
 
         addTalkResponse("learn latin", "It's pretty nerdy but I think it'd be fun to randomly recite phrases in latin to my friends.");
+        addTalkResponse("learn Japanese", "When I visit Japan I don't want to be seen as a dumb foreigner, I think the overall experience would be much better if I knew the language.");
+        addTalkResponse("learn Chinese", "I have a lot of American-Chinese friends, so I bet they'd appreciate me trying to learn the language. Or not, who knows.");
 
         addQuestionResponse("Do you have a favorite poem?", "Yes, I really love Bonedog by Eva H.D.", "Bonedog");
+        addQuestionResponse("Do you have a favorite poem?", "My favorite is 'I Go Back To May' by Sharon Olds.", "I Go Back To May");
 
         addTalkResponse("Bonedog", "You carry your weather with you,\nthe big blue whale,\na skeletal darkness.");
+        addTalkResponse("I Go Back To May", "'Do what you are going to do, and I will tell about it.' I find the poem very relatable, given my parental relations.");
 
         addQuestionResponse("How often do you play sports?", "I play soccer with my friends sometimes.", "soccer");
+        addQuestionResponse("How often do you play sports?", "I'm not really a sports person.", "aren't a sports person");
 
+        addTalkResponse("aren't a sports person", "I just don't find it fun, I guess..");
         addTalkResponse("soccer", "It's just a nice way to get active and spend some time with my friends.");
 
         addQuestionResponse("What's the most interesting piece of art you've seen?", "My favorite painting is Ivan the Terrible and His Son Ivan.", "Ivan the Terrible and His Son Ivan");
+        addQuestionResponse("What's the most interesting piece of art you've seen?", "Have you seen 'Saturn Devouring His Son'? It's certainly something.", "Saturn Devouring His Son");
 
         addTalkResponse("Ivan the Terrible and His Son Ivan", "Our bouts of anger often have permanent, irreversible consequences.");
+        addTalkResponse("Saturn Devouring His Son", "The painting evokes are pretty interesting response.. it's horror in the most horrible sense.");
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {
