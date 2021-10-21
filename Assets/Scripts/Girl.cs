@@ -155,6 +155,31 @@ public class Girl : MonoBehaviour {
         addQuestionResponse("How'd you meet your best friend?", "I met them through my brother a very long time ago, when I was around 8 I think?", "your best friend");
 
         addTalkResponse("your best friend", "They were very funny and creative. I respected their artistic vision and wished for their success, but unfortunately they passed away earlier this year..");
+
+        addQuestionResponse("What's needlessly expensive but worth the money?", "I think sushi is really expensive, but I still eat it all time time.", "sushi");
+
+        addTalkResponse("sushi", "My favorite fish is salmon, I could eat salmon sashimi all day!");
+
+        addQuestionResponse("Would you want to be famous?", "No, I value my privacy too much for that.", "don't want to be famous");
+
+        addTalkResponse("don't want to be famous", "Everything celebrities do gets posted all over social media, I could never handle that!");
+
+        addQuestionResponse("Who's your favorite actor?", "I love Ryan Gosling!", "Ryan Gosling");
+
+        addTalkResponse("Ryan Gosling", "I've seen all of his movies.. my favorite is probably Drive!");
+
+        addQuestionResponse("What's your favorite food?", "I could spend the rest of my life eating fried rice.", "fried rice");
+
+        addTalkResponse("fried rice", "I call it friend rice!");
+
+        addQuestionResponse("What's an interest you're kind of embarrassed to admit?", "I watch Ludwig on twitch..", "Ludwig");
+
+        addTalkResponse("Ludwig", "I watch nearly every stream! I redeemed the twitter follow reward but he scammed me..");
+
+        addQuestionResponse("What's your favorite band name?", "I've always really liked TV On The Radio, what a cool name!", "TV On The Radio");
+
+        addTalkResponse("TV On The Radio", "My favorite song of theirs is Staring At The Sun.");
+
         
     }
 

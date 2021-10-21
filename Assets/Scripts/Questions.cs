@@ -36,13 +36,19 @@ public class Questions {
         //allQuestions.Add("Do you play any video games?");
         //allQuestions.Add("Are you on social media a lot?");
         //allQuestions.Add("Where are you from?");
+        //allQuestions.Add("Do you have a favorite animal?");
+        //allQuestions.Add("What's your biggest fear?");
+        //allQuestions.Add("What's the strangest place you've been?");
+        //allQuestions.Add("Do you like working in a team?");
+        //allQuestions.Add("Is there anything you want to get into?");
+        //allQuestions.Add("How'd you meet your best friend?");
 
-        allQuestions.Add("Do you have a favorite animal?");
-        allQuestions.Add("What's your biggest fear?");
-        allQuestions.Add("What's the strangest place you've been?");
-        allQuestions.Add("Do you like working in a team?");
-        allQuestions.Add("Is there anything you want to get into?");
-        allQuestions.Add("How'd you meet your best friend?");
+        allQuestions.Add("What's needlessly expensive but worth the money?");
+        allQuestions.Add("Would you want to be famous?");
+        allQuestions.Add("Who's your favorite actor?");
+        allQuestions.Add("What's your favorite food?");
+        allQuestions.Add("What's an interest you're kind of embarrassed to admit?");
+        allQuestions.Add("What's your favorite band name?");
     }
 
     public void AddAskedQuestion(string q) {
