@@ -31,7 +31,7 @@ public class Knowledge {
     private HashSet<string> knownVacations;
     private HashSet<string> knownPets;
 
-    public Knowledge(string girlName) {
+    public Knowledge() {
         talkedAbout = new HashSet<string>();
 
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing", "soccer", "rock climbing"};

@@ -15,7 +15,7 @@ public class OptionsManager : MonoBehaviour {
     private int correctOption = 0;
 
     void Start() {
-        knowledge = new Knowledge(girl.girlName);
+        knowledge = new Knowledge();
         questions = new Questions();
         currentOptions = new List<string>();
     }
