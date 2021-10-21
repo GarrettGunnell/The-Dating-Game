@@ -89,28 +89,50 @@ public class Girl : MonoBehaviour {
         addTalkResponse("met Ryan Gosling", "Yeah, he was kind of a real asshole about it though.");
 
         addQuestionResponse("Do you happen to have a favorite cocktail?", "My favorite is probably... just vodka and water.", "vodka and water");
+        addQuestionResponse("Do you happen to have a favorite cocktail?", "I would never pass up a cosmopolitan.", "cosmopolitans");
+        addQuestionResponse("Do you happen to have a favorite cocktail?", "I don't really drink", "don't really drink");
 
         addTalkResponse("vodka and water", "Well, you see, it hydrates you at the same time as getting you drunk. It's just efficient. Also, I might be an alcoholic.");
+        addTalkResponse("cosmopolitans", "The cranberry juice and lime really hides the gross alcohol taste.");
+        addTalkResponse("don't really drink", "Both of my parents are alcoholics.. I didn't want to be like that.");
 
         addQuestionResponse("What's your favorite beverage?", "Nothing beats Mountain Dew Baja Blast.", "Baja Blast");
+        addQuestionResponse("What's your favorite beverage?", "I love tea!", "tea");
+        addQuestionResponse("What's your favorite beverage?", "I just like water.", "water");
 
         addTalkResponse("Baja Blast", "What isn't there to like about it?");
+        addTalkResponse("tea", "I love all kinds of tea, my favorite is green tea.");
+        addTalkResponse("water", "It's not amazing or anything, it's just water..");
 
         addQuestionResponse("Alright, what's your favorite item on the Taco Bell menu?", "For me, it's the naked chicken chalupa.", "the naked chicken chalupa");
     
         addTalkResponse("the naked chicken chalupa", "It really changed the game in terms of fried chicken.. but you have to try it yourself to really understand its depth.");
     
         addQuestionResponse("Do you have a dream job?", "I always wanted to be a therapist.", "be a therapist");
+        addQuestionResponse("Do you have a dream job?", "I always wanted to be an artist.", "be an artist");
+        addQuestionResponse("Do you have a dream job?", "I always wanted to be a private investigator.", "be a private investigator");
+        addQuestionResponse("Do you have a dream job?", "I've always secretly wanted to be a crime lord.", "be a crime lord");
     
         addTalkResponse("be a therapist", "My friends constantly dump their problems on me, so why not do it for a living?");
+        addTalkResponse("be an artist", "At this point in my life, I feel it's too late to become a great artist. That's why it's a dream!");
+        addTalkResponse("be a private investigator", "Yeah, you know.. follow people around, investigate potential affairs, solve a dastardly murder.. it's all so exciting!");
+        addTalkResponse("be a crime lord", "Following the rules is boring sometimes, it must be so freeing and empowering to do whatever you want.");
     
         addQuestionResponse("Who's your favorite author?", "If I had to choose, probably Clive Barker.", "Clive Barker");
+        addQuestionResponse("Who's your favorite author?", "Inio Asano, without a doubt.", "Inio Asano");
+        addQuestionResponse("Who's your favorite author?", "Ummmm... Nisioisin!", "Nisioisin");
 
         addTalkResponse("Clive Barker", "Well, I mean, he's an incredibly influential horror writer. But I myself love his Abarat series, you should read it!");
+        addTalkResponse("Inio Asano", "Everyone of his works is masterful.. Oyasumi Punpun, Solanin, A Girl On The Shore, the list goes on. I strongly recommend his stuff!");
+        addTalkResponse("Nisioisin", "He wrote Katanagatari, which I really recommend.");
 
         addQuestionResponse("What's your favorite TV show?", "Breaking Bad without a doubt.", "Breaking Bad");
+        addQuestionResponse("What's your favorite TV show?", "I really enjoyed Hannibal.", "Hannibal");
+        addQuestionResponse("What's your favorite TV show?", "I don't watch a lot of television, my favorite when I was a kid was Spongebob.", "Spongebob");
 
         addTalkResponse("Breaking Bad", "Ever since I watched it years ago I find myself constantly reminiscing on many moments in the show.");
+        addTalkResponse("Hannibal", "Mads Mikkelsen is wonderful in it! The second season is especially great.");
+        addTalkResponse("Spongebob", "A timeless classic, wouldn't you agree?");
 
         addQuestionResponse("What's your favorite song?", "There's a lot of songs I'd consider my favorite, but if I had to choose, it would be Blue Honey by Lunar Vacation", "Blue Honey");
 

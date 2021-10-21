@@ -41,10 +41,10 @@ public class Knowledge {
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
         "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter", "cats", "your best friend",
         "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan", "Oyasumi Punpun",
-        "Artemis Fowl"};
-        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin"};
+        "Artemis Fowl", "cosmopolitans", "tea", "water", "Inio Asano", "Nisioisin", "Hannibal", "Spongebob"};
+        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin", "be an artist", "be a private investigator", "be a crime lord"};
         Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
-        "worked at Spirit Halloween", "met Ryan Gosling"};
+        "worked at Spirit Halloween", "met Ryan Gosling", "don't really drink"};
         Vacations = new HashSet<string> {"Italy", "Weed", "Canada", "France"};
         Pets = new HashSet<string> {"two dogs", "three dogs", "a cat", "a fear of bees"};
 
