@@ -347,6 +347,9 @@ public class Girl : MonoBehaviour {
     }
 
     public string GetTalkResponse(string inquery) {
+        if (!talkResponses.Contains(inquery))
+            return "Uh oh, looks like Acerola forgot to code a response to this, or he made a typo. It's quite hard to test all of this by yourself you know.";
+            
         return (string)talkResponses[inquery];
     }
 }
