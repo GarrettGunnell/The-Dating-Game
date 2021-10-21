@@ -42,13 +42,19 @@ public class Questions {
         //allQuestions.Add("Do you like working in a team?");
         //allQuestions.Add("Is there anything you want to get into?");
         //allQuestions.Add("How'd you meet your best friend?");
-
-        allQuestions.Add("What's needlessly expensive but worth the money?");
-        allQuestions.Add("Would you want to be famous?");
-        allQuestions.Add("Who's your favorite actor?");
-        allQuestions.Add("What's your favorite food?");
-        allQuestions.Add("What's an interest you're kind of embarrassed to admit?");
-        allQuestions.Add("What's your favorite band name?");
+        //allQuestions.Add("What's needlessly expensive but worth the money?");
+        //allQuestions.Add("Would you want to be famous?");
+        //allQuestions.Add("Who's your favorite actor?");
+        //allQuestions.Add("What's your favorite food?");
+        //allQuestions.Add("What's an interest you're kind of embarrassed to admit?");
+        //allQuestions.Add("What's your favorite band name?");
+    
+        allQuestions.Add("What's the worst job you've had?");
+        allQuestions.Add("What do you go to school for?");
+        allQuestions.Add("Do you want to learn any other languages?");
+        allQuestions.Add("Do you have a favorite poem?");
+        allQuestions.Add("How often do you play sports?");
+        allQuestions.Add("What's the most interesting piece of art you've seen?");
     }
 
     public void AddAskedQuestion(string q) {

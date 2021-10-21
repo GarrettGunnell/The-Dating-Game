@@ -180,7 +180,29 @@ public class Girl : MonoBehaviour {
 
         addTalkResponse("TV On The Radio", "My favorite song of theirs is Staring At The Sun.");
 
-        
+        addQuestionResponse("What's the worst job you've had?", "I got hired at a Spirit Halloween a few days before halloween weekend.", "worked at Spirit Halloween");
+
+        addTalkResponse("worked at Spirit Halloween", "It was so busy the day before Halloween, the line was about a 2 hour wait. Several people offered me money to skip the line!");
+
+        addQuestionResponse("What do you go to school for?", "Right now I'm going to school for history, but it might change!", "history");
+
+        addTalkResponse("history", "There's so many great stories from the past, fiction is great and all but nothing beats real experiences.");
+
+        addQuestionResponse("Do you want to learn any other languages?", "I'd love to learn latin.", "learn latin");
+
+        addTalkResponse("learn latin", "It's pretty nerdy but I think it'd be fun to randomly recite phrases in latin to my friends.");
+
+        addQuestionResponse("Do you have a favorite poem?", "Yes, I really love Bonedog by Eva H.D.", "Bonedog");
+
+        addTalkResponse("Bonedog", "You carry your weather with you,\nthe big blue whale,\na skeletal darkness.");
+
+        addQuestionResponse("How often do you play sports?", "I play soccer with my friends sometimes.", "soccer");
+
+        addTalkResponse("soccer", "It's just a nice way to get active and spend some time with my friends.");
+
+        addQuestionResponse("What's the most interesting piece of art you've seen?", "My favorite painting is Ivan the Terrible and His Son Ivan.", "Ivan the Terrible and His Son Ivan");
+
+        addTalkResponse("Ivan the Terrible and His Son Ivan", "Our bouts of anger often have permanent, irreversible consequences.");
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {

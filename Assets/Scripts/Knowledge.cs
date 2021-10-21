@@ -36,13 +36,14 @@ public class Knowledge {
     public Knowledge(string girlName) {
         talkedAbout = new HashSet<string>();
 
-        Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
+        Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing", "soccer"};
         Attributes = new HashSet<string> {"an indoors", "a night", "not a team"};
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
         "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter", "cats", "your best friend",
-        "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio"};
-        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument"};
-        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous"};
+        "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan"};
+        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin"};
+        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
+        "worked at Spirit Halloween"};
         Vacations = new HashSet<string> {"Italy", "Weed"};
         Pets = new HashSet<string> {"two dogs", "three dogs", "a cat", "a fear of bees"};
 
