@@ -37,13 +37,13 @@ public class Knowledge {
         talkedAbout = new HashSet<string>();
 
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing"};
-        Attributes = new HashSet<string> {"fake", "indoors"};
+        Attributes = new HashSet<string> {"an indoors", "a night"};
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
-        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter"};
-        Future = new HashSet<string> {"go to Japan", "be a therapist"};
+        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter", "cats", "your best friend"};
+        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument"};
         Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle"};
-        Vacations = new HashSet<string> {"Italy", "fake"};
-        Pets = new HashSet<string> {"two dogs", "three dogs", "a cat"};
+        Vacations = new HashSet<string> {"Italy", "Weed"};
+        Pets = new HashSet<string> {"two dogs", "three dogs", "a cat", "a fear of bees"};
 
 
         allHobbies = new HashSet<string>(Hobbies);
@@ -99,7 +99,7 @@ public class Knowledge {
         if (Hobbies.Contains(k))
             point += $"what's so fun about {k}?";
         else if (Attributes.Contains(k))
-            point += $"you'd consider yourself a {k} person?";
+            point += $"you'd consider yourself {k} person?";
         else if (Media.Contains(k))
             point += $"what do you like about {k}?";
         else if (Future.Contains(k))
@@ -107,7 +107,7 @@ public class Knowledge {
         else if (Accomplishments.Contains(k))
             point += $"you {k}?";
         else if (Vacations.Contains(k))
-            point += $"you've been to {k}? How was that?";
+            point += $"you've been to {k}?";
         else if (Pets.Contains(k))
             point += $"you have {k}?";
 

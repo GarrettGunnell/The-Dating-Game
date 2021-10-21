@@ -30,13 +30,19 @@ public class Questions {
         //allQuestions.Add("What's your favorite song?");
         //allQuestions.Add("Who's your favorite band?");
         //allQuestions.Add("What's your proudest achievement?");
+        //allQuestions.Add("Is there anywhere you'd really like to travel?");
+        //allQuestions.Add("What do you do for work?");
+        //allQuestions.Add("What's your toxic trait?");
+        //allQuestions.Add("Do you play any video games?");
+        //allQuestions.Add("Are you on social media a lot?");
+        //allQuestions.Add("Where are you from?");
 
-        allQuestions.Add("Is there anywhere you'd really like to travel?");
-        allQuestions.Add("What do you do for work?");
-        allQuestions.Add("What's your toxic trait?");
-        allQuestions.Add("Do you play any video games?");
-        allQuestions.Add("Are you on social media a lot?");
-        allQuestions.Add("Where are you from?");
+        allQuestions.Add("Do you have a favorite animal?");
+        allQuestions.Add("What's your biggest fear?");
+        allQuestions.Add("What's the strangest place you've been?");
+        allQuestions.Add("Do you like working in a team?");
+        allQuestions.Add("Is there anything you want to get into?");
+        allQuestions.Add("How'd you meet your best friend?");
     }
 
     public void AddAskedQuestion(string q) {

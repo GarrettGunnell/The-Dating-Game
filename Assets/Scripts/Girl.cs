@@ -56,17 +56,17 @@ public class Girl : MonoBehaviour {
 
         addTalkResponse("Italy", "It was a fun trip but this one weird guy approached me asking if I knew where he could find 'Italian Plan B'. I didn't know what to say.");
 
-        addQuestionResponse("Are you a morning person?", "No, I hate waking up early. I prefer staying up late.", "night");
+        addQuestionResponse("Are you a morning person?", "No, I hate waking up early. I prefer staying up late.", "a night");
     
-        addTalkResponse("night", "It's nice and quiet at night, don't you think?");
+        addTalkResponse("a night", "It's nice and quiet at night, don't you think?");
     
         addQuestionResponse("What's your favorite book?", "Probably 'Pale Fire' if I had to choose.", "Pale Fire");
 
         addTalkResponse("Pale Fire", "Dreadfully distinct.");
 
-        addQuestionResponse("Are you interested in outdoor activities?", "No, I definitely prefer staying inside.", "indoors");
+        addQuestionResponse("Are you interested in outdoor activities?", "No, I definitely prefer staying inside.", "an indoors");
 
-        addTalkResponse("indoors", "As embarrassing as it is, I used to be a little afraid of going outside.");
+        addTalkResponse("an indoors", "As embarrassing as it is, I used to be a little afraid of going outside.");
     
         addQuestionResponse("Have you ever met anyone famous?", "I met Hungrybox at a grocery store in Los Angeles.", "met Hungrybox");
     
@@ -132,6 +132,30 @@ public class Girl : MonoBehaviour {
 
         addTalkResponse("are from Seattle", "I don't remember much about it, I've visited several times and I don't think I'd like to live there again.");
 
+        addQuestionResponse("Do you have a favorite animal?", "I love cats!", "cats");
+
+        addTalkResponse("cats", "While I was growing up my family was allergic to cats, I couldn't wait to move out and get one myself.");
+
+        addQuestionResponse("What's your biggest fear?", "I used to have a major fear of bees.", "a fear of bees");
+
+        addTalkResponse("a fear of bees", "It used to be so bad that I couldn't go outside! I'm a little bit better now though.");
+
+        addQuestionResponse("What's the strangest place you've been?", "There's this town in California called Weed.", "Weed");
+
+        addTalkResponse("Weed", "Yes, it's funny once.");
+
+        addQuestionResponse("Do you like working in a team?", "No, I find it hard to communicate professionally.", "not a team");
+
+        addTalkResponse("not a team", "It's difficult to trust others to do their part of the work. It stresses me out!");
+
+        addQuestionResponse("Is there anything you want to get into?", "I want to learn an instrument, but I just don't have the time!", "learn an instrument");
+
+        addTalkResponse("learn an instrument", "I want to learn piano so I can play all my favorite classical songs, like anything from Chopin!");
+
+        addQuestionResponse("How'd you meet your best friend?", "I met them through my brother a very long time ago, when I was around 8 I think?", "your best friend");
+
+        addTalkResponse("your best friend", "They were very funny and creative. I respected their artistic vision and wished for their success, but unfortunately they passed away earlier this year..");
+        
     }
 
     private void addQuestionResponse(string question, string response, string knowledge) {
