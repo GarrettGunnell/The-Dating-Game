@@ -184,7 +184,7 @@ public class Girl : MonoBehaviour {
 
         addQuestionResponse("Are you on social media a lot?", "I can't help myself from mindlessly scrolling Twitter.", "Twitter");
         addQuestionResponse("Are you on social media a lot?", "I'm a little obsessed with posting pictures I take on Instagram..", "Instagram");
-        addQuestionResponse("Are you on social media a lot?", "No, I tend to stay away from all of that.");
+        addQuestionResponse("Are you on social media a lot?", "No, I tend to stay away from all of that.", "not a social media");
 
         addTalkResponse("Twitter", "Twitter ruins my day constantly, I should stop using it... but I can't.");
         addTalkResponse("Instagram", "There's a lot of talented people on there, it's a bit overwhelming.");
@@ -205,36 +205,54 @@ public class Girl : MonoBehaviour {
         addTalkResponse("a dog", "I've always liked dogs, I'd love to have a samoyed someday!");
 
         addQuestionResponse("What's your biggest fear?", "I used to have a major fear of bees.", "a fear of bees");
+        addQuestionResponse("What's your biggest fear?", "Abandonment.", "a fear of abandonment");
 
         addTalkResponse("a fear of bees", "It used to be so bad that I couldn't go outside! I'm a little bit better now though.");
+        addTalkResponse("a fear of abandonment", "I'd rather not talk about it..");
 
         addQuestionResponse("What's the strangest place you've been?", "There's this town in California called Weed.", "Weed");
+        addQuestionResponse("What's the strangest place you've been?", "There's a place in Oregon called Post, it's literally just a post office.", "Post");
 
         addTalkResponse("Weed", "Yes, it's funny once.");
+        addTalkResponse("Post", "I drove through it on a trip, it was rather underwhelming.");
 
         addQuestionResponse("Do you like working in a team?", "No, I find it hard to communicate professionally.", "not a team");
+        addQuestionResponse("Do you like working in a team?", "Yes, I like seeing what those around me can come up with.", "a team");
 
         addTalkResponse("not a team", "It's difficult to trust others to do their part of the work. It stresses me out!");
+        addTalkResponse("a team", "We can't do everything ourselves, there's just simply not enough time!");
 
         addQuestionResponse("Is there anything you want to get into?", "I want to learn an instrument, but I just don't have the time!", "learn an instrument");
-
+        addQuestionResponse("Is there anything you want to get into?", "I want to learn to paint, I think.", "learn to paint");
+        addQuestionResponse("Is there anything you want to get into?", "I never really learned how to cook.", "learn to cook");
+            
+        addTalkResponse("learn to paint", "I should really start soon, it takes such a long time to learn art.");
         addTalkResponse("learn an instrument", "I want to learn piano so I can play all my favorite classical songs, like anything from Chopin!");
+        addTalkResponse("learn to cook", "I've survived off premade meals for too long, I'd like to be able to make my own.");
 
         addQuestionResponse("How'd you meet your best friend?", "I met them through my brother a very long time ago, when I was around 8 I think?", "your best friend");
 
         addTalkResponse("your best friend", "They were very funny and creative. I respected their artistic vision and wished for their success, but unfortunately they passed away earlier this year..");
 
         addQuestionResponse("What's needlessly expensive but worth the money?", "I think sushi is really expensive, but I still eat it all time time.", "sushi");
+        addQuestionResponse("What's needlessly expensive but worth the money?", "Art supplies are so expensive..", "art supplies");
 
         addTalkResponse("sushi", "My favorite fish is salmon, I could eat salmon sashimi all day!");
+        addTalkResponse("art supplies", "I like collecting sketchbooks, although I never really fill them out.");
 
         addQuestionResponse("Would you want to be famous?", "No, I value my privacy too much for that.", "don't want to be famous");
+        addQuestionResponse("Would you want to be famous?", "Yeah I think it would be fun, I would love the attention.", "want to be famous");
 
         addTalkResponse("don't want to be famous", "Everything celebrities do gets posted all over social media, I could never handle that!");
+        addTalkResponse("want to be famous", "Everything you say and do gets treated with such high esteem, that sounds nice..");
 
         addQuestionResponse("Who's your favorite actor?", "I love Ryan Gosling!", "Ryan Gosling");
+        addQuestionResponse("Who's your favorite actor?", "I'm a huge fan of Jack Nicholson.", "Jack Nicholson");
+        addQuestionResponse("Who's your favorite actor?", "I think Jodie Foster is a huge inspiration.", "Jodie Foster");
 
         addTalkResponse("Ryan Gosling", "I've seen all of his movies.. my favorite is probably Drive!");
+        addTalkResponse("Jack Nicholson", "My favorite movie of his is Chinatown, but who doesn't love The Shining?");
+        addTalkResponse("Jodie Foster", "Her performance alongside Anthony Hopkins in The Silence of the Lambs is one for the ages!");
 
         addQuestionResponse("What's your favorite food?", "I could spend the rest of my life eating fried rice.", "fried rice");
 
