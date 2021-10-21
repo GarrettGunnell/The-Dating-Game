@@ -53,24 +53,40 @@ public class Girl : MonoBehaviour {
         addTalkResponse("a cat", "His name is Oliver, he doesn't like people very much.");
     
         addQuestionResponse("Have you traveled anywhere interesting?", "I've been to Italy!", "Italy");
+        addQuestionResponse("Have you traveled anywhere interesting?", "I've been to Canada!", "Canada");
+        addQuestionResponse("Have you traveled anywhere interesting?", "I've been to France!", "France");
 
-        addTalkResponse("Italy", "It was a fun trip but this one weird guy approached me asking if I knew where he could find 'Italian Plan B'. I didn't know what to say.");
+        addTalkResponse("Italy", "It was a fun trip but this one weird guy approached me asking if I knew where he could find 'Italian Plan B'. I didn't know what to say...");
+        addTalkResponse("Canada", "I visited Stanley Park, it's apparently a rain forest which is interesting.");
+        addTalkResponse("France", "I got to see the Notre-Dame! The pictures don't do it justice.");
 
         addQuestionResponse("Are you a morning person?", "No, I hate waking up early. I prefer staying up late.", "a night");
+        addQuestionResponse("Are you a morning person?", "For some reason I'm incapable of sleeping in, so I'm a morning person by happenstance.", "a morning");
     
         addTalkResponse("a night", "It's nice and quiet at night, don't you think?");
+        addTalkResponse("a morning", "The early bird gets the worm! Or something like that.");
     
         addQuestionResponse("What's your favorite book?", "Probably 'Pale Fire' if I had to choose.", "Pale Fire");
+        addQuestionResponse("What's your favorite book?", "Does manga count? 'Oyasumi Punpun' is my favorite piece of literature.", "Oyasumi Punpun");
+        addQuestionResponse("What's your favorite book?", "I haven't done much reading since middle school, my favorite back then was 'Artemis Fowl'.", "Artemis Fowl");
 
-        addTalkResponse("Pale Fire", "Dreadfully distinct.");
+        addTalkResponse("Pale Fire", "'And dreadfully distinct\nAgainst the dark, a tall white fountain played.'");
+        addTalkResponse("Oyasumi Punpun", "If there were a place lower than here\nit would surely be hell..");
+        addTalkResponse("Artemis Fowl", "It's a shame the movie was so unforgivably terrible.");
 
         addQuestionResponse("Are you interested in outdoor activities?", "No, I definitely prefer staying inside.", "an indoors");
+        addQuestionResponse("Are you interested in outdoor activities?", "Yes, I spend a lot of my time outside.", "an outdoors");
+        addQuestionResponse("Are you interested in outdoor activities?", "I go rock climbing all the time.", "rock climbing");
 
         addTalkResponse("an indoors", "As embarrassing as it is, I used to be a little afraid of going outside.");
+        addTalkResponse("an outdoors", "I go on hikes, walks, bike rides, everything really!");
+        addTalkResponse("rock climbing", "There's all sorts of climbs from beginner to advanced! You should come with me some time.");
     
         addQuestionResponse("Have you ever met anyone famous?", "I met Hungrybox at a grocery store in Los Angeles.", "met Hungrybox");
+        addQuestionResponse("Have you ever met anyone famous?", "I met Ryan Gosling at a grocery store in Los Angeles.", "met Ryan Gosling");
     
         addTalkResponse("met Hungrybox", "Yeah, he was kind of a real asshole about it though.");
+        addTalkResponse("met Ryan Gosling", "Yeah, he was kind of a real asshole about it though.");
 
         addQuestionResponse("Do you happen to have a favorite cocktail?", "My favorite is probably... just vodka and water.", "vodka and water");
 
