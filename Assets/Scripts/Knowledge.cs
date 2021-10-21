@@ -160,7 +160,6 @@ public class Knowledge {
     }
 
     public void gainKnowledge(string k) {
-        Debug.Log("Gaining Knowledge: " + k);
         if (allHobbies.Contains(k)) {
             knownHobbies.Add(k);
             allHobbies.Remove(k);
