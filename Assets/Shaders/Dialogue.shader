@@ -29,6 +29,7 @@
             #pragma fragment fp
 
             fixed4 fp(v2f i) : SV_TARGET {
+                clip(-1.0f);
                 return 1.0f;
             }
 
