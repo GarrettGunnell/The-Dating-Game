@@ -69,34 +69,6 @@ public class Knowledge {
         knownPets = new HashSet<string>();
     }
 
-    public (List<string>, List<string>, int) generateTalkingPoints() {
-        if (noKnowledge()) {
-            return (new List<string>(), new List<string>(), 0);
-        }
-
-        List<string> options = new List<string>();
-
-        string correctKnowledge = findKnowledge();
-
-        string correctOption = generateTalkingPoint(correctKnowledge);
-
-        options.Add(correctOption);
-
-        List<string> fakeKnowledge = findRandomKnowledge();
-
-        for (int i = 0; i < 7; ++i) {
-            options.Add(generateTalkingPoint(fakeKnowledge[i]));
-        }
-
-        fakeKnowledge.Insert(0, correctKnowledge);
-        var joined = options.Zip(fakeKnowledge, (x, y) => new {x, y}).ToList();
-        var shuffled = joined.OrderBy(x => Random.value).ToList();
-        options = shuffled.Select(pair => pair.x).ToList();
-        fakeKnowledge = shuffled.Select(pair => pair.y).ToList();
-
-        return (options, fakeKnowledge, options.IndexOf(correctOption));
-    }
-
     public string generateTalkingPoint(string k) {
         string point = "";
 
@@ -203,8 +175,27 @@ public class Knowledge {
         }
     }
 
+    private void removeKnowledge(string k) {
+        if (knownHobbies.Contains(k)) {
+            knownHobbies.Remove(k);
+        } else if (knownAttributes.Contains(k)) {
+            knownAttributes.Remove(k);
+        } else if (knownMedia.Contains(k)) {
+            knownMedia.Remove(k);
+        } else if (knownFuture.Contains(k)) {
+            knownFuture.Remove(k);
+        } else if (knownAccomplishments.Contains(k)) {
+            knownAccomplishments.Remove(k);
+        } else if (knownVacations.Contains(k)) {
+            knownVacations.Remove(k);
+        } else if (knownPets.Contains(k)) {
+            knownPets.Remove(k);
+        }
+    }
+
     public void addTalkedAbout(string k) {
         talkedAbout.Add(k);
+        removeKnowledge(k);
     }
 
     public bool hasBeenTalkedAbout(string k) {

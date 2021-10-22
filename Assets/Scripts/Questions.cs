@@ -77,23 +77,4 @@ public class Questions {
     public bool IsQuestion(string q) {
         return allQuestions.Contains(q) || askedQuestions.Contains(q);
     }
-
-    public List<string> generateQuestions() {
-        List<string> qs = new List<string>();
-        List<string> unaskedQuestionsList = allQuestions.ToList().OrderBy(x => Random.value).ToList();
-        List<string> askedQuestionsList = askedQuestions.ToList().OrderBy(x => Random.value).ToList();
-
-        if (askedQuestions.Count < 8) {
-            int numRealQuestions = 8 - askedQuestions.Count;
-            qs = unaskedQuestionsList.GetRange(0, numRealQuestions);
-            for (int i = 0; i < askedQuestions.Count; ++i) {
-                qs.Add(askedQuestionsList[i]);
-            }
-        } else {
-            qs = askedQuestionsList.GetRange(0, 8);
-            qs.Add(unaskedQuestionsList[0]);
-        }
-
-        return qs.OrderBy(x => Random.value).ToList();
-    }
 }
