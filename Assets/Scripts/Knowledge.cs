@@ -97,7 +97,7 @@ public class Knowledge {
         return (options, fakeKnowledge, options.IndexOf(correctOption));
     }
 
-    private string generateTalkingPoint(string k) {
+    public string generateTalkingPoint(string k) {
         string point = "";
 
         if (Hobbies.Contains(k))
@@ -118,7 +118,7 @@ public class Knowledge {
         return point;
     }
 
-    private string findKnowledge() {
+    public string findKnowledge() {
         List<HashSet<string>> knownCategories = new List<HashSet<string>>();
 
         if (knownHobbies.Count != 0) knownCategories.Add(knownHobbies);
@@ -133,9 +133,28 @@ public class Knowledge {
         HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
 
         string chosenKnowledge = chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
-        chosenCategory.Remove(chosenKnowledge);
 
         return chosenKnowledge;
+    }
+
+    public bool isKnown(string k) {
+        if (knownHobbies.Contains(k)) {
+            return true;
+        } else if (knownAttributes.Contains(k)) {
+            return true;
+        } else if (knownMedia.Contains(k)) {
+            return true;
+        } else if (knownFuture.Contains(k)) {
+            return true;
+        } else if (knownAccomplishments.Contains(k)) {
+            return true;
+        } else if (knownVacations.Contains(k)) {
+            return true;
+        } else if (knownPets.Contains(k)) {
+            return true;
+        }
+
+        return false;
     }
 
     private List<string> findRandomKnowledge() {

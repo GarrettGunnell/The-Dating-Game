@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour {
         optionTextBoxes.Add(option7);
         optionTextBoxes.Add(option8);
 
-        optionBoxFinished = new List<bool> {false, false, false, false, false, false, false, false};
+        optionBoxFinished = new List<bool>();
 
         guyDialogue.text = "";
         girlDialogue.text = "";
@@ -74,13 +74,12 @@ public class DialogueManager : MonoBehaviour {
         stateManager.endGame(endReason);
     }
 
-    public void populateOptions(List<string> options) {
-        for (int i = 0; i < optionBoxFinished.Count; ++i)
-            optionBoxFinished[i] = false;
+    public void populateOptions(List<OptionsManager.Option> options) {
+        optionBoxFinished = Enumerable.Repeat(false, options.Count).ToList();
 
         for (int i = 0; i < options.Count; ++i) {
             Text box = optionTextBoxes[i];
-            StartCoroutine(FillOption(box, options[i], i));
+            StartCoroutine(FillOption(box, options[i].option, i));
         }
 
         populatingOptions = true;

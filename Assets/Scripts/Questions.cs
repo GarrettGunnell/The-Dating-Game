@@ -66,6 +66,18 @@ public class Questions {
         return askedQuestions.Contains(q);
     }
 
+    public List<string> getQuestions() {
+        return allQuestions.ToList();
+    }
+
+    public List<string> getAskedQuestions() {
+        return askedQuestions.ToList();
+    }
+
+    public bool IsQuestion(string q) {
+        return allQuestions.Contains(q) || askedQuestions.Contains(q);
+    }
+
     public List<string> generateQuestions() {
         List<string> qs = new List<string>();
         List<string> unaskedQuestionsList = allQuestions.ToList().OrderBy(x => Random.value).ToList();
