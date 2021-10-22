@@ -36,7 +36,7 @@
             #pragma fragment fp
 
             fixed4 fp(v2f i) : SV_TARGET {
-                float4 col = tex2D(_MainTex, i.uv);
+                float4 col = tex2Dlod(_MainTex, float4(i.uv.x, i.uv.y, 0, 0));
                 clip(-(1 - col.a));
                 return col;
             }
