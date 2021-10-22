@@ -35,6 +35,7 @@ public class OptionsManager : MonoBehaviour {
 
         List<string> qs = questions.getQuestions();
         List<string> askedQs = questions.getAskedQuestions();
+        List<string> talkedAbout = knowledge.getTalkedAbout();
 
         if (actionNumber == 1) {
             string q = qs[Random.Range(0, qs.Count)];
@@ -48,6 +49,10 @@ public class OptionsManager : MonoBehaviour {
                 string r = knowledge.generateTalkingPoint(k);
 
                 options.Add(new Option(r, k));
+            }
+
+            if (talkedAbout.Count > 0) {
+                options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
             }
         }
 

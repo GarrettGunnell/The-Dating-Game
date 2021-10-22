@@ -4,9 +4,6 @@ using System.Linq;
 using UnityEngine;
 
 public class Knowledge {
-
-    private HashSet<string> talkedAbout;
-
     private HashSet<string> Hobbies;
     private HashSet<string> Attributes;
     private HashSet<string> Media;
@@ -15,21 +12,9 @@ public class Knowledge {
     private HashSet<string> Vacations;
     private HashSet<string> Pets;
 
-    private HashSet<string> allHobbies;
-    private HashSet<string> allAttributes;
-    private HashSet<string> allMedia;
-    private HashSet<string> allFuture;
-    private HashSet<string> allAccomplishments;
-    private HashSet<string> allVacations;
-    private HashSet<string> allPets;
-
-    private HashSet<string> knownHobbies;
-    private HashSet<string> knownAttributes;
-    private HashSet<string> knownMedia;
-    private HashSet<string> knownFuture;
-    private HashSet<string> knownAccomplishments;
-    private HashSet<string> knownVacations;
-    private HashSet<string> knownPets;
+    private HashSet<string> unknownKnowledge;
+    private HashSet<string> knownKnowledge;
+    private HashSet<string> talkedAbout;
 
     public Knowledge() {
         talkedAbout = new HashSet<string>();
@@ -51,22 +36,14 @@ public class Knowledge {
         Vacations = new HashSet<string> {"Italy", "Weed", "Canada", "France", "Post"};
         Pets = new HashSet<string> {"two dogs", "three dogs", "a cat", "a fear of bees", "a fear of abandonment"};
 
+        unknownKnowledge = new HashSet<string>(Attributes);
+        unknownKnowledge.UnionWith(Media);
+        unknownKnowledge.UnionWith(Future);
+        unknownKnowledge.UnionWith(Accomplishments);
+        unknownKnowledge.UnionWith(Vacations);
+        unknownKnowledge.UnionWith(Pets);
 
-        allHobbies = new HashSet<string>(Hobbies);
-        allAttributes = new HashSet<string>(Attributes);
-        allMedia = new HashSet<string>(Media);
-        allFuture = new HashSet<string>(Future);
-        allAccomplishments = new HashSet<string>(Accomplishments);
-        allVacations = new HashSet<string>(Vacations);
-        allPets = new HashSet<string>(Pets);
-
-        knownHobbies = new HashSet<string>();
-        knownAttributes = new HashSet<string>();
-        knownMedia = new HashSet<string>();
-        knownFuture = new HashSet<string>();
-        knownAccomplishments = new HashSet<string>();
-        knownVacations = new HashSet<string>();
-        knownPets = new HashSet<string>();
+        knownKnowledge = new HashSet<string>();
     }
 
     public string generateTalkingPoint(string k) {
@@ -91,126 +68,48 @@ public class Knowledge {
     }
 
     public string findKnowledge() {
-        List<HashSet<string>> knownCategories = new List<HashSet<string>>();
-
-        if (knownHobbies.Count != 0) knownCategories.Add(knownHobbies);
-        if (knownAttributes.Count != 0) knownCategories.Add(knownAttributes);
-        if (knownMedia.Count != 0) knownCategories.Add(knownMedia);
-        if (knownFuture.Count != 0) knownCategories.Add(knownFuture);
-        if (knownAccomplishments.Count != 0) knownCategories.Add(knownAccomplishments);
-        if (knownVacations.Count != 0) knownCategories.Add(knownVacations);
-        if (knownPets.Count != 0) knownCategories.Add(knownPets);
-
-
-        HashSet<string> chosenCategory = knownCategories[Random.Range(0, knownCategories.Count)];
-
-        string chosenKnowledge = chosenCategory.ElementAt(Random.Range(0, chosenCategory.Count));
-
-        return chosenKnowledge;
+        return knownKnowledge.ElementAt(Random.Range(0, knownKnowledge.Count));
     }
 
     public bool isKnown(string k) {
-        if (knownHobbies.Contains(k)) {
-            return true;
-        } else if (knownAttributes.Contains(k)) {
-            return true;
-        } else if (knownMedia.Contains(k)) {
-            return true;
-        } else if (knownFuture.Contains(k)) {
-            return true;
-        } else if (knownAccomplishments.Contains(k)) {
-            return true;
-        } else if (knownVacations.Contains(k)) {
-            return true;
-        } else if (knownPets.Contains(k)) {
-            return true;
-        }
-
-        return false;
+        return knownKnowledge.Contains(k);
     }
 
     private List<string> findRandomKnowledge() {
-        List<string> rk = new List<string>();
+        HashSet<string> rk = new HashSet<string>();
+        List<string> allKnowledge = unknownKnowledge.ToList();
 
-        rk.Add(allHobbies.ElementAt(Random.Range(0, allHobbies.Count)));
-        rk.Add(allAttributes.ElementAt(Random.Range(0, allAttributes.Count)));
-        rk.Add(allMedia.ElementAt(Random.Range(0, allMedia.Count)));
-        rk.Add(allFuture.ElementAt(Random.Range(0, allFuture.Count)));
-        rk.Add(allAccomplishments.ElementAt(Random.Range(0, allAccomplishments.Count)));
-        rk.Add(allVacations.ElementAt(Random.Range(0, allVacations.Count)));
-        rk.Add(allPets.ElementAt(Random.Range(0, allPets.Count)));
+        for (int i = 0; i < 10; ++i) {
+            rk.Add(allKnowledge[Random.Range(0, allKnowledge.Count)]);
+        }
 
         string[] talkedAboutArray = talkedAbout.ToArray();
         for (int i = 0; i < talkedAbout.Count; ++i) {
             rk.Add(talkedAboutArray[Random.Range(0, talkedAbout.Count)]);
         }
 
-        rk = rk.OrderBy(x => Random.value).ToList();
+        List<string> randomKnowledge = rk.ToList();
 
-        return rk.GetRange(0, 7);
+        randomKnowledge = randomKnowledge.OrderBy(x => Random.value).ToList();
+
+        return randomKnowledge;
     }
 
     public void gainKnowledge(string k) {
-        if (allHobbies.Contains(k)) {
-            knownHobbies.Add(k);
-            allHobbies.Remove(k);
-        } else if (allAttributes.Contains(k)) {
-            knownAttributes.Add(k);
-            allAttributes.Remove(k);
-        } else if (allMedia.Contains(k)) {
-            knownMedia.Add(k);
-            allMedia.Remove(k);
-        } else if (allFuture.Contains(k)) {
-            knownFuture.Add(k);
-            allFuture.Remove(k);
-        } else if (allAccomplishments.Contains(k)) {
-            knownAccomplishments.Add(k);
-            allAccomplishments.Remove(k);
-        } else if (allVacations.Contains(k)) {
-            knownVacations.Add(k);
-            allVacations.Remove(k);
-        } else if (allPets.Contains(k)) {
-            knownPets.Add(k);
-            allPets.Remove(k);
-        }
-    }
-
-    private void removeKnowledge(string k) {
-        if (knownHobbies.Contains(k)) {
-            knownHobbies.Remove(k);
-        } else if (knownAttributes.Contains(k)) {
-            knownAttributes.Remove(k);
-        } else if (knownMedia.Contains(k)) {
-            knownMedia.Remove(k);
-        } else if (knownFuture.Contains(k)) {
-            knownFuture.Remove(k);
-        } else if (knownAccomplishments.Contains(k)) {
-            knownAccomplishments.Remove(k);
-        } else if (knownVacations.Contains(k)) {
-            knownVacations.Remove(k);
-        } else if (knownPets.Contains(k)) {
-            knownPets.Remove(k);
-        }
+        knownKnowledge.Add(k);
+        unknownKnowledge.Remove(k);
     }
 
     public void addTalkedAbout(string k) {
         talkedAbout.Add(k);
-        removeKnowledge(k);
+        knownKnowledge.Remove(k);
     }
 
     public bool hasBeenTalkedAbout(string k) {
         return talkedAbout.Contains(k);
     }
 
-    private bool noKnowledge() {
-        if (knownHobbies.Count != 0) return false;
-        if (knownAttributes.Count != 0) return false;
-        if (knownMedia.Count != 0) return false;
-        if (knownFuture.Count != 0) return false;
-        if (knownAccomplishments.Count != 0) return false;
-        if (knownVacations.Count != 0) return false;
-        if (knownPets.Count != 0) return false;
-
-        return true;
+    public List<string> getTalkedAbout() {
+        return talkedAbout.ToList();
     }
 }
