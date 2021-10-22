@@ -84,7 +84,7 @@ public class Knowledge {
 
         List<string> fakeKnowledge = findRandomKnowledge();
 
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 7; ++i) {
             options.Add(generateTalkingPoint(fakeKnowledge[i]));
         }
 
@@ -156,7 +156,7 @@ public class Knowledge {
 
         rk = rk.OrderBy(x => Random.value).ToList();
 
-        return rk.GetRange(0, 5);
+        return rk.GetRange(0, 7);
     }
 
     public void gainKnowledge(string k) {

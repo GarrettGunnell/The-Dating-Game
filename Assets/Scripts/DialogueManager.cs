@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour {
     public Text option4;
     public Text option5;
     public Text option6;
+    public Text option7;
+    public Text option8;
 
     private List<Text> optionTextBoxes = null;
     private List<bool> optionBoxFinished;
@@ -31,8 +33,10 @@ public class DialogueManager : MonoBehaviour {
         optionTextBoxes.Add(option4);
         optionTextBoxes.Add(option5);
         optionTextBoxes.Add(option6);
+        optionTextBoxes.Add(option7);
+        optionTextBoxes.Add(option8);
 
-        optionBoxFinished = new List<bool> {false, false, false, false, false, false};
+        optionBoxFinished = new List<bool> {false, false, false, false, false, false, false, false};
 
         guyDialogue.text = "";
         girlDialogue.text = "";
