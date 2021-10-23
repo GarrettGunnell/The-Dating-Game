@@ -34,6 +34,7 @@ public class UI : MonoBehaviour {
         for (int i = 0; i < count; ++i) {
             optionBoxes[i].SetDisabled();
         }
+        changeCursor(false);
     }
 
     public void enableTalk() {
@@ -42,6 +43,7 @@ public class UI : MonoBehaviour {
 
     public void disableTalk() {
         talkButton.SetDisabled();
+        changeCursor(false);
     }
 
     public void enableLeave() {
@@ -50,5 +52,6 @@ public class UI : MonoBehaviour {
 
     public void disableLeave() {
         leaveButton.SetDisabled();
+        changeCursor(false);
     }
 }
