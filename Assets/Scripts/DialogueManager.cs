@@ -23,7 +23,9 @@ public class DialogueManager : MonoBehaviour {
     public Text option7;
     public Text option8;
 
-    public AudioSource girlSound;
+    public AudioClip girlSound;
+    public AudioClip guySound;
+    public AudioSource audioSource;
 
     private List<Text> optionTextBoxes = null;
     private List<bool> optionBoxFinished;
@@ -47,8 +49,8 @@ public class DialogueManager : MonoBehaviour {
         girlDialogue.text = "";
         EmptyOptions();
 
-        girlSound = GetComponent<AudioSource>();
-        girlSound.Stop();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
     }
 
     void Update() {
@@ -138,30 +140,39 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator StartConversation(string guySentence, string girlSentence) {
         guyDialogue.text = "";
+        audioSource.clip = guySound;
+        audioSource.Play();
         foreach (char letter in guySentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
             guyDialogue.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
 
+        audioSource.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
 
         girlDialogue.text = "";
         girlAnimator.SetBool("talking", true);
-        bool playing = true;
-        girlSound.Play();
+        audioSource.clip = girlSound;
+        audioSource.Play();
         foreach (char letter in girlSentence.ToCharArray()) {
             if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
-                girlSound.Play();
-                girlSound.Stop();
+                audioSource.Play();
+                audioSource.Stop();
             } else {
-                girlSound.Play();
+                audioSource.Play();
             }
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("talking", false);
-        girlSound.Stop();
+        audioSource.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
         Reset();
     }
