@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour {
     public Text guyDialogue;
     public Text girlDialogue;
 
+    public Animator girlAnimator;
+
     public Text option1;
     public Text option2;
     public Text option3;
@@ -66,11 +68,13 @@ public class DialogueManager : MonoBehaviour {
 
         yield return new WaitForSecondsRealtime(1.0f);
         girlDialogue.text = "";
+        girlAnimator.SetBool("upset", true);
         foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
 
+        girlAnimator.SetBool("upset", false);
         yield return new WaitForSecondsRealtime(1.0f);
         stateManager.endGame(endReason);
     }
@@ -120,11 +124,13 @@ public class DialogueManager : MonoBehaviour {
         yield return new WaitForSecondsRealtime(1.0f);
 
         girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
         foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
 
+        girlAnimator.SetBool("talking", false);
         yield return new WaitForSecondsRealtime(1.0f);
         Reset();
     }
