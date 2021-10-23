@@ -103,4 +103,8 @@ public class OptionsManager : MonoBehaviour {
             }
         }
     }
+
+    public void Leave() {
+        dialogueManager.Leave();
+    }
 }

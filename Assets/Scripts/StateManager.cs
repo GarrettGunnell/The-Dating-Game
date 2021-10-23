@@ -28,8 +28,8 @@ public class StateManager : MonoBehaviour {
                         talking = true;
                         actionNumber++;
                         optionsManager.Talk(actionNumber);
-                    } else if (hit.transform.name == "Girl") {
-                        Debug.Log("Girl");
+                    } else if (hit.transform.name == "Leave") {
+                        optionsManager.Leave();
                     }
                 } else if (collided && talking) {
                     if (hit.transform.name.Contains("Option")) {

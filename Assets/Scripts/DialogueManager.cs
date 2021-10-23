@@ -145,4 +145,34 @@ public class DialogueManager : MonoBehaviour {
         optionBoxFinished[optionNum] = true;
     }
 
+    public void Leave() {
+        uiManager.disableTalk();
+        uiManager.disableLeave();
+        StartCoroutine(LeaveConvo());
+    }
+
+    private IEnumerator LeaveConvo() {
+        string yourSentence = "Alright, I think I'm going to leave.";
+        string girlSentence = "Oh... okay.";
+
+        guyDialogue.text = "";
+        foreach (char letter in yourSentence.ToCharArray()) {
+            guyDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
+        foreach (char letter in girlSentence.ToCharArray()) {
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        girlAnimator.SetBool("talking", false);
+        yield return new WaitForSecondsRealtime(2.0f);
+        Application.Quit();
+    }
+
 }
