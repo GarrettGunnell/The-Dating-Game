@@ -5,7 +5,7 @@ using UnityEngine;
 public class Leave : MonoBehaviour {
     public Texture2D defaultTex, hoverTex, disabledTex;
 
-    private bool isEnabled;
+    private bool isEnabled = true;
     private Material material;
 
     void Start() {

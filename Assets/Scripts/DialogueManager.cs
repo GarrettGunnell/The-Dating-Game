@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour {
 
     public StateManager stateManager;
+    public UI uiManager;
 
     public Text guyDialogue;
     public Text girlDialogue;
@@ -75,6 +76,9 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void populateOptions(List<OptionsManager.Option> options) {
+        uiManager.disableTalk();
+        uiManager.disableLeave();
+        uiManager.enableBoxes(options.Count);
         optionBoxFinished = Enumerable.Repeat(false, options.Count).ToList();
 
         for (int i = 0; i < options.Count; ++i) {
@@ -86,6 +90,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void Converse(string guySentence, string girlSentence) {
+        uiManager.disableBoxes(8);
         StartCoroutine(StartConversation(guySentence, girlSentence));
     }
 
@@ -94,6 +99,9 @@ public class DialogueManager : MonoBehaviour {
         guyDialogue.text = "";
         girlDialogue.text = "";
         EmptyOptions();
+        uiManager.enableTalk();
+        uiManager.enableLeave();
+        uiManager.disableBoxes(8);
     }
 
     public void EmptyOptions() {
