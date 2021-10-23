@@ -154,9 +154,10 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator FillOption(Text optionBox, string optionText, int optionNum) {
         optionBox.text = "";
+        float fillTime = 1.0f / optionText.Length;
         foreach (char letter in optionText.ToCharArray()) {
             optionBox.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(fillTime);
         }
 
         optionBoxFinished[optionNum] = true;
