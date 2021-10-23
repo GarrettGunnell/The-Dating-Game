@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour {
     public Text option7;
     public Text option8;
 
+    public AudioSource girlSound;
+
     private List<Text> optionTextBoxes = null;
     private List<bool> optionBoxFinished;
 
@@ -44,6 +46,9 @@ public class DialogueManager : MonoBehaviour {
         guyDialogue.text = "";
         girlDialogue.text = "";
         EmptyOptions();
+
+        girlSound = GetComponent<AudioSource>();
+        girlSound.Stop();
     }
 
     void Update() {
@@ -125,7 +130,7 @@ public class DialogueManager : MonoBehaviour {
             case '?':
                 return 1.0f;
             case '\n':
-                return 1.0f;
+                return 0.2f;
             default:
                 return 0.05f;
         }
@@ -142,12 +147,21 @@ public class DialogueManager : MonoBehaviour {
 
         girlDialogue.text = "";
         girlAnimator.SetBool("talking", true);
+        bool playing = true;
+        girlSound.Play();
         foreach (char letter in girlSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                girlSound.Play();
+                girlSound.Stop();
+            } else {
+                girlSound.Play();
+            }
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("talking", false);
+        girlSound.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
         Reset();
     }
