@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Option : MonoBehaviour {
-
+public class Talk : MonoBehaviour {
     public Texture2D defaultTex, hoverTex, disabledTex;
 
     private bool isEnabled;
