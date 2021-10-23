@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class UI : MonoBehaviour {
 
-    public Texture2D mouseCursor;
+    public static Texture2D mouseCursor, hoverCursor;
 
-    Vector2 hotSpot = new Vector2(0, 0);
-    CursorMode cursorMode = CursorMode.Auto;
-
-    // Start is called before the first frame update
     void Start() {
-        Cursor.SetCursor(mouseCursor, hotSpot, cursorMode);
+        mouseCursor = Resources.Load("Cursor") as Texture2D;
+        hoverCursor = Resources.Load("clickCursor") as Texture2D;
+        Cursor.SetCursor(mouseCursor, new Vector2(0, 0), CursorMode.Auto);
     }
 
-    // Update is called once per frame
     void Update() {
-        
+
+    }
+
+    public static void changeCursor(bool hover) {
+        Cursor.SetCursor(hover ? hoverCursor : mouseCursor, hover ? new Vector2(0.5f, 0.5f) : new Vector2(0, 0), CursorMode.Auto);
     }
 }

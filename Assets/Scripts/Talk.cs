@@ -18,9 +18,11 @@ public class Talk : MonoBehaviour {
 
     void OnMouseOver() {
         material.SetTexture("_MainTex", hoverTex);
+        UI.changeCursor(true);
     }
 
     void OnMouseExit() {
         material.SetTexture("_MainTex", defaultTex);
+        UI.changeCursor(false);
     }
 }
