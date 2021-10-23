@@ -17,12 +17,26 @@ public class Talk : MonoBehaviour {
     }
 
     void OnMouseOver() {
-        material.SetTexture("_MainTex", hoverTex);
-        UI.changeCursor(true);
+        if (isEnabled) {
+            material.SetTexture("_MainTex", hoverTex);
+            UI.changeCursor(true);
+        }
     }
 
     void OnMouseExit() {
+        if (isEnabled) {
+            material.SetTexture("_MainTex", defaultTex);
+            UI.changeCursor(false);
+        }
+    }
+
+    public void SetDisabled() {
+        isEnabled = false;
+        material.SetTexture("_MainTex", disabledTex);
+    }
+
+    public void SetEnabled() {
+        isEnabled = true;
         material.SetTexture("_MainTex", defaultTex);
-        UI.changeCursor(false);
     }
 }

@@ -17,7 +17,7 @@ public class UI : MonoBehaviour {
     }
 
     void Update() {
-        enableBoxes(4);
+
     }
 
     public static void changeCursor(bool hover) {
@@ -34,5 +34,21 @@ public class UI : MonoBehaviour {
         for (int i = 0; i < count; ++i) {
             optionBoxes[i].SetDisabled();
         }
+    }
+
+    public void enableTalk() {
+        talkButton.SetEnabled();
+    }
+
+    public void disableTalk() {
+        talkButton.SetDisabled();
+    }
+
+    public void enableLeave() {
+        leaveButton.SetEnabled();
+    }
+
+    public void disableLeave() {
+        leaveButton.SetDisabled();
     }
 }
