@@ -6,11 +6,12 @@ public class Option : MonoBehaviour {
 
     public Texture2D defaultTex, hoverTex, disabledTex;
 
-    private bool isEnabled;
+    private bool isEnabled = false;
     private Material material;
 
     void Start() {
         material = GetComponent<Renderer>().material;
+        SetDisabled();
     }
 
     void Update() {
@@ -18,12 +19,26 @@ public class Option : MonoBehaviour {
     }
 
     void OnMouseOver() {
-        material.SetTexture("_MainTex", hoverTex);
-        UI.changeCursor(true);
+        if (isEnabled) {
+            material.SetTexture("_MainTex", hoverTex);
+            UI.changeCursor(true);
+        }
     }
 
     void OnMouseExit() {
+        if (isEnabled) {
+            material.SetTexture("_MainTex", defaultTex);
+            UI.changeCursor(false);
+        }
+    }
+
+    public void SetDisabled() {
+        isEnabled = false;
+        material.SetTexture("_MainTex", disabledTex);
+    }
+
+    public void SetEnabled() {
+        isEnabled = true;
         material.SetTexture("_MainTex", defaultTex);
-        UI.changeCursor(false);
     }
 }
