@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour {
         guyDialogue.text = "";
         foreach (char letter in guySentence.ToCharArray()) {
             guyDialogue.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         yield return new WaitForSecondsRealtime(1.0f);
@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour {
         girlAnimator.SetBool("upset", true);
         foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("upset", false);
@@ -114,6 +114,23 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
+    private float waitTime(char letter) {
+        switch(letter) {
+            case '.':
+                return 0.75f;
+            case ',':
+                return 0.5f;
+            case '!':
+                return 1.0f;
+            case '?':
+                return 1.0f;
+            case '\n':
+                return 1.0f;
+            default:
+                return 0.05f;
+        }
+    }
+
     IEnumerator StartConversation(string guySentence, string girlSentence) {
         guyDialogue.text = "";
         foreach (char letter in guySentence.ToCharArray()) {
@@ -127,7 +144,7 @@ public class DialogueManager : MonoBehaviour {
         girlAnimator.SetBool("talking", true);
         foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("talking", false);
@@ -167,7 +184,7 @@ public class DialogueManager : MonoBehaviour {
         girlAnimator.SetBool("talking", true);
         foreach (char letter in girlSentence.ToCharArray()) {
             girlDialogue.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("talking", false);
