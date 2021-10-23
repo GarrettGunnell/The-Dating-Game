@@ -1,4 +1,4 @@
-﻿Shader "Custom/Background" {
+﻿Shader "Custom/Image" {
     Properties {
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
     }
