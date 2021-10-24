@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Flake : MonoBehaviour {
-    
+
     public Texture2D defaultTex, hoverTex;
     
     public AudioSource audioSource;
@@ -27,5 +27,12 @@ public class Flake : MonoBehaviour {
 
     void OnMouseDown() {
         audioSource.Play();
+        StartCoroutine(quit());
+    }
+
+    IEnumerator quit() {
+        yield return new WaitForSecondsRealtime(1.0f);
+        
+        Application.Quit();
     }
 }
