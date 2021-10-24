@@ -11,7 +11,9 @@ public class UI : MonoBehaviour {
     public Talk talkButton;
     public Leave leaveButton;
 
-    public Text dateBox, time;
+    public Text dateBox, timeBox;
+
+    int hour, minute;
 
     void Start() {
         mouseCursor = Resources.Load("Cursor") as Texture2D;
@@ -23,6 +25,10 @@ public class UI : MonoBehaviour {
         int day = Random.Range(1, 31);
         string dayString = day < 10 ? "0" + day.ToString("D") : day.ToString("D");
         dateBox.text = monthString + "/" + dayString;
+
+        timeBox.text = "05:00";
+        hour = 5;
+        minute = 0;
     }
 
     void Update() {
@@ -62,5 +68,18 @@ public class UI : MonoBehaviour {
     public void disableLeave() {
         leaveButton.SetDisabled();
         changeCursor(false);
+    }
+
+    public void incrementTime() {
+        minute += 5;
+        if (minute == 60) {
+            hour += 1;
+            minute = 0;
+        }
+
+        string minuteString = minute < 10 ? "0" + minute.ToString("D") : minute.ToString("D");
+        string hourString = hour < 10 ? "0" + hour.ToString("D") : hour.ToString("D");
+
+        timeBox.text = hourString + ":" + minuteString;
     }
 }

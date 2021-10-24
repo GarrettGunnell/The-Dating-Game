@@ -132,6 +132,7 @@ public class DialogueManager : MonoBehaviour {
         uiManager.enableTalk();
         uiManager.enableLeave();
         uiManager.disableBoxes(8);
+        uiManager.incrementTime();
     }
 
     public void EmptyOptions() {

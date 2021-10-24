@@ -1119,6 +1119,8 @@ MonoBehaviour:
   - {fileID: 1658216126}
   talkButton: {fileID: 1408177757}
   leaveButton: {fileID: 208145269}
+  dateBox: {fileID: 1886632322}
+  time: {fileID: 796425392}
 --- !u!4 &507519749
 Transform:
   m_ObjectHideFlags: 0
@@ -1632,8 +1634,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 716.25, y: 443.7}
-  m_SizeDelta: {x: 291.30017, y: 43.18696}
+  m_AnchoredPosition: {x: 715.1, y: 443.7}
+  m_SizeDelta: {x: 293.59357, y: 43.18696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796425392
 MonoBehaviour:
@@ -3508,8 +3510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421.8, y: 443.7}
-  m_SizeDelta: {x: 297.6034, y: 43.18696}
+  m_AnchoredPosition: {x: 419.2199, y: 443.7}
+  m_SizeDelta: {x: 292.44324, y: 43.18696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886632322
 MonoBehaviour:
