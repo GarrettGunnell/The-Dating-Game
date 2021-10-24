@@ -27,9 +27,9 @@ public class Knowledge {
         "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan", "Oyasumi Punpun",
         "Artemis Fowl", "cosmopolitans", "tea", "water", "Inio Asano", "Nisioisin", "Hannibal", "Spongebob", "The Barrel", "Dancing Queen", "Disorder",
         "turtles", "art supplies", "Jack Nicholson", "Jodie Foster", "pasta", "ramen", "Mars Argo", "Gesaffelstein", "I Monster", "chemistry", "nursing",
-        "Saturn Devouring His Son", "the rain"};
+        "Saturn Devouring His Son", "the rain", "I Go Back To May"};
         Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin", "be an artist", "be a private investigator", "be a crime lord",
-        "go to London", "learn an instrument", "learn to paint", "learn Japanese", "learn Chinese", "I Go Back To May"};
+        "go to London", "learn an instrument", "learn to paint", "learn Japanese", "learn Chinese"};
         Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
         "worked at Spirit Halloween", "met Ryan Gosling", "don't really drink", "have an honors diploma", "made a lot of friends", "won the science fair",
         "are from Michigan", "want to be famous", "interviewed at Dairy Queen", "aren't a sports person"};
