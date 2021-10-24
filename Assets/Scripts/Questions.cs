@@ -91,7 +91,7 @@ public class Questions {
     }
 
     public bool IsQuestion(string q) {
-        return allQuestions.Contains(q) || askedQuestions.Contains(q);
+        return allQuestions.Contains(q) || askedQuestions.Contains(q) || badQuestions.Contains(q);
     }
 
     public bool IsBadQuestion(string q) {
