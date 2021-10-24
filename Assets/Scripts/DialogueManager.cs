@@ -139,6 +139,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     IEnumerator StartConversation(string guySentence, string girlSentence) {
+        yield return new WaitForSecondsRealtime(0.2f);
+
         guyDialogue.text = "";
         audioSource.clip = guySound;
         audioSource.Play();

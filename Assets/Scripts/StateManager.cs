@@ -10,9 +10,14 @@ public class StateManager : MonoBehaviour {
 
     private int actionNumber = 0;
 
+    private AudioSource audioSource;
+
     void Start() {
         idle = true;
         talking = false;
+        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
     }
 
     void Update() {
@@ -24,15 +29,19 @@ public class StateManager : MonoBehaviour {
             if (idle) {
                 if (collided && !talking) {
                     if (hit.transform.name == "Talk") {
+                        audioSource.Play();
                         setIdle(false);
                         talking = true;
                         actionNumber++;
                         optionsManager.Talk(actionNumber);
                     } else if (hit.transform.name == "Leave") {
+                        audioSource.Play();
                         optionsManager.Leave();
                     }
                 } else if (collided && talking) {
                     if (hit.transform.name.Contains("Option")) {
+                        audioSource.Play();
+
                         int chosenOption = int.Parse(hit.transform.name.Split(' ')[1]);
                         optionsManager.Choose(chosenOption - 1);
                         setIdle(false);
