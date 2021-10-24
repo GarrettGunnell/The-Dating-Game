@@ -33,15 +33,21 @@ public class OptionsManager : MonoBehaviour {
 
         List<Option> options = new List<Option>();
 
-        List<string> qs = questions.getQuestions();
-        List<string> askedQs = questions.getAskedQuestions();
-        List<string> talkedAbout = knowledge.getTalkedAbout();
+        List<string> qs = new List<string>(questions.getQuestions());
+        List<string> askedQs = new List<string>(questions.getAskedQuestions());
+        List<string> talkedAbout = new List<string>(knowledge.getTalkedAbout());
 
         if (actionNumber == 1) {
             string q = qs[Random.Range(0, qs.Count)];
             options.Add(new Option(q, null));
+        } else if (actionNumber == 2) {
+            string k = knowledge.findKnowledge();
+            string r = knowledge.generateTalkingPoint(k);
+
+            options.Add(new Option(r, k));
+            options.Add(new Option(askedQs[0], null));
         } else if (actionNumber < 8) {
-            if (Random.value < 0.5f) {
+            if (Random.value < 0.75f || knowledge.knowledgeCount() == 0) {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             } else {
@@ -51,8 +57,24 @@ public class OptionsManager : MonoBehaviour {
                 options.Add(new Option(r, k));
             }
 
-            if (talkedAbout.Count > 0) {
-                options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+            for (int i = 0; i < actionNumber - 1; ++i) {
+                if (Random.value < 0.5f) {
+                    if (talkedAbout.Count > 0) {
+                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        talkedAbout.RemoveAt(0);
+                    } else {
+                        options.Add(new Option(askedQs[0], null));
+                        askedQs.RemoveAt(0);
+                    }
+                } else {
+                    if (askedQs.Count > 0) {
+                        options.Add(new Option(askedQs[0], null));
+                        askedQs.RemoveAt(0);
+                    } else {
+                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        talkedAbout.RemoveAt(0);
+                    }
+                }
             }
         }
 

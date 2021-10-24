@@ -149,7 +149,7 @@ public class DialogueManager : MonoBehaviour {
             case '!':
                 return 1.0f;
             case '?':
-                return 1.0f;
+                return 0.75f;
             case '\n':
                 return 0.2f;
             default:

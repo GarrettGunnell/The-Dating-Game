@@ -29,7 +29,7 @@ public class Knowledge {
         "turtles", "art supplies", "Jack Nicholson", "Jodie Foster", "pasta", "ramen", "Mars Argo", "Gesaffelstein", "I Monster", "chemistry", "nursing",
         "Saturn Devouring His Son", "the rain", "I Go Back To May"};
         Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin", "be an artist", "be a private investigator", "be a crime lord",
-        "go to London", "learn an instrument", "learn to paint", "learn Japanese", "learn Chinese"};
+        "go to London", "learn an instrument", "learn to paint", "learn to cook", "learn Japanese", "learn Chinese"};
         Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
         "worked at Spirit Halloween", "met Ryan Gosling", "don't really drink", "have an honors diploma", "made a lot of friends", "won the science fair",
         "are from Michigan", "want to be famous", "interviewed at Dairy Queen", "aren't a sports person"};
@@ -63,6 +63,9 @@ public class Knowledge {
             point += $"You've been to {k}?";
         else if (Pets.Contains(k))
             point += $"You have {k}?";
+        else {
+            point += $"Uh oh stinky! Looks like there's a bug here. ({k})";
+        }
 
         return point;
     }
@@ -111,5 +114,9 @@ public class Knowledge {
 
     public List<string> getTalkedAbout() {
         return talkedAbout.ToList();
+    }
+
+    public int knowledgeCount() {
+        return knownKnowledge.Count();
     }
 }
