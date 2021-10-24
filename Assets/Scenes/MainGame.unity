@@ -1120,7 +1120,7 @@ MonoBehaviour:
   talkButton: {fileID: 1408177757}
   leaveButton: {fileID: 208145269}
   dateBox: {fileID: 1886632322}
-  time: {fileID: 796425392}
+  timeBox: {fileID: 796425392}
 --- !u!4 &507519749
 Transform:
   m_ObjectHideFlags: 0
