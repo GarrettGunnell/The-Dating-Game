@@ -33,9 +33,14 @@ public class ColorSchemer : MonoBehaviour {
             new Vector4(15, 10, 14, 255),
             new Vector4(240, 246, 240, 255)
         };
+
+        Vector4[] scheme5 = new Vector4[] {
+            new Vector4(38, 31, 96, 255),
+            new Vector4(189, 231, 193, 255)
+        };
         
 
-        scheme = scheme4;
+        scheme = scheme5;
 
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
