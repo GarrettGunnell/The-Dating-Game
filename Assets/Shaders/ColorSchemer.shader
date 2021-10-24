@@ -7,6 +7,7 @@
         #include "UnityCG.cginc"
 
         sampler2D _MainTex;
+        float4 col1, col2;
 
         struct VertexData {
             float4 vertex : POSITION;
@@ -40,8 +41,8 @@
             fixed4 fp(v2f i) : SV_Target {
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                fixed4 col1 = fixed4(18.0f / 255.0f, 18.0f / 255.0f, 22.0f / 255.0f, 1.0f);
-                fixed4 col2 = fixed4(232.0f / 255.0f, 230.0f / 255.0f, 225.0f / 255.0f, 1.0f);
+                col1 /= 255.0f;
+                col2 /= 255.0f;
 
                 col = lerp(col1, col2, col.r);
 
