@@ -7,12 +7,12 @@ public class Questions {
 
     private HashSet<string> allQuestions;
     private HashSet<string> askedQuestions;
+    private HashSet<string> badQuestions;
 
     public Questions() {
         askedQuestions = new HashSet<string>();
         allQuestions = new HashSet<string>();
 
-        allQuestions.Add("So, what's your name?");
         allQuestions.Add("What do you like doing with your free time?");
         allQuestions.Add("Watched any cool movies lately?");
         allQuestions.Add("Do you have any pets?");
@@ -55,6 +55,21 @@ public class Questions {
         allQuestions.Add("How often do you play sports?");
         allQuestions.Add("What's the most interesting piece of art you've seen?");
         allQuestions.Add("Do you like the rain?");
+
+        badQuestions.Add("So, what's your name?");
+        badQuestions.Add("Why are you still single?");
+        badQuestions.Add("Are you seeing anyone else?");
+        badQuestions.Add("Do you want to have kids?");
+        badQuestions.Add("Are you an alcoholic?");
+        badQuestions.Add("Why'd your last relationship end?");
+        badQuestions.Add("How much money do you make?");
+        badQuestions.Add("How do you feel about marriage?");
+        badQuestions.Add("How old are you?");
+        badQuestions.Add("How much do you weigh?");
+        badQuestions.Add("How tall are you?");
+        badQuestions.Add("So do you do this often?");
+        badQuestions.Add("Are you afraid of commitment?");
+        badQuestions.Add("Be honest, do you think I'm ugly?");
     }
 
     public void AddAskedQuestion(string q) {
@@ -76,5 +91,9 @@ public class Questions {
 
     public bool IsQuestion(string q) {
         return allQuestions.Contains(q) || askedQuestions.Contains(q);
+    }
+
+    public bool IsBadQuestion(string q) {
+        return badQuestions.Contains(q);
     }
 }
