@@ -67,21 +67,40 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private IEnumerator badEnd(string guySentence, string girlSentence, string endReason) {
+        yield return new WaitForSecondsRealtime(0.2f);
         guyDialogue.text = "";
+        audioSource.clip = guySound;
+        audioSource.Play();
         foreach (char letter in guySentence.ToCharArray()) {
             guyDialogue.text += letter;
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
             yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
+        audioSource.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
         girlDialogue.text = "";
         girlAnimator.SetBool("upset", true);
+        audioSource.clip = girlSound;
+        audioSource.Play();
         foreach (char letter in girlSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("upset", false);
+        audioSource.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
         stateManager.endGame(endReason);
     }
@@ -200,8 +219,17 @@ public class DialogueManager : MonoBehaviour {
         string yourSentence = "Alright, I think I'm going to leave.";
         string girlSentence = "Oh... okay.";
 
+        yield return new WaitForSecondsRealtime(0.2f);
         guyDialogue.text = "";
+        audioSource.clip = guySound;
+        audioSource.Play();
         foreach (char letter in yourSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
             guyDialogue.text += letter;
             yield return new WaitForSecondsRealtime(0.05f);
         }
@@ -210,12 +238,21 @@ public class DialogueManager : MonoBehaviour {
 
         girlDialogue.text = "";
         girlAnimator.SetBool("talking", true);
+            audioSource.clip = girlSound;
+        audioSource.Play();
         foreach (char letter in girlSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
             girlDialogue.text += letter;
             yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         girlAnimator.SetBool("talking", false);
+        audioSource.Stop();
         yield return new WaitForSecondsRealtime(2.0f);
         Application.Quit();
     }
