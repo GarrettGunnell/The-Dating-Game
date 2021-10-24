@@ -21,7 +21,7 @@ public class Knowledge {
 
         Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing", "soccer", "rock climbing"};
         Attributes = new HashSet<string> {"an indoors", "a night", "not a team", "a morning", "an outdoors", "a manipulative", "not a social media", "a dog",
-        "a team"};
+        "a team", "a self-defeating"};
         Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
         "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter", "cats", "your best friend",
         "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan", "Oyasumi Punpun",

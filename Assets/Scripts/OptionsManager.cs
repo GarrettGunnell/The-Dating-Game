@@ -53,7 +53,7 @@ public class OptionsManager : MonoBehaviour {
             options.Add(new Option(r, k));
             options.Add(new Option(askedQs[0], null));
         } else if (actionNumber < 8) {
-            if (Random.value < 0.75f || knowledge.knowledgeCount() == 0) {
+            if (Random.value < 0.8f || knowledge.knowledgeCount() == 0) {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             } else {
@@ -108,16 +108,18 @@ public class OptionsManager : MonoBehaviour {
                     string re = knowledge.generateTalkingPoint(k);
                     options.Add(new Option(re, k));
                 } else if (r < 0.5f) {
-                    if (talkedAbout.Count != 0)
+                    if (talkedAbout.Count > 0)
                         options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
                         talkedAbout.RemoveAt(0);
                 } else if (r < 0.75f) {
-                    if (askedQs.Count != 0)
+                    if (askedQs.Count > 0)
                         options.Add(new Option(askedQs[0], null));
                         askedQs.RemoveAt(0);
                 } else {
-                    options.Add(new Option(badQs[0], null));
-                    badQs.RemoveAt(0);
+                    if (badQs.Count > 0) {
+                        options.Add(new Option(badQs[0], null));
+                        badQs.RemoveAt(0);
+                    }
                 }
             }
 
