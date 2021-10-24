@@ -37,6 +37,10 @@ public class OptionsManager : MonoBehaviour {
         List<string> askedQs = new List<string>(questions.getAskedQuestions());
         List<string> talkedAbout = new List<string>(knowledge.getTalkedAbout());
 
+        qs = qs.OrderBy(x => Random.value).ToList();
+        askedQs = askedQs.OrderBy(x => Random.value).ToList();
+        talkedAbout = talkedAbout.OrderBy(x => Random.value).ToList();
+
         if (actionNumber == 1) {
             string q = qs[Random.Range(0, qs.Count)];
             options.Add(new Option(q, null));
@@ -76,6 +80,44 @@ public class OptionsManager : MonoBehaviour {
                     }
                 }
             }
+        } else {
+            //Correct Option
+            if (knowledge.knowledgeCount() == 0) {
+                string q = qs[Random.Range(0, qs.Count)];
+                options.Add(new Option(q, null));
+            } else {
+                if (Random.value < 0.5f) {
+                    string q = qs[Random.Range(0, qs.Count)];
+                    options.Add(new Option(q, null));
+                } else {
+                    string k = knowledge.findKnowledge();
+                    string r = knowledge.generateTalkingPoint(k);
+
+                    options.Add(new Option(r, k));
+                }
+            }
+
+            //Incorrect
+            while (options.Count < 8) {
+                float r = Random.value;
+
+                if (r < 0.25f) {
+                    string k = knowledge.findRandomKnowledge();
+                    string re = knowledge.generateTalkingPoint(k);
+                    options.Add(new Option(re, k));
+                } else if (r < 0.5f) {
+                    if (talkedAbout.Count != 0)
+                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        talkedAbout.RemoveAt(0);
+                } else if (r < 0.75f) {
+                    if (askedQs.Count != 0)
+                        options.Add(new Option(askedQs[0], null));
+                        askedQs.RemoveAt(0);
+                } else {
+                    options.Add(new Option("Bad Question", null));
+                }
+            }
+
         }
 
         options = options.OrderBy(x => Random.value).ToList();

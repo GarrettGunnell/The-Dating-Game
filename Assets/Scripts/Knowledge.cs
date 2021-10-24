@@ -27,7 +27,7 @@ public class Knowledge {
         "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan", "Oyasumi Punpun",
         "Artemis Fowl", "cosmopolitans", "tea", "water", "Inio Asano", "Nisioisin", "Hannibal", "Spongebob", "The Barrel", "Dancing Queen", "Disorder",
         "turtles", "art supplies", "Jack Nicholson", "Jodie Foster", "pasta", "ramen", "Mars Argo", "Gesaffelstein", "I Monster", "chemistry", "nursing",
-        "Saturn Devouring His Son", "the rain", "I Go Back To May"};
+        "Saturn Devouring His Son", "the rain", "I Go Back To May", "Instagram"};
         Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin", "be an artist", "be a private investigator", "be a crime lord",
         "go to London", "learn an instrument", "learn to paint", "learn to cook", "learn Japanese", "learn Chinese"};
         Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
@@ -78,24 +78,8 @@ public class Knowledge {
         return knownKnowledge.Contains(k);
     }
 
-    private List<string> findRandomKnowledge() {
-        HashSet<string> rk = new HashSet<string>();
-        List<string> allKnowledge = unknownKnowledge.ToList();
-
-        for (int i = 0; i < 10; ++i) {
-            rk.Add(allKnowledge[Random.Range(0, allKnowledge.Count)]);
-        }
-
-        string[] talkedAboutArray = talkedAbout.ToArray();
-        for (int i = 0; i < talkedAbout.Count; ++i) {
-            rk.Add(talkedAboutArray[Random.Range(0, talkedAbout.Count)]);
-        }
-
-        List<string> randomKnowledge = rk.ToList();
-
-        randomKnowledge = randomKnowledge.OrderBy(x => Random.value).ToList();
-
-        return randomKnowledge;
+    public string findRandomKnowledge() {
+        return unknownKnowledge.ElementAt(Random.Range(0, unknownKnowledge.Count));
     }
 
     public void gainKnowledge(string k) {
