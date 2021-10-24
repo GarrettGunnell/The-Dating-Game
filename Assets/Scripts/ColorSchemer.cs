@@ -79,7 +79,27 @@ public class ColorSchemer : MonoBehaviour {
             new Vector4(255, 174, 52, 255)
         };
 
-        scheme = scheme13;
+        Vector4[] scheme14 = new Vector4[] {
+            new Vector4(52, 56, 52, 255),
+            new Vector4(255, 204, 167, 255)
+        };
+
+        colorSchemes.Add(scheme1);
+        colorSchemes.Add(scheme2);
+        colorSchemes.Add(scheme3);
+        colorSchemes.Add(scheme4);
+        colorSchemes.Add(scheme5);
+        colorSchemes.Add(scheme6);
+        colorSchemes.Add(scheme7);
+        colorSchemes.Add(scheme8);
+        colorSchemes.Add(scheme9);
+        colorSchemes.Add(scheme10);
+        colorSchemes.Add(scheme11);
+        colorSchemes.Add(scheme12);
+        colorSchemes.Add(scheme13);
+        colorSchemes.Add(scheme14);
+
+        scheme = colorSchemes[Random.Range(0, colorSchemes.Count)];
 
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
