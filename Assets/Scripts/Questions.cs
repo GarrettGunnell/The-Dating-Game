@@ -96,4 +96,8 @@ public class Questions {
     public bool IsBadQuestion(string q) {
         return badQuestions.Contains(q);
     }
+
+    public List<string> getBadQuestions() {
+        return badQuestions.ToList();
+    }
 }

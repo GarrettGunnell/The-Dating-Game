@@ -36,10 +36,12 @@ public class OptionsManager : MonoBehaviour {
         List<string> qs = new List<string>(questions.getQuestions());
         List<string> askedQs = new List<string>(questions.getAskedQuestions());
         List<string> talkedAbout = new List<string>(knowledge.getTalkedAbout());
+        List<string> badQs = new List<string>(knowledge.getBadQuestions());
 
         qs = qs.OrderBy(x => Random.value).ToList();
         askedQs = askedQs.OrderBy(x => Random.value).ToList();
         talkedAbout = talkedAbout.OrderBy(x => Random.value).ToList();
+        badQs = badQs.OrderBy(x => Random.value).ToList();
 
         if (actionNumber == 1) {
             string q = qs[Random.Range(0, qs.Count)];
@@ -114,7 +116,8 @@ public class OptionsManager : MonoBehaviour {
                         options.Add(new Option(askedQs[0], null));
                         askedQs.RemoveAt(0);
                 } else {
-                    options.Add(new Option("Bad Question", null));
+                    options.Add(new Option(badQs[0], null));
+                    badQs.RemoveAt(0);
                 }
             }
 
