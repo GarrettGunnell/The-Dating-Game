@@ -12,6 +12,7 @@ public class Questions {
     public Questions() {
         askedQuestions = new HashSet<string>();
         allQuestions = new HashSet<string>();
+        badQuestions = new HashSet<string>();
 
         allQuestions.Add("What do you like doing with your free time?");
         allQuestions.Add("Watched any cool movies lately?");

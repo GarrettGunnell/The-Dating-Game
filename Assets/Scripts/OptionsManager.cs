@@ -36,7 +36,7 @@ public class OptionsManager : MonoBehaviour {
         List<string> qs = new List<string>(questions.getQuestions());
         List<string> askedQs = new List<string>(questions.getAskedQuestions());
         List<string> talkedAbout = new List<string>(knowledge.getTalkedAbout());
-        List<string> badQs = new List<string>(knowledge.getBadQuestions());
+        List<string> badQs = new List<string>(questions.getBadQuestions());
 
         qs = qs.OrderBy(x => Random.value).ToList();
         askedQs = askedQs.OrderBy(x => Random.value).ToList();
