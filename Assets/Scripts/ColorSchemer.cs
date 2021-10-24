@@ -15,11 +15,17 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemes = new List<Vector4[]>();
 
         Vector4[] scheme1 = new Vector4[] {
-            new Vector4(18, 18, 22, 255),
-            new Vector4(232, 230, 225, 255)
+            new Vector4(21, 22, 18, 255),
+            new Vector4(232, 225, 225, 255)
         };
+        
+        Vector4[] scheme2 = new Vector4[] {
+            new Vector4(62, 35, 44, 255),
+            new Vector4(237, 246, 214, 255)
+        };
+        
 
-        scheme = scheme1;
+        scheme = scheme2;
 
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
