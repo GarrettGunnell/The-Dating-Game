@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Date : MonoBehaviour {
 
@@ -27,5 +28,6 @@ public class Date : MonoBehaviour {
 
     void OnMouseDown() {
         audioSource.Play();
+        SceneManager.LoadScene("MainGame");
     }
 }
