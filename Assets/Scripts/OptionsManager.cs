@@ -141,12 +141,12 @@ public class OptionsManager : MonoBehaviour {
                 return;
             }
 
-            List<string> response = girl.GetQuestionResponse(sentence);
-
-            if (response[1] == null) {
-                dialogueManager.endGame(sentence, response[0], "Bad question");
+            if (questions.IsBadQuestion(sentence)) {
+                dialogueManager.endGame(sentence, "Why would you ask me that?", "Bad question");
                 return;
             }
+
+            List<string> response = girl.GetQuestionResponse(sentence);
 
             knowledge.gainKnowledge(response[1]);
             questions.AddAskedQuestion(sentence);

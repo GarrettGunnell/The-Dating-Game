@@ -20,9 +20,6 @@ public class Girl : MonoBehaviour {
     void Start() {
         questionResponses = new Hashtable();
         talkResponses = new Hashtable();
-
-        addQuestionResponse("So, what's your name?", "Did you really forget my name?", null);
-        addQuestionResponse("So, what's your name?", "Did you really just ask what my name is?", null);
         
         addQuestionResponse("What do you like doing with your free time?", "I love drawing, I just wish I was better at it.", "drawing");
         addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "YouTube");
