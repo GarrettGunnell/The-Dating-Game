@@ -9,7 +9,7 @@ public class ColorSchemer : MonoBehaviour {
     private Material colorSchemeMat;
 
     private List<Vector4[]> colorSchemes = null;
-    private int index = 0;
+    public static int schemeIndex = -1;
 
     void Start() {
         colorSchemes = new List<Vector4[]>();
@@ -141,7 +141,9 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemes.Add(scheme20);
         colorSchemes.Add(scheme21);
 
-        index = Random.Range(0, colorSchemes.Count);
+        if (schemeIndex == -1)
+            schemeIndex = Random.Range(0, colorSchemes.Count);
+
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
             colorSchemeMat.hideFlags = HideFlags.HideAndDontSave;
@@ -149,14 +151,14 @@ public class ColorSchemer : MonoBehaviour {
     }
 
     void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        colorSchemeMat.SetVector("col1", colorSchemes[index][0]);
-        colorSchemeMat.SetVector("col2", colorSchemes[index][1]);
+        colorSchemeMat.SetVector("col1", colorSchemes[schemeIndex][0]);
+        colorSchemeMat.SetVector("col2", colorSchemes[schemeIndex][1]);
         Graphics.Blit(source, destination, colorSchemeMat);
     }
 
     public void Refresh() {
-        index++;
-        if (index > colorSchemes.Count - 1)
-            index = 0;
+        schemeIndex++;
+        if (schemeIndex > colorSchemes.Count - 1)
+            schemeIndex = 0;
     }
 }
