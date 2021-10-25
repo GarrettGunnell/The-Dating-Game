@@ -23,21 +23,21 @@ public class Girl : MonoBehaviour {
         
         addQuestionResponse("What do you like doing with your free time?", "I love drawing, I just wish I was better at it.", "drawing");
         addQuestionResponse("What do you like doing with your free time?", "I spend a lot of time watching YouTube..", "YouTube");
-        addQuestionResponse("What do you like doing with your free time?", "I don't really do anything at all.", "doing nothing");
+        addQuestionResponse("What do you like doing with your free time?", "I don't really do anything at all.", "do nothing");
         
         addTalkResponse("drawing", "Being able to draw is a great creative outlet, I particularly enjoy drawing portraits. Perhaps I could draw you!");
         addTalkResponse("YouTube", "There's so much to learn on there. My favorite YouTuber is Acerola_t, you should check him out!");
-        addTalkResponse("doing nothing", "It's not very fun. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
+        addTalkResponse("do nothing", "It's not very fun. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
         
         addQuestionResponse("Watched any cool movies lately?", "My friend recommended me La La Land.", "La La Land");
         addQuestionResponse("Watched any cool movies lately?", "I just saw Whiplash.", "Whiplash");
         addQuestionResponse("Watched any cool movies lately?", "Yes! I recently watched The Green Knight.", "The Green Knight");
         addQuestionResponse("Watched any cool movies lately?", "I saw The Lighthouse a few days ago.", "The Lighthouse");
     
-        addTalkResponse("La La Land", "I think it's tragic how often we must choose between our careers and those we love.");
-        addTalkResponse("Whiplash", "Absolute perfection requires absolute sacrifice, wouldn't you agree? I quite enjoy the obsessed artist motif.");
-        addTalkResponse("The Green Knight", "The ending never fails to make me cry, to see Gawain take responsibility and acknowledge his fallibility is so powerful!");
-        addTalkResponse("The Lighthouse", "I love the promethean allegory, it's quite similar to the situation we're in right now.");
+        addTalkResponse("La La Land", "I did, I think it's tragic how often we must choose between our careers and those we love.");
+        addTalkResponse("Whiplash", "I did! Absolute perfection requires absolute sacrifice, wouldn't you agree? I quite enjoy the obsessed artist motif.");
+        addTalkResponse("The Green Knight", "I did, multiple times actually. The ending never fails to make me cry, to see Gawain take responsibility and acknowledge his fallibility is so powerful!");
+        addTalkResponse("The Lighthouse", "I did! I love the promethean allegory, it's quite similar to the situation we're in right now.");
     
         addQuestionResponse("Do you have any pets?", "I've got two dogs.", "two dogs");
         addQuestionResponse("Do you have any pets?", "I've got three dogs.", "three dogs");
@@ -154,11 +154,11 @@ public class Girl : MonoBehaviour {
         addTalkResponse("made a lot of friends", "More than I could ever ask for!");
         addTalkResponse("won the science fair", "My project involved making circuits with salt, it was pretty fun!");
 
-        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've always wanted to visit Japan.", "go to Japan");
-        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've been interested in London.", "go to London");
+        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've always wanted to visit Japan.", "Japan");
+        addQuestionResponse("Is there anywhere you'd really like to travel?", "I've been interested in London.", "London");
 
-        addTalkResponse("go to Japan", "I would love to see the cherry blossoms.");
-        addTalkResponse("go to London", "I don't really know why, seems like a cool place, I guess?");
+        addTalkResponse("Japan", "I would love to see the cherry blossoms.");
+        addTalkResponse("London", "I don't really know why. Seems like a cool place, I guess?");
 
         addQuestionResponse("What do you do for work?", "I'm a server at this restaurant.", "are a server");
 
