@@ -9,7 +9,7 @@ public class ColorSchemer : MonoBehaviour {
     private Material colorSchemeMat;
 
     private List<Vector4[]> colorSchemes = null;
-    private Vector4[] scheme = null;
+    private int index = 0;
 
     void Start() {
         colorSchemes = new List<Vector4[]>();
@@ -84,6 +84,26 @@ public class ColorSchemer : MonoBehaviour {
             new Vector4(255, 204, 167, 255)
         };
 
+        Vector4[] scheme15 = new Vector4[] {
+            new Vector4(10, 5, 50, 255),
+            new Vector4(251, 182, 209, 255)
+        };
+
+        Vector4[] scheme16 = new Vector4[] {
+            new Vector4(65, 137, 193, 255),
+            new Vector4(251, 182, 209, 255)
+        };
+
+        Vector4[] scheme17 = new Vector4[] {
+            new Vector4(36, 54, 104, 255),
+            new Vector4(112, 117, 113, 255)
+        };
+
+        Vector4[] scheme18 = new Vector4[] {
+            new Vector4(109, 61, 15, 255),
+            new Vector4(152, 178, 18, 255)
+        };
+
         colorSchemes.Add(scheme1);
         colorSchemes.Add(scheme2);
         colorSchemes.Add(scheme3);
@@ -98,9 +118,12 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemes.Add(scheme12);
         colorSchemes.Add(scheme13);
         colorSchemes.Add(scheme14);
+        colorSchemes.Add(scheme15);
+        colorSchemes.Add(scheme16);
+        colorSchemes.Add(scheme17);
+        colorSchemes.Add(scheme18);
 
-        scheme = colorSchemes[Random.Range(0, colorSchemes.Count)];
-
+        index = Random.Range(0, colorSchemes.Count);
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
             colorSchemeMat.hideFlags = HideFlags.HideAndDontSave;
@@ -108,14 +131,14 @@ public class ColorSchemer : MonoBehaviour {
     }
 
     void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        colorSchemeMat.SetVector("col1", scheme[0]);
-        colorSchemeMat.SetVector("col2", scheme[1]);
+        colorSchemeMat.SetVector("col1", colorSchemes[index][0]);
+        colorSchemeMat.SetVector("col2", colorSchemes[index][1]);
         Graphics.Blit(source, destination, colorSchemeMat);
     }
 
     public void Refresh() {
-        Vector4[] prevScheme = new Vector4[] {scheme[0], scheme[1]};
-        while (scheme[0] == prevScheme[0])
-            scheme = colorSchemes[Random.Range(0, colorSchemes.Count)];
+        index++;
+        if (index > colorSchemes.Count - 1)
+            index = 0;
     }
 }
