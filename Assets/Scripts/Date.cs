@@ -28,6 +28,11 @@ public class Date : MonoBehaviour {
 
     void OnMouseDown() {
         audioSource.Play();
+        StartCoroutine(play());
+    }
+
+    IEnumerator play() {
+        yield return new WaitForSecondsRealtime(0.5f);
         SceneManager.LoadScene("MainGame");
     }
 }

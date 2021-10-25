@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour {
 
@@ -60,5 +61,6 @@ public class StateManager : MonoBehaviour {
     public void endGame(string reason) {
         Debug.Log("Game Over!");
         Debug.Log("Reason: " + reason);
+        SceneManager.LoadScene("GameOver");
     }
 }
