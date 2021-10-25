@@ -112,4 +112,10 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemeMat.SetVector("col2", scheme[1]);
         Graphics.Blit(source, destination, colorSchemeMat);
     }
+
+    public void Refresh() {
+        Vector4[] prevScheme = new Vector4[] {scheme[0], scheme[1]};
+        while (scheme[0] == prevScheme[0])
+            scheme = colorSchemes[Random.Range(0, colorSchemes.Count)];
+    }
 }
