@@ -16,6 +16,8 @@ public class Knowledge {
     private HashSet<string> knownKnowledge;
     private HashSet<string> talkedAbout;
 
+    private Hashtable incorrectKnowledge;
+
     public Knowledge() {
         talkedAbout = new HashSet<string>();
 
@@ -44,6 +46,111 @@ public class Knowledge {
         unknownKnowledge.UnionWith(Pets);
 
         knownKnowledge = new HashSet<string>();
+
+        incorrectKnowledge = new Hashtable();
+
+        incorrectKnowledge.Add("drawing", "painting");
+        incorrectKnowledge.Add("YouTube", "Vimeo");
+        incorrectKnowledge.Add("doing nothing", "doing everything");
+        incorrectKnowledge.Add("La La Land", "La La Planet");
+        incorrectKnowledge.Add("The Green Knight", "The Red Knight");
+        incorrectKnowledge.Add("The Lighthouse", "The Witch");
+        incorrectKnowledge.Add("two dogs", "a dog");
+        incorrectKnowledge.Add("three dogs", "three cats");
+        incorrectKnowledge.Add("a cat", "two cats");
+        incorrectKnowledge.Add("Italy", "Spain");
+        incorrectKnowledge.Add("Canada", "Portugal");
+        incorrectKnowledge.Add("France", "Germany");
+        incorrectKnowledge.Add("a night", "a morning");
+        incorrectKnowledge.Add("a morning", "a night");
+        incorrectKnowledge.Add("Pale Fire", "Gale Fire");
+        incorrectKnowledge.Add("Oyasumi Punpun", "Ohayo Punpun");
+        incorrectKnowledge.Add("Artemis Fowl", "Artemis Foul");
+        incorrectKnowledge.Add("an indoors", "an outdoors");
+        incorrectKnowledge.Add("an outdoors", "an indoors");
+        incorrectKnowledge.Add("rock climbing", "hiking");
+        incorrectKnowledge.Add("met Hungrybox", "met Mango");
+        incorrectKnowledge.Add("met Ryan Gosling", "met Robert Pattinson");
+        incorrectKnowledge.Add("vodka and water", "vodka and soda");
+        incorrectKnowledge.Add("cosmopolitans", "pina coladas");
+        incorrectKnowledge.Add("don't really drink", "drink a lot");
+        incorrectKnowledge.Add("Baja Blast", "Baja Flash");
+        incorrectKnowledge.Add("tea", "water");
+        incorrectKnowledge.Add("water", "tea");
+        incorrectKnowledge.Add("the naked chicken chalupa", "nacho fries");
+        incorrectKnowledge.Add("be a therapist", "be a psychologist");
+        incorrectKnowledge.Add("be an artist", "be a painter");
+        incorrectKnowledge.Add("be a private investigator", "be a police officer");
+        incorrectKnowledge.Add("be a crime lord", "be a mob boss");
+        incorrectKnowledge.Add("Clive Barker", "Clive Woofer");
+        incorrectKnowledge.Add("Inio Asano", "Tatsuki Fujimoto");
+        incorrectKnowledge.Add("Nisioisin", "nisioisiN");
+        incorrectKnowledge.Add("Breaking Bad", "Better Call Saul");
+        incorrectKnowledge.Add("Hannibal", "Cannibal");
+        incorrectKnowledge.Add("Spongebob", "Avatar");
+        incorrectKnowledge.Add("Blue Honey", "Blue Valentine");
+        incorrectKnowledge.Add("The Barrel", "Blue Honey");
+        incorrectKnowledge.Add("Disorder", "The Barrel");
+        incorrectKnowledge.Add("Dancing Queen", "Mamma Mia");
+        incorrectKnowledge.Add("Alvvays", "Always");
+        incorrectKnowledge.Add("ran a marathon", "ran a 100 meter dash");
+        incorrectKnowledge.Add("have an honors diploma", "have a degree");
+        incorrectKnowledge.Add("made a lot of friends", "made a few friends");
+        incorrectKnowledge.Add("won the science fair", "won the spelling bee");
+        incorrectKnowledge.Add("go to Japan", "go to China");
+        incorrectKnowledge.Add("go to London", "go to Paris");
+        incorrectKnowledge.Add("are a server", "are a bartender");
+        incorrectKnowledge.Add("care too much", "don't care that much");
+        incorrectKnowledge.Add("a manipulative", "a cunning");
+        incorrectKnowledge.Add("a self-defeating", "a self-admiring");
+        incorrectKnowledge.Add("The Dating Game", "Macroscopic");
+        incorrectKnowledge.Add("Twitter", "Facebook");
+        incorrectKnowledge.Add("Instagram", "Twitter");
+        incorrectKnowledge.Add("not a social media", "a social media");
+        incorrectKnowledge.Add("are from Seattle", "are from Portland");
+        incorrectKnowledge.Add("are from Michigan", "are from New Hampshire");
+        incorrectKnowledge.Add("cats", "dogs");
+        incorrectKnowledge.Add("a dog", "a cat");
+        incorrectKnowledge.Add("a fear of bees", "a fear of beetles");
+        incorrectKnowledge.Add("a fear of abandonment", "a fear of loneliness");
+        incorrectKnowledge.Add("Weed", "Hash");
+        incorrectKnowledge.Add("Post", "Toast");
+        incorrectKnowledge.Add("not a team", "a team");
+        incorrectKnowledge.Add("a team", "not a team");
+        incorrectKnowledge.Add("learn to paint", "learn to draw");
+        incorrectKnowledge.Add("learn an instrument", "learn to compose");
+        incorrectKnowledge.Add("learn to cook", "learn to write");
+        incorrectKnowledge.Add("your best friend", "your worst friend");
+        incorrectKnowledge.Add("sushi", "noodles");
+        incorrectKnowledge.Add("art supplies", "textbooks");
+        incorrectKnowledge.Add("don't want to be famous", "want to be famous");
+        incorrectKnowledge.Add("want to be famous", "don't want to be famous");
+        incorrectKnowledge.Add("Ryan Gosling", "Robert Pattinson");
+        incorrectKnowledge.Add("Jack Nicholson", "Ryan Gosling");
+        incorrectKnowledge.Add("Jodie Foster", "Anthony Hopkins");
+        incorrectKnowledge.Add("fried rice", "white rice");
+        incorrectKnowledge.Add("pasta", "donda");
+        incorrectKnowledge.Add("ramen", "noodles");
+        incorrectKnowledge.Add("Ludwig", "Ludwin");
+        incorrectKnowledge.Add("TV On The Radio", "Radio On The TV");
+        incorrectKnowledge.Add("Mars Argo", "Saturns Argo");
+        incorrectKnowledge.Add("I Monster", "He, Monster");
+        incorrectKnowledge.Add("Gesaffelstein", "Frankenstein");
+        incorrectKnowledge.Add("worked at Spirit Halloween", "worked at Phantom Halloween");
+        incorrectKnowledge.Add("interviewed at Diary Queen", "interviewed at Burger King");
+        incorrectKnowledge.Add("history", "english");
+        incorrectKnowledge.Add("chemistry", "biology");
+        incorrectKnowledge.Add("nursing", "medicine");
+        incorrectKnowledge.Add("learn latin", "learn italian");
+        incorrectKnowledge.Add("learn Japanese", "learn Korean");
+        incorrectKnowledge.Add("learn Chinese", "learn Japanese");
+        incorrectKnowledge.Add("Bonedog", "Bonecat");
+        incorrectKnowledge.Add("I Go Back To May", "I Go Back To June");
+        incorrectKnowledge.Add("aren't a sports person", "are a sports person");
+        incorrectKnowledge.Add("soccer", "football");
+        incorrectKnowledge.Add("Ivan the Terrible and His Son Ivan", "Ivan the Terrible and His Dad Ivan");
+        incorrectKnowledge.Add("Saturn Devouring His Son", "Jupiter Devouring His Son");
+        incorrectKnowledge.Add("the rain", "the sun");
     }
 
     public string generateTalkingPoint(string k) {

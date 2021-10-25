@@ -142,7 +142,6 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemes.Add(scheme21);
 
         index = Random.Range(0, colorSchemes.Count);
-        index = 20;
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
             colorSchemeMat.hideFlags = HideFlags.HideAndDontSave;
