@@ -90,18 +90,33 @@ public class ColorSchemer : MonoBehaviour {
         };
 
         Vector4[] scheme16 = new Vector4[] {
-            new Vector4(65, 137, 193, 255),
+            new Vector4(15, 87, 143, 255),
             new Vector4(251, 182, 209, 255)
         };
 
         Vector4[] scheme17 = new Vector4[] {
             new Vector4(36, 54, 104, 255),
-            new Vector4(112, 117, 113, 255)
+            new Vector4(122, 127, 123, 255)
         };
 
         Vector4[] scheme18 = new Vector4[] {
             new Vector4(109, 61, 15, 255),
             new Vector4(152, 178, 18, 255)
+        };
+
+        Vector4[] scheme19 = new Vector4[] {
+            new Vector4(79, 42, 70, 255),
+            new Vector4(152, 178, 118, 255)
+        };
+        
+        Vector4[] scheme20 = new Vector4[] {
+            new Vector4(131, 45, 56, 255),
+            new Vector4(229, 214, 209, 255)
+        };
+
+        Vector4[] scheme21 = new Vector4[] {
+            new Vector4(90, 56, 51, 255),
+            new Vector4(221, 141, 130, 255)
         };
 
         colorSchemes.Add(scheme1);
@@ -122,8 +137,12 @@ public class ColorSchemer : MonoBehaviour {
         colorSchemes.Add(scheme16);
         colorSchemes.Add(scheme17);
         colorSchemes.Add(scheme18);
+        colorSchemes.Add(scheme19);
+        colorSchemes.Add(scheme20);
+        colorSchemes.Add(scheme21);
 
         index = Random.Range(0, colorSchemes.Count);
+        index = 20;
         if (colorSchemeMat == null) {
             colorSchemeMat = new Material(colorSchemeShader);
             colorSchemeMat.hideFlags = HideFlags.HideAndDontSave;
