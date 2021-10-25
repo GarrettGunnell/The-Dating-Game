@@ -105,9 +105,9 @@ public class OptionsManager : MonoBehaviour {
                 float r = Random.value;
 
                 if (r < 0.25f) {
-                    string k = knowledge.findRandomKnowledge();
-                    string re = knowledge.generateTalkingPoint(k);
-                    options.Add(new Option(re, k));
+                    string incorrectPoint = knowledge.generateIncorrectTalkingPoint();
+                    if (incorrectPoint != null)
+                        options.Add(new Option(incorrectPoint, null));
                 } else if (r < 0.5f) {
                     if (talkedAbout.Count > 0)
                         options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));

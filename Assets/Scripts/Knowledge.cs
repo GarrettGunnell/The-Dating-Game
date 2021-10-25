@@ -273,7 +273,14 @@ public class Knowledge {
         }
 
         string k = findKnowledge();
+        if (!incorrectKnowledge.ContainsKey(k))
+            return "Uh oh! Stinky! There's a bug here! (This answer is wrong)";
+        
         string incorrectK = (string)incorrectKnowledge[k];
+        
+        if (!knowledgeResponse.ContainsKey(k))
+            return "Uh oh! Stinky! There's a bug here! (This answer is wrong)";
+
         string correctResponse = (string)knowledgeResponse[k];
 
         return correctResponse.Replace(k, incorrectK);
@@ -285,15 +292,6 @@ public class Knowledge {
 
     public bool isKnown(string k) {
         return knownKnowledge.Contains(k);
-    }
-
-    public string findRandomKnowledge() {
-        if (knownKnowledge.Count == 0) {
-            return null;
-        }
-
-        string k = findKnowledge();
-        return (string)incorrectKnowledge[k];
     }
 
     public void gainKnowledge(string k) {
