@@ -267,6 +267,18 @@ public class Knowledge {
         return (string)knowledgeResponse[k];
     }
 
+    public string generateIncorrectTalkingPoint() {
+        if (knownKnowledge.Count == 0) {
+            return null;
+        }
+
+        string k = findKnowledge();
+        string incorrectK = (string)incorrectKnowledge[k];
+        string correctResponse = (string)knowledgeResponse[k];
+
+        return correctResponse.Replace(k, incorrectK);
+    }
+
     public string findKnowledge() {
         return knownKnowledge.ElementAt(Random.Range(0, knownKnowledge.Count));
     }
@@ -276,7 +288,12 @@ public class Knowledge {
     }
 
     public string findRandomKnowledge() {
-        return unknownKnowledge.ElementAt(Random.Range(0, unknownKnowledge.Count));
+        if (knownKnowledge.Count == 0) {
+            return null;
+        }
+
+        string k = findKnowledge();
+        return (string)incorrectKnowledge[k];
     }
 
     public void gainKnowledge(string k) {

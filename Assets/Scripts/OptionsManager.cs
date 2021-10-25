@@ -49,9 +49,10 @@ public class OptionsManager : MonoBehaviour {
         } else if (actionNumber == 2) {
             string k = knowledge.findKnowledge();
             string r = knowledge.generateTalkingPoint(k);
+            string ik = knowledge.generateIncorrectTalkingPoint();
 
             options.Add(new Option(r, k));
-            options.Add(new Option(askedQs[0], null));
+            options.Add(new Option(ik, null));
         } else if (actionNumber < 8) {
             if (Random.value < 0.8f || knowledge.knowledgeCount() == 0) {
                 string q = qs[Random.Range(0, qs.Count)];
