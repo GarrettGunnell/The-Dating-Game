@@ -105,7 +105,7 @@ public class Knowledge {
         incorrectKnowledge.Add("care too much", "don't care that much");
         incorrectKnowledge.Add("a manipulative", "a cunning");
         incorrectKnowledge.Add("a self-defeating", "a self-admiring");
-        incorrectKnowledge.Add("The Dating Game", "Macroscopic");
+        incorrectKnowledge.Add("The Dating Game", "The Hating Game");
         incorrectKnowledge.Add("Twitter", "Facebook");
         incorrectKnowledge.Add("Instagram", "Twitter");
         incorrectKnowledge.Add("not a social media", "a social media");
@@ -274,12 +274,12 @@ public class Knowledge {
 
         string k = findKnowledge();
         if (!incorrectKnowledge.ContainsKey(k))
-            return "Uh oh! Stinky! There's a bug here! (This answer is wrong)";
+            return $"Uh oh! Stinky! There's a bug here! (This answer is wrong) (Debug: {k})";
         
         string incorrectK = (string)incorrectKnowledge[k];
         
         if (!knowledgeResponse.ContainsKey(k))
-            return "Uh oh! Stinky! There's a bug here! (This answer is wrong)";
+            return $"Uh oh! Stinky! There's a bug here! (This answer is wrong) (Debug: {incorrectK})";
 
         string correctResponse = (string)knowledgeResponse[k];
 

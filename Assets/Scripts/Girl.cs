@@ -272,7 +272,7 @@ public class Girl : MonoBehaviour {
         addTalkResponse("TV On The Radio", "My favorite song of theirs is Staring At The Sun.");
         addTalkResponse("Mars Argo", "It's such a shame she hasn't made any music, her songs are so great.");
         addTalkResponse("I Monster", "You should listen to their song Lust for a Vampyr, it bangs.");
-        addTalkResponse("Gesaffelstein", "I've listen to his song Opr more times than I can count.");
+        addTalkResponse("Gesaffelstein", "I've listened to his song Opr more times than I can count.");
 
         addQuestionResponse("What's the worst job you've had?", "I got hired at a Spirit Halloween a few days before halloween weekend.", "worked at Spirit Halloween");
         addQuestionResponse("What's the worst job you've had?", "I didn't actually work the job, but the worst interview I had was at a Dairy Queen.", "interviewed at Dairy Queen");

@@ -105,9 +105,19 @@ public class OptionsManager : MonoBehaviour {
                 float r = Random.value;
 
                 if (r < 0.25f) {
+                    bool add = true;
                     string incorrectPoint = knowledge.generateIncorrectTalkingPoint();
-                    if (incorrectPoint != null)
-                        options.Add(new Option(incorrectPoint, null));
+                    
+                    if (incorrectPoint != null) {
+                        foreach (Option op in options) {
+                            if (op.option == incorrectPoint) {
+                                add = false;
+                                break;
+                            }
+                        }
+                        if (add)
+                            options.Add(new Option(incorrectPoint, null));
+                    }
                 } else if (r < 0.5f) {
                     if (talkedAbout.Count > 0)
                         options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
@@ -126,7 +136,7 @@ public class OptionsManager : MonoBehaviour {
 
         }
 
-        options = options.OrderBy(x => Random.value).ToList();
+        //options = options.OrderBy(x => Random.value).ToList();
 
         currentOptions = options;
         dialogueManager.populateOptions(options);
