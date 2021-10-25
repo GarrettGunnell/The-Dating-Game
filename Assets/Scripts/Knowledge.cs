@@ -22,30 +22,6 @@ public class Knowledge {
     public Knowledge() {
         talkedAbout = new HashSet<string>();
 
-        Hobbies = new HashSet<string> {"drawing", "YouTube", "doing nothing", "soccer", "rock climbing"};
-        Attributes = new HashSet<string> {"an indoors", "a night", "not a team", "a morning", "an outdoors", "a manipulative", "not a social media", "a dog",
-        "a team", "a self-defeating"};
-        Media = new HashSet<string> {"La La Land", "Whiplash", "The Green Knight", "The Lighthouse", "Pale Fire", "vodka and water", "Baja Blast", 
-        "the naked chicken chalupa", "Clive Barker", "Breaking Bad", "Blue Honey", "Alvvays", "The Dating Game", "Twitter", "cats", "your best friend",
-        "sushi", "Ryan Gosling", "fried rice", "Ludwig", "TV On The Radio", "history", "Bonedog", "Ivan the Terrible and His Son Ivan", "Oyasumi Punpun",
-        "Artemis Fowl", "cosmopolitans", "tea", "water", "Inio Asano", "Nisioisin", "Hannibal", "Spongebob", "The Barrel", "Dancing Queen", "Disorder",
-        "turtles", "art supplies", "Jack Nicholson", "Jodie Foster", "pasta", "ramen", "Mars Argo", "Gesaffelstein", "I Monster", "chemistry", "nursing",
-        "Saturn Devouring His Son", "the rain", "I Go Back To May", "Instagram"};
-        Future = new HashSet<string> {"go to Japan", "be a therapist", "learn an instrument", "learn latin", "be an artist", "be a private investigator", "be a crime lord",
-        "go to London", "learn an instrument", "learn to paint", "learn to cook", "learn Japanese", "learn Chinese"};
-        Accomplishments = new HashSet<string> {"ran a marathon", "met Hungrybox", "are a server", "care too much", "are from Seattle", "don't want to be famous",
-        "worked at Spirit Halloween", "met Ryan Gosling", "don't really drink", "have an honors diploma", "made a lot of friends", "won the science fair",
-        "are from Michigan", "want to be famous", "interviewed at Dairy Queen", "aren't a sports person"};
-        Vacations = new HashSet<string> {"Italy", "Weed", "Canada", "France", "Post"};
-        Pets = new HashSet<string> {"two dogs", "three dogs", "a cat", "a fear of bees", "a fear of abandonment"};
-
-        unknownKnowledge = new HashSet<string>(Attributes);
-        unknownKnowledge.UnionWith(Media);
-        unknownKnowledge.UnionWith(Future);
-        unknownKnowledge.UnionWith(Accomplishments);
-        unknownKnowledge.UnionWith(Vacations);
-        unknownKnowledge.UnionWith(Pets);
-
         knownKnowledge = new HashSet<string>();
 
         incorrectKnowledge = new Hashtable();
@@ -128,8 +104,8 @@ public class Knowledge {
         incorrectKnowledge.Add("art supplies", "textbooks");
         incorrectKnowledge.Add("don't want to be famous", "want to be famous");
         incorrectKnowledge.Add("want to be famous", "don't want to be famous");
-        incorrectKnowledge.Add("Ryan Gosling", "Robert Pattinson");
-        incorrectKnowledge.Add("Jack Nicholson", "Ryan Gosling");
+        incorrectKnowledge.Add("Ryan Gosling", "Ryan Reynolds");
+        incorrectKnowledge.Add("Jack Nicholson", "Jack Crawford");
         incorrectKnowledge.Add("Jodie Foster", "Anthony Hopkins");
         incorrectKnowledge.Add("fried rice", "white rice");
         incorrectKnowledge.Add("pasta", "donda");

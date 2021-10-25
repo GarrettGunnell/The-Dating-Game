@@ -27,7 +27,7 @@ public class Girl : MonoBehaviour {
         
         addTalkResponse("drawing", "Being able to draw is a great creative outlet, I particularly enjoy drawing portraits. Perhaps I could draw you!");
         addTalkResponse("YouTube", "There's so much to learn on there. My favorite YouTuber is Acerola_t, you should check him out!");
-        addTalkResponse("do nothing", "It's not very fun. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.. with or without me.");
+        addTalkResponse("do nothing", "It's not very fun. I just haven't found anything I particularly enjoy, so I tend to spend a lot of my time staring at the wall in a depressive state as time marches forward.");
         
         addQuestionResponse("Watched any cool movies lately?", "My friend recommended me La La Land.", "La La Land");
         addQuestionResponse("Watched any cool movies lately?", "I just saw Whiplash.", "Whiplash");
