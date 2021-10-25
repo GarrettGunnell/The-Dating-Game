@@ -4,15 +4,6 @@ using System.Linq;
 using UnityEngine;
 
 public class Knowledge {
-    private HashSet<string> Hobbies;
-    private HashSet<string> Attributes;
-    private HashSet<string> Media;
-    private HashSet<string> Future;
-    private HashSet<string> Accomplishments;
-    private HashSet<string> Vacations;
-    private HashSet<string> Pets;
-
-    private HashSet<string> unknownKnowledge;
     private HashSet<string> knownKnowledge;
     private HashSet<string> talkedAbout;
 
