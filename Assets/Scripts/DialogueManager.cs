@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour {
         girlAnimator.SetBool("upset", false);
         audioSource.Stop();
         yield return new WaitForSecondsRealtime(1.0f);
-        stateManager.endGame(endReason);
+        stateManager.endGame(false, endReason);
     }
 
     public void populateOptions(List<OptionsManager.Option> options) {
@@ -258,4 +258,55 @@ public class DialogueManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void Win() {
+        uiManager.disableTalk();
+        uiManager.disableLeave();
+        StartCoroutine(WinConvo());
+    }
+
+    private IEnumerator WinConvo() {
+        string girlSentence = "Well, the restaurant is about to close. We should probably get going..";
+
+        girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
+            audioSource.clip = girlSound;
+        audioSource.Play();
+        foreach (char letter in girlSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(waitTime(letter));
+        }
+
+        girlAnimator.SetBool("talking", false);
+        audioSource.Stop();
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        string girlSentence2 = "I had a great time! We should do this again.";
+
+        girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
+            audioSource.clip = girlSound;
+        audioSource.Play();
+        foreach (char letter in girlSentence2.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(waitTime(letter));
+        }
+
+        girlAnimator.SetBool("talking", false);
+        audioSource.Stop();
+
+        yield return new WaitForSecondsRealtime(1.0f);
+        stateManager.endGame(true, "Victory!");
+    }
 }

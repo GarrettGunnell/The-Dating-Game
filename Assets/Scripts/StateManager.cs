@@ -22,8 +22,9 @@ public class StateManager : MonoBehaviour {
     }
 
     void Update() {
-        if (actionNumber == 36) {
-            Debug.Log("You Won!");
+        if (actionNumber == 36 && idle) {
+            idle = false;
+            optionsManager.Win();
         } else {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -62,9 +63,7 @@ public class StateManager : MonoBehaviour {
         idle = state;
     }
 
-    public void endGame(string reason) {
-        Debug.Log("Game Over!");
-        Debug.Log("Reason: " + reason);
-        SceneManager.LoadScene("GameOver");
+    public void endGame(bool victory, string reason) {
+        SceneManager.LoadScene(victory ? "Victory" : "GameOver");
     }
 }

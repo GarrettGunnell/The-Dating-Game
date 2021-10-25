@@ -187,4 +187,8 @@ public class OptionsManager : MonoBehaviour {
     public void Leave() {
         dialogueManager.Leave();
     }
+
+    public void Win() {
+        dialogueManager.Win();
+    }
 }
