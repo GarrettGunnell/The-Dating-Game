@@ -14,7 +14,7 @@ public class StateManager : MonoBehaviour {
     private AudioSource audioSource;
 
     void Start() {
-        idle = true;
+        idle = false;
         talking = false;
         
         audioSource = GetComponent<AudioSource>();

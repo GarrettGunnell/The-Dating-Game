@@ -51,6 +51,8 @@ public class DialogueManager : MonoBehaviour {
 
         audioSource = GetComponent<AudioSource>();
         audioSource.Stop();
+
+        StartCoroutine(introDialogue());
     }
 
     void Update() {
@@ -308,5 +310,58 @@ public class DialogueManager : MonoBehaviour {
 
         yield return new WaitForSecondsRealtime(1.0f);
         stateManager.endGame(true, "Victory!");
+    }
+
+    private IEnumerator introDialogue() {
+        yield return new WaitForSecondsRealtime(1.0f);
+        string girlSentence = "Hey! Thanks for coming.";
+
+        girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
+            audioSource.clip = girlSound;
+        audioSource.Play();
+        foreach (char letter in girlSentence.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(waitTime(letter));
+        }
+
+        girlAnimator.SetBool("talking", false);
+        audioSource.Stop();
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        string girlSentence2 = "This place closes at 08:00, so we can talk until then.";
+
+        girlDialogue.text = "";
+        girlAnimator.SetBool("talking", true);
+            audioSource.clip = girlSound;
+        audioSource.Play();
+        foreach (char letter in girlSentence2.ToCharArray()) {
+            if (letter == ',' || letter == '.' || letter == '\n' || letter == '!' || letter == '?') {
+                audioSource.Play();
+                audioSource.Stop();
+            } else {
+                audioSource.Play();
+            }
+            girlDialogue.text += letter;
+            yield return new WaitForSecondsRealtime(waitTime(letter));
+        }
+
+        girlAnimator.SetBool("talking", false);
+        audioSource.Stop();
+
+        yield return new WaitForSecondsRealtime(1.0f);
+        stateManager.setIdle(true);
+        guyDialogue.text = "";
+        girlDialogue.text = "";
+        EmptyOptions();
+        uiManager.enableTalk();
+        uiManager.enableLeave();
+        uiManager.disableBoxes(8);
     }
 }

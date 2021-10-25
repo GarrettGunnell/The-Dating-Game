@@ -5,11 +5,12 @@ using UnityEngine;
 public class Talk : MonoBehaviour {
     public Texture2D defaultTex, hoverTex, disabledTex;
 
-    private bool isEnabled = true;
+    private bool isEnabled = false;
     private Material material;
 
     void Start() {
         material = GetComponent<Renderer>().material;
+        material.SetTexture("_MainTex", disabledTex);
     }
 
     void Update() {
