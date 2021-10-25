@@ -118,14 +118,16 @@ public class OptionsManager : MonoBehaviour {
                         if (add)
                             options.Add(new Option(incorrectPoint, null));
                     }
-                } else if (r < 0.5f) {
-                    if (talkedAbout.Count > 0)
+                } else if (r < 0.6f) {
+                    if (talkedAbout.Count > 0) {
                         options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
                         talkedAbout.RemoveAt(0);
-                } else if (r < 0.75f) {
-                    if (askedQs.Count > 0)
+                    }
+                } else if (r < 0.85f) {
+                    if (askedQs.Count > 0) {
                         options.Add(new Option(askedQs[0], null));
                         askedQs.RemoveAt(0);
+                    }
                 } else {
                     if (badQs.Count > 0) {
                         options.Add(new Option(badQs[0], null));
