@@ -263,7 +263,6 @@ public class Knowledge {
 
     public void gainKnowledge(string k) {
         knownKnowledge.Add(k);
-        unknownKnowledge.Remove(k);
     }
 
     public void addTalkedAbout(string k) {
