@@ -30,7 +30,6 @@ public class OptionsManager : MonoBehaviour {
     }
 
     public void Talk(int actionNumber) {
-
         List<Option> options = new List<Option>();
 
         List<string> qs = new List<string>(questions.getQuestions());
@@ -54,7 +53,7 @@ public class OptionsManager : MonoBehaviour {
             options.Add(new Option(r, k));
             options.Add(new Option(ik, null));
         } else if (actionNumber < 8) {
-            if (Random.value < 0.8f || knowledge.knowledgeCount() == 0) {
+            if (Random.value < 0.85f || knowledge.knowledgeCount() == 0) {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             } else {
@@ -89,7 +88,11 @@ public class OptionsManager : MonoBehaviour {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             } else {
-                if (Random.value < 0.5f) {
+                float correctChance = Mathf.Lerp(1.0f, 0.6f, (actionNumber % 12) / 12.0f);
+                if (actionNumber > 24)
+                    correctChance = 0.2f;
+
+                if (Random.value < correctChance) {
                     string q = qs[Random.Range(0, qs.Count)];
                     options.Add(new Option(q, null));
                 } else {
@@ -138,7 +141,7 @@ public class OptionsManager : MonoBehaviour {
 
         }
 
-        //options = options.OrderBy(x => Random.value).ToList();
+        options = options.OrderBy(x => Random.value).ToList();
 
         currentOptions = options;
         dialogueManager.populateOptions(options);

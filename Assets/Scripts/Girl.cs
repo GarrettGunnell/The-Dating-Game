@@ -229,7 +229,7 @@ public class Girl : MonoBehaviour {
 
         addTalkResponse("your best friend", "They were very funny and creative. I respected their artistic vision and wished for their success, but unfortunately they passed away earlier this year..");
 
-        addQuestionResponse("What's needlessly expensive but worth the money?", "I think sushi is really expensive, but I still eat it all time time.", "sushi");
+        addQuestionResponse("What's needlessly expensive but worth the money?", "I think sushi is really expensive, but I still eat it all the time.", "sushi");
         addQuestionResponse("What's needlessly expensive but worth the money?", "Art supplies are so expensive..", "art supplies");
 
         addTalkResponse("sushi", "My favorite fish is salmon, I could eat salmon sashimi all day!");

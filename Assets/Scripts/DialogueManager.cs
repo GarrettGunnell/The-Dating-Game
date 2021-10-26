@@ -174,11 +174,11 @@ public class DialogueManager : MonoBehaviour {
                 audioSource.Play();
             }
             guyDialogue.text += letter;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(waitTime(letter));
         }
 
         audioSource.Stop();
-        yield return new WaitForSecondsRealtime(1.0f);
+        yield return new WaitForSecondsRealtime(0.5f);
 
         girlDialogue.text = "";
         girlAnimator.SetBool("talking", true);

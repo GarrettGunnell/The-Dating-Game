@@ -91,7 +91,7 @@ public class Knowledge {
         incorrectKnowledge.Add("learn an instrument", "learn to compose");
         incorrectKnowledge.Add("learn to cook", "learn to write");
         incorrectKnowledge.Add("your best friend", "your worst friend");
-        incorrectKnowledge.Add("sushi", "noodles");
+        incorrectKnowledge.Add("sushi", "sashimi");
         incorrectKnowledge.Add("art supplies", "textbooks");
         incorrectKnowledge.Add("don't want to be famous", "want to be famous");
         incorrectKnowledge.Add("want to be famous", "don't want to be famous");
