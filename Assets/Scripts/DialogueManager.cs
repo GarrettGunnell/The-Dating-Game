@@ -144,7 +144,6 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private float waitTime(char letter) {
-        return 0.0f;
         switch(letter) {
             case '.':
                 return 0.75f;
