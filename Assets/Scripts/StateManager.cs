@@ -41,6 +41,7 @@ public class StateManager : MonoBehaviour {
                             optionsManager.Talk(actionNumber);
                         } else if (hit.transform.name == "Leave") {
                             audioSource.Play();
+                            setIdle(false);
                             optionsManager.Leave();
                         }
                     } else if (collided && talking) {
