@@ -19,7 +19,7 @@ public class Knowledge {
 
         incorrectKnowledge.Add("drawing", "painting");
         incorrectKnowledge.Add("YouTube", "Vimeo");
-        incorrectKnowledge.Add("do", "do everything");
+        incorrectKnowledge.Add("do nothing", "do everything");
         incorrectKnowledge.Add("La La Land", "La La Planet");
         incorrectKnowledge.Add("The Green Knight", "The Red Knight");
         incorrectKnowledge.Add("Whiplash", "Whiptrash");
