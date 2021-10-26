@@ -8,6 +8,8 @@ by Garrett Gunnell (Acerola_t)
 
 A 1-bit memory puzzle game created in 10 days for Ludwig Jam. Designed, programmed, art drawn, and sounds made, all by me!
 
+Play it [here](https://acerola-t.itch.io/the-dating-game)!
+
 # Screenshots
 
 ![screenshot 1](/screenshots/screen1.png)
