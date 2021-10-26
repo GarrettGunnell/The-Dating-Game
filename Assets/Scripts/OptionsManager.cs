@@ -88,10 +88,11 @@ public class OptionsManager : MonoBehaviour {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             } else {
-                float correctChance = Mathf.Lerp(1.0f, 0.6f, (actionNumber % 12) / 12.0f);
+                float correctChance = Mathf.Lerp(1.0f, 0.6f, (actionNumber - 8) / 16.0f);
                 if (actionNumber > 24)
                     correctChance = 0.2f;
 
+                Debug.Log(correctChance);
                 if (Random.value < correctChance) {
                     string q = qs[Random.Range(0, qs.Count)];
                     options.Add(new Option(q, null));

@@ -39,7 +39,7 @@ public class Knowledge {
         incorrectKnowledge.Add("an outdoors", "an indoors");
         incorrectKnowledge.Add("rock climbing", "hiking");
         incorrectKnowledge.Add("met Hungrybox", "met Mango");
-        incorrectKnowledge.Add("met Ryan Gosling", "met Robert Pattinson");
+        incorrectKnowledge.Add("met Ryan Gosling", "met Ryan Reynolds");
         incorrectKnowledge.Add("vodka and water", "vodka and soda");
         incorrectKnowledge.Add("cosmopolitans", "pina coladas");
         incorrectKnowledge.Add("don't really drink", "drink a lot");
