@@ -22,7 +22,7 @@ public class StateManager : MonoBehaviour {
     }
 
     void Update() {
-        if (actionNumber == 36 && idle && !talking) {
+        if (actionNumber >= 36 && idle && !talking) {
             idle = false;
             optionsManager.Win();
         } else {

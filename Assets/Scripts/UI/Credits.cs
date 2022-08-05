@@ -5,13 +5,10 @@ using UnityEngine.Video;
 
 public class Credits : MonoBehaviour {
 
-    public VideoPlayer vidPlayer;
-    public ColorSchemer colorSchemer;
+    [SerializeField] private VideoPlayer vidPlayer;
+    [SerializeField] private ColorSchemer colorSchemer;
 
-    void Start() {
-    }
-
-    void Update() {
+    private void Update() {
         if (vidPlayer.frame > 0 && vidPlayer.isPlaying == false) {
             colorSchemer.enabled = true;
             gameObject.SetActive(false);

@@ -1,24 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+//TODO move to same as other button structure
 public class Refresh : MonoBehaviour {
 
     public AudioSource audioSource;
     public ColorSchemer colorSchemer;
-
-    private Material material;
 
     void Start() {
         audioSource.Stop();
     }
 
     void OnMouseOver() {
-        UI.changeCursor(true);
+        UI.ChangeCursor(true);
     }
 
     void OnMouseExit() {
-        UI.changeCursor(false);
+        UI.ChangeCursor(false);
     }
 
     void OnMouseDown() {

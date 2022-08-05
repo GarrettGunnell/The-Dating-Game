@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Portrait : MonoBehaviour {
 
-    float x, y;
-    Vector3 pos;
+    private float x, y;
+    private Vector3 pos;
     
-    void Start() {
+    private void Start() {
         pos = transform.position;
     }
 
-    void Update() {
+    private void Update() {
         if ( 0 < Input.mousePosition.x && Input.mousePosition.x < Screen.width && 0 < Input.mousePosition.y && Input.mousePosition.y < Screen.height) {
             float targetX = Input.mousePosition.x - Screen.width * 0.75f;
             float dx = targetX - x;
@@ -23,7 +21,7 @@ public class Portrait : MonoBehaviour {
             Vector3 direction = new Vector3(x, y, 0.0f);
             direction.y *= 1 / 500.0f * 0.2f;
             direction.x *= 1 / 500.0f * 0.7f;
-            this.transform.position = pos - direction;
+            transform.position = pos - direction;
         }
     }
 }

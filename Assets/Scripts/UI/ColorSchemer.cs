@@ -4,12 +4,12 @@ using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 public class ColorSchemer : MonoBehaviour {
-    public Shader colorSchemeShader;
+    [SerializeField] private Shader colorSchemeShader;
 
     private Material colorSchemeMat;
 
     private List<Vector4[]> colorSchemes = null;
-    public static int schemeIndex = -1;
+    private static int schemeIndex = -1;
 
     void Start() {
         colorSchemes = new List<Vector4[]>();
@@ -157,8 +157,6 @@ public class ColorSchemer : MonoBehaviour {
     }
 
     public void Refresh() {
-        schemeIndex++;
-        if (schemeIndex > colorSchemes.Count - 1)
-            schemeIndex = 0;
+        schemeIndex = (schemeIndex + 1) % colorSchemes.Count;
     }
 }

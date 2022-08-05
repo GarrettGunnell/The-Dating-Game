@@ -145,7 +145,7 @@ public class OptionsManager : MonoBehaviour {
         options = options.OrderBy(x => Random.value).ToList();
 
         currentOptions = options;
-        dialogueManager.populateOptions(options);
+        dialogueManager.PopulateOptions(options);
     }
 
     public void Choose(int n) {
@@ -156,12 +156,12 @@ public class OptionsManager : MonoBehaviour {
             string sentence = choice.option;
 
             if (questions.IsQuestionAsked(sentence)) {
-                dialogueManager.endGame(sentence, "You already asked me that...", "Duplicate question");
+                dialogueManager.EndGame(sentence, "You already asked me that...", "Duplicate question");
                 return;
             }
 
             if (questions.IsBadQuestion(sentence)) {
-                dialogueManager.endGame(sentence, "Why would you ask me that?", "Bad question");
+                dialogueManager.EndGame(sentence, "Why would you ask me that?", "Bad question");
                 return;
             }
 
@@ -182,9 +182,9 @@ public class OptionsManager : MonoBehaviour {
                 dialogueManager.Converse(sentence, response);
             } else {
                 if (knowledge.hasBeenTalkedAbout(k)) {
-                    dialogueManager.endGame(sentence, "We already talked about that...", "Talked about the same thing twice.");
+                    dialogueManager.EndGame(sentence, "We already talked about that...", "Talked about the same thing twice.");
                 } else {
-                    dialogueManager.endGame(sentence, "When did I say that?", "She never said that bro");
+                    dialogueManager.EndGame(sentence, "When did I say that?", "She never said that bro");
                 }
             }
         }
