@@ -1580,6 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorSchemeShader: {fileID: 4800000, guid: 9e427278c424260478eac9474b69a7f0, type: 3}
+  colorSchemes: {fileID: 11400000, guid: 6fb195deb09a1450c80a90f2f3d235c4, type: 2}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
