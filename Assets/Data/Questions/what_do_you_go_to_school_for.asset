@@ -18,14 +18,20 @@ MonoBehaviour:
     knowledge:
       correct: history
       incorrectKnowledge: english
-      talkReponse: You are going to school for history?
+      talkReponse: There's so many great stories from the past, fiction is great
+        and all but nothing beats real experiences.
+      question: You are going to school for history?
   - sentence: I'm currently studying chemistry, I enjoy it.
     knowledge:
       correct: chemistry
       incorrectKnowledge: biology
-      talkReponse: You are going to school for chemistry?
+      talkReponse: The math is tough, but I love how everything is equal in reactions,
+        nothing is being created from nothing. It's all a conversion.
+      question: You are going to school for chemistry?
   - sentence: I'm trying to become a nurse.
     knowledge:
       correct: nursing
       incorrectKnowledge: medicine
-      talkReponse: You are going to school for nursing?
+      talkReponse: I don't really like anything about it, but it's what all my friends
+        are doing.. and my parents seem to like it.
+      question: You are going to school for nursing?

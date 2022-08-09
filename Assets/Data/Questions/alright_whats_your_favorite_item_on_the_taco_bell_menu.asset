@@ -18,4 +18,6 @@ MonoBehaviour:
     knowledge:
       correct: the naked chicken chalupa
       incorrectKnowledge: nacho fries
-      talkReponse: You like the naked chicken chalupa?
+      talkReponse: It really changed the game in terms of fried chicken.. but you
+        have to try it yourself to really understand its depth.
+      question: You like the naked chicken chalupa?

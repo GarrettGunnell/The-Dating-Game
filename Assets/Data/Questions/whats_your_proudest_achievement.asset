@@ -18,19 +18,24 @@ MonoBehaviour:
     knowledge:
       correct: ran a marathon
       incorrectKnowledge: ran a 100 meter dash
-      talkReponse: You ran a marathon?
+      talkReponse: Yeah, I run a lot in my free time for fun and exercise.
+      question: You ran a marathon?
   - sentence: I have an honors diploma.
     knowledge:
       correct: have an honors diploma
       incorrectKnowledge: have a degree
-      talkReponse: You have an honors diploma?
+      talkReponse: I worked very hard for it back in high school, turns out to not
+        be very useful other than bragging about it in situations like this though!
+      question: You have an honors diploma?
   - sentence: I've made a lot of friends.
     knowledge:
       correct: made a lot of friends
       incorrectKnowledge: made a few friends
-      talkReponse: You made a lot of friends?
+      talkReponse: More than I could ever ask for!
+      question: You made a lot of friends?
   - sentence: I won the science fair in the sixth grade.
     knowledge:
       correct: won the science fair
       incorrectKnowledge: won the spelling bee
-      talkReponse: You won the science fair?
+      talkReponse: My project involved making circuits with salt, it was pretty fun!
+      question: You won the science fair?

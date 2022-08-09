@@ -19,19 +19,31 @@ MonoBehaviour:
     knowledge:
       correct: Blue Honey
       incorrectKnowledge: Blue Valentine
-      talkReponse: Your favorite song is Blue Honey?
+      talkReponse: It isn't really the song, rather, I spent a very important moment
+        with someone while listening to it.
+      question: Your favorite song is Blue Honey?
   - sentence: I really like The Barrel by Aldous Harding.
     knowledge:
       correct: The Barrel
       incorrectKnowledge: Blue Honey
-      talkReponse: Your favorite song is The Barrel?
+      talkReponse: The barrel, the barrel, the barrel, the barrel, the barrel, the
+        barrel, the barrel, the barrel
+      question: Your favorite song is The Barrel?
   - sentence: I really like Disorder by Freak Slug.
     knowledge:
       correct: Disorder
       incorrectKnowledge: The Barrel
-      talkReponse: Your favorite song is Disorder?
+      talkReponse: It's a cover of the Joy Division song, but I feel like this version
+        is an overall improvement.
+      question: Your favorite song is Disorder?
   - sentence: Is there any song that can compete with Dancing Queen by ABBA?
     knowledge:
       correct: Dancing Queen
       incorrectKnowledge: Mamma Mia
-      talkReponse: Dancing Queen is your favorite song?
+      talkReponse: 'You can dance
+
+        you can jive
+
+        having the time
+        of your life.'
+      question: Dancing Queen is your favorite song?

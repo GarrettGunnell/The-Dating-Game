@@ -20,6 +20,7 @@ public class GoodQuestion:QuestionData
         [SerializeField] public string correct;
         [SerializeField] public string incorrectKnowledge;
         [SerializeField] public string talkReponse;
+        [SerializeField] public string question;
 
         public string TalkResponse => talkReponse;
         public string Correct => correct;

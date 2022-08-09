@@ -18,14 +18,19 @@ MonoBehaviour:
     knowledge:
       correct: Italy
       incorrectKnowledge: Spain
-      talkReponse: You went to Italy?
+      talkReponse: It was a fun trip but this one weird guy approached me asking
+        if I knew where he could find 'Italian Plan B'. I didn't know what to say...
+      question: You went to Italy?
   - sentence: I've been to Canada!
     knowledge:
       correct: Canada
       incorrectKnowledge: Portugal
-      talkReponse: You went to Canada?
+      talkReponse: I visited Stanley Park, it's apparently a rain forest which is
+        interesting.
+      question: You went to Canada?
   - sentence: I've been to France!
     knowledge:
       correct: France
       incorrectKnowledge: Germany
-      talkReponse: You went to France?
+      talkReponse: I got to see the Notre-Dame! The pictures don't do it justice.
+      question: You went to France?

@@ -18,14 +18,19 @@ MonoBehaviour:
     knowledge:
       correct: an indoors
       incorrectKnowledge: an outdoors
-      talkReponse: You are an indoors person?
+      talkReponse: As embarrassing as it is, I used to be a little afraid of going
+        outside.
+      question: You are an indoors person?
   - sentence: Yes, I spend a lot of my time outside.
     knowledge:
       correct: an outdoors
       incorrectKnowledge: an indoors
-      talkReponse: You are an outdoors person?
+      talkReponse: I go on hikes, walks, bike rides, everything really!
+      question: You are an outdoors person?
   - sentence: I go rock climbing all the time.
     knowledge:
       correct: rock climbing
       incorrectKnowledge: hiking
-      talkReponse: You like going rock climbing?
+      talkReponse: There's all sorts of climbs from beginner to advanced! You should
+        come with me some time.
+      question: You like going rock climbing?

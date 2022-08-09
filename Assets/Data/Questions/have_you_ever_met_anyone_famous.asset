@@ -18,9 +18,11 @@ MonoBehaviour:
     knowledge:
       correct: met Hungrybox
       incorrectKnowledge: met Mango
-      talkReponse: You met Hungrybox?
+      talkReponse: Yeah, he was kind of a real asshole about it though.
+      question: You met Hungrybox?
   - sentence: I met Ryan Gosling at a grocery store in Los Angeles.
     knowledge:
       correct: met Ryan Gosling
       incorrectKnowledge: met Ryan Reynolds
-      talkReponse: You met Ryan Gosling?
+      talkReponse: Yeah, he was kind of a real asshole about it though.
+      question: You met Ryan Gosling?

@@ -18,14 +18,17 @@ MonoBehaviour:
     knowledge:
       correct: Baja Blast
       incorrectKnowledge: Baja Flash
-      talkReponse: Your favorite beverage is Baja Blast?
+      talkReponse: What isn't there to like about it?
+      question: Your favorite beverage is Baja Blast?
   - sentence: I love tea!
     knowledge:
       correct: tea
       incorrectKnowledge: water
-      talkReponse: Your favorite beverage is tea?
+      talkReponse: I love all kinds of tea, my favorite is green tea.
+      question: Your favorite beverage is tea?
   - sentence: I just like water.
     knowledge:
       correct: water
       incorrectKnowledge: tea
-      talkReponse: Your favorite beverage is water?
+      talkReponse: It's not amazing or anything, it's just water..
+      question: Your favorite beverage is water?

@@ -18,9 +18,12 @@ MonoBehaviour:
     knowledge:
       correct: Ivan the Terrible and His Son Ivan
       incorrectKnowledge: Ivan the Terrible and His Dad Ivan
-      talkReponse: Your favorite painting is Ivan the Terrible and His Son Ivan?
+      talkReponse: Our bouts of anger often have permanent, irreversible consequences.
+      question: Your favorite painting is Ivan the Terrible and His Son Ivan?
   - sentence: Have you seen 'Saturn Devouring His Son'? It's certainly something.
     knowledge:
       correct: Saturn Devouring His Son
       incorrectKnowledge: Jupiter Devouring His Son
-      talkReponse: Your favorite painting is Saturn Devouring His Son?
+      talkReponse: The painting evokes an interesting response.. it's horror in the
+        most horrible sense.
+      question: Your favorite painting is Saturn Devouring His Son?

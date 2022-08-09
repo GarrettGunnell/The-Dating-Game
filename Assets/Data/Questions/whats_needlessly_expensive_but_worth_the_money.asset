@@ -18,9 +18,12 @@ MonoBehaviour:
     knowledge:
       correct: sushi
       incorrectKnowledge: sashimi
-      talkReponse: sushi is expensive?
+      talkReponse: My favorite fish is salmon, I could eat salmon sashimi all day!
+      question: sushi is expensive?
   - sentence: Art supplies are so expensive..
     knowledge:
       correct: art supplies
       incorrectKnowledge: textbooks
-      talkReponse: art supplies are expensive?
+      talkReponse: I like collecting sketchbooks, although I never really fill them
+        out.
+      question: art supplies are expensive?

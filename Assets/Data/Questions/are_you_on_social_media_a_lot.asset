@@ -18,14 +18,18 @@ MonoBehaviour:
     knowledge:
       correct: Twitter
       incorrectKnowledge: Facebook
-      talkReponse: You spend a lot of time on Twitter?
+      talkReponse: Twitter ruins my day constantly, I should stop using it... but
+        I can't.
+      question: You spend a lot of time on Twitter?
   - sentence: I'm a little obsessed with posting pictures I take on Instagram..
     knowledge:
       correct: Instagram
       incorrectKnowledge: Twitter
-      talkReponse: You spend a lot of time on Instagram?
+      talkReponse: There's a lot of talented people on there, it's a bit overwhelming.
+      question: You spend a lot of time on Instagram?
   - sentence: No, I tend to stay away from all of that.
     knowledge:
       correct: not a social media
       incorrectKnowledge: a social media
-      talkReponse: You are not a social media person?
+      talkReponse: I deleted all my social media accounts a few years ago!
+      question: You are not a social media person?

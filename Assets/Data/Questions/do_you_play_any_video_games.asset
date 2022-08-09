@@ -19,4 +19,6 @@ MonoBehaviour:
     knowledge:
       correct: The Dating Game
       incorrectKnowledge: The Hating Game
-      talkReponse: You play The Dating Game?
+      talkReponse: I like how it's a new experience each playthrough, it's endless
+        entertainment.
+      question: You play The Dating Game?

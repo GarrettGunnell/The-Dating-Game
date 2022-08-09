@@ -18,14 +18,19 @@ MonoBehaviour:
     knowledge:
       correct: Ryan Gosling
       incorrectKnowledge: Ryan Reynolds
-      talkReponse: Your favorite actor is Ryan Gosling?
+      talkReponse: I've seen all of his movies.. my favorite is probably Drive!
+      question: Your favorite actor is Ryan Gosling?
   - sentence: I'm a huge fan of Jack Nicholson.
     knowledge:
       correct: Jack Nicholson
       incorrectKnowledge: Jack Crawford
-      talkReponse: Your favorite actor is Jack Nicholson?
+      talkReponse: My favorite movie of his is Chinatown, but who doesn't love The
+        Shining?
+      question: Your favorite actor is Jack Nicholson?
   - sentence: I think Jodie Foster is a huge inspiration.
     knowledge:
       correct: Jodie Foster
       incorrectKnowledge: Anthony Hopkins
-      talkReponse: Your favorite actor is Jodie Foster?
+      talkReponse: Her performance alongside Anthony Hopkins in The Silence of the
+        Lambs is one for the ages!
+      question: Your favorite actor is Jodie Foster?

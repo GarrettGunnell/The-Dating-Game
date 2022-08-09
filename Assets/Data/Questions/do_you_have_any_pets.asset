@@ -18,14 +18,17 @@ MonoBehaviour:
     knowledge:
       correct: two dogs
       incorrectKnowledge: a dog
-      talkReponse: You have two dogs?
+      talkReponse: Their names are Sigma and Phi, they're both corgis!
+      question: You have two dogs?
   - sentence: I've got three dogs.
     knowledge:
       correct: three dogs
       incorrectKnowledge: three cats
-      talkReponse: You have three dogs?
+      talkReponse: Yes, I have a doberman, a chocolate lab, and a beagle!
+      question: You have three dogs?
   - sentence: I've got a cat.
     knowledge:
       correct: a cat
       incorrectKnowledge: two cats
-      talkReponse: You have a cat?
+      talkReponse: His name is Oliver, he doesn't like people very much.
+      question: You have a cat?

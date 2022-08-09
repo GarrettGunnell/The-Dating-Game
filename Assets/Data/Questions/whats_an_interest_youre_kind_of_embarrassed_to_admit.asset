@@ -18,4 +18,6 @@ MonoBehaviour:
     knowledge:
       correct: Ludwig
       incorrectKnowledge: Ludwin
-      talkReponse: You watch Ludwig on Twitch?
+      talkReponse: I watch nearly every stream! I redeemed the twitter follow reward
+        but he scammed me..
+      question: You watch Ludwig on Twitch?

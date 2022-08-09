@@ -18,19 +18,27 @@ MonoBehaviour:
     knowledge:
       correct: be a therapist
       incorrectKnowledge: be a psychologist
-      talkReponse: You want to be a therapist?
+      talkReponse: My friends constantly dump their problems on me, so why not do
+        it for a living?
+      question: You want to be a therapist?
   - sentence: I always wanted to be an artist.
     knowledge:
       correct: be an artist
       incorrectKnowledge: be a painter
-      talkReponse: You want to be an artist?
+      talkReponse: At this point in my life, I feel it's too late to become a great
+        artist. That's why it's a dream!
+      question: You want to be an artist?
   - sentence: I always wanted to be a private investigator.
     knowledge:
       correct: be a private investigator
       incorrectKnowledge: be a police officer
-      talkReponse: You want to be a private investigator?
+      talkReponse: Yeah, you know.. follow people around, investigate potential affairs,
+        solve a dastardly murder.. it's all so exciting!
+      question: You want to be a private investigator?
   - sentence: I've always secretly wanted to be a crime lord.
     knowledge:
       correct: be a crime lord
       incorrectKnowledge: be a mob boss
-      talkReponse: You want to be a crime lord?
+      talkReponse: Following the rules is boring sometimes, it must be so freeing
+        and empowering to do whatever you want.
+      question: You want to be a crime lord?

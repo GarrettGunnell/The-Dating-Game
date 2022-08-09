@@ -18,4 +18,6 @@ MonoBehaviour:
     knowledge:
       correct: are a server
       incorrectKnowledge: are a bartender
-      talkReponse: You are a server here?
+      talkReponse: Yes, all my coworkers are watching us right now. You've also been
+        on dates with other girls that work here as well, haven't you?
+      question: You are a server here?

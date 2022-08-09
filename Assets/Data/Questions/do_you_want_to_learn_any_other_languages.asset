@@ -18,15 +18,21 @@ MonoBehaviour:
     knowledge:
       correct: learn latin
       incorrectKnowledge: learn italian
-      talkReponse: You want to learn latin?
+      talkReponse: It's pretty nerdy but I think it'd be fun to randomly recite phrases
+        in latin to my friends.
+      question: You want to learn latin?
   - sentence: It's a little embarrassing, but I think learning Japanese would be
       cool.
     knowledge:
       correct: learn Japanese
       incorrectKnowledge: learn Korean
-      talkReponse: You want to learn Japanese?
+      talkReponse: When I visit Japan I don't want to be seen as a dumb foreigner,
+        I think the overall experience would be much better if I knew the language.
+      question: You want to learn Japanese?
   - sentence: Chinese seems like a good idea to learn.
     knowledge:
       correct: learn Chinese
       incorrectKnowledge: learn Japanese
-      talkReponse: You want to learn Chinese?
+      talkReponse: I have a lot of American-Chinese friends, so I bet they'd appreciate
+        me trying to learn the language. Or not, who knows.
+      question: You want to learn Chinese?

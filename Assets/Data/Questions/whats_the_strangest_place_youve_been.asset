@@ -18,9 +18,11 @@ MonoBehaviour:
     knowledge:
       correct: Weed
       incorrectKnowledge: Hash
-      talkReponse: You've been to Weed?
+      talkReponse: Yes, it's funny once.
+      question: You've been to Weed?
   - sentence: There's a place in Oregon called Post, it's literally just a post office.
     knowledge:
       correct: Post
       incorrectKnowledge: Toast
-      talkReponse: You've been to Post?
+      talkReponse: I drove through it on a trip, it was rather underwhelming.
+      question: You've been to Post?

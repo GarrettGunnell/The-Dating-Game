@@ -18,14 +18,19 @@ MonoBehaviour:
     knowledge:
       correct: Clive Barker
       incorrectKnowledge: Clive Woofer
-      talkReponse: Your favorite author is Clive Barker?
+      talkReponse: Well, I mean, he's an incredibly influential horror writer. But
+        I myself love his Abarat series, you should read it!
+      question: Your favorite author is Clive Barker?
   - sentence: Inio Asano, without a doubt.
     knowledge:
       correct: Inio Asano
       incorrectKnowledge: Tatsuki Fujimoto
-      talkReponse: Your favorite author is Inio Asano?
+      talkReponse: Everyone of his works is masterful.. Oyasumi Punpun, Solanin,
+        A Girl On The Shore, the list goes on. I strongly recommend his stuff!
+      question: Your favorite author is Inio Asano?
   - sentence: Ummmm... Nisioisin!
     knowledge:
       correct: Nisioisin
       incorrectKnowledge: nisioisiN
-      talkReponse: Your favorite author is Nisioisin?
+      talkReponse: He wrote Katanagatari, which I really recommend.
+      question: Your favorite author is Nisioisin?

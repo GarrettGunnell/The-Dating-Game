@@ -18,9 +18,13 @@ MonoBehaviour:
     knowledge:
       correct: not a team
       incorrectKnowledge: a team
-      talkReponse: You are not a team person?
+      talkReponse: It's difficult to trust others to do their part of the work. It
+        stresses me out!
+      question: You are not a team person?
   - sentence: Yes, I like seeing what those around me can come up with.
     knowledge:
       correct: a team
       incorrectKnowledge: not a team
-      talkReponse: You are a team person?
+      talkReponse: We can't do everything ourselves, there's just simply not enough
+        time!
+      question: You are a team person?

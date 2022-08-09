@@ -18,14 +18,18 @@ MonoBehaviour:
     knowledge:
       correct: cats
       incorrectKnowledge: dogs
-      talkReponse: Your favorite animal is cats?
+      talkReponse: While I was growing up my family was allergic to cats, I couldn't
+        wait to move out and get one myself.
+      question: Your favorite animal is cats?
   - sentence: I think turtles are neat.
     knowledge:
       correct: turtles
       incorrectKnowledge: penguins
-      talkReponse: Your favorite animal is turtles?
+      talkReponse: Turtles are much faster than people think, did you know that?
+      question: Your favorite animal is turtles?
   - sentence: I like to think of myself as a dog person.
     knowledge:
       correct: a dog
       incorrectKnowledge: a cat
-      talkReponse: You're a dog person?
+      talkReponse: I've always liked dogs, I'd love to have a samoyed someday!
+      question: You're a dog person?

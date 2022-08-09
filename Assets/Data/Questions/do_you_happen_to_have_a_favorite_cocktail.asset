@@ -18,14 +18,18 @@ MonoBehaviour:
     knowledge:
       correct: vodka and water
       incorrectKnowledge: vodka and soda
-      talkReponse: Your favorite drink is vodka and water?
+      talkReponse: Well, you see, it hydrates you at the same time as getting you
+        drunk. It's just efficient. Also, I might be an alcoholic.
+      question: Your favorite drink is vodka and water?
   - sentence: I would never pass up a cosmopolitan.
     knowledge:
       correct: cosmopolitans
       incorrectKnowledge: pina coladas
-      talkReponse: You like cosmopolitans?
+      talkReponse: The cranberry juice and lime really hides the gross alcohol taste.
+      question: You like cosmopolitans?
   - sentence: I don't really drink
     knowledge:
       correct: don't really drink
       incorrectKnowledge: drink a lot
-      talkReponse: You don't really drink?
+      talkReponse: Both of my parents are alcoholics.. I didn't want to be like that.
+      question: You don't really drink?

@@ -18,9 +18,12 @@ MonoBehaviour:
     knowledge:
       correct: a fear of bees
       incorrectKnowledge: a fear of beetles
-      talkReponse: You have a fear of bees?
+      talkReponse: It used to be so bad that I couldn't go outside! I'm a little
+        bit better now though.
+      question: You have a fear of bees?
   - sentence: Abandonment.
     knowledge:
       correct: a fear of abandonment
       incorrectKnowledge: a fear of loneliness
-      talkReponse: You have a fear of abandonment?
+      talkReponse: I'd rather not talk about it..
+      question: You have a fear of abandonment?

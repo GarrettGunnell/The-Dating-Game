@@ -9,16 +9,17 @@ public class GirlEditor:Editor
 {
     private Questions q = new Questions();
     private Knowledge k = new Knowledge();
+    private Girl g = null;
     public override void OnInspectorGUI()
     {
         if (GUILayout.Button("Create Questions Data"))
         {
-            var girl = (Girl)target;
+            g = (Girl)target;
 
             List<GoodQuestion> goodQuestions = new List<GoodQuestion>();//girl.questionResponses.Select(q=> CreateGoodQuestion(q, (List<Girl.QuestionResponse>)girl.questionResponses[q])).ToList();
-            foreach (string question in girl.questionResponses.Keys)
+            foreach (string question in g.questionResponses.Keys)
             {
-                goodQuestions.Add(CreateGoodQuestion(question, (List<Girl.QuestionResponse>)girl.questionResponses[question]));
+                goodQuestions.Add(CreateGoodQuestion(question, (List<Girl.QuestionResponse>)g.questionResponses[question]));
             }
         }
         DrawDefaultInspector();
@@ -36,7 +37,8 @@ public class GirlEditor:Editor
                 {
                     correct = c.knowledge,
                     incorrectKnowledge = (string)k.incorrectKnowledge[c.knowledge],
-                    talkReponse = (string)k.knowledgeResponse[c.knowledge]
+                    talkReponse = (string)g.talkResponses[c.knowledge],
+                    question = (string)k.knowledgeResponse[c.knowledge],
                 }
             }).ToArray();
         // path has to start at "Assets"

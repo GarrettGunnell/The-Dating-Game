@@ -18,9 +18,17 @@ MonoBehaviour:
     knowledge:
       correct: Bonedog
       incorrectKnowledge: Bonecat
-      talkReponse: Your favorite poem is Bonedog?
+      talkReponse: 'You carry your weather with you,
+
+        the big blue whale,
+
+        a
+        skeletal darkness.'
+      question: Your favorite poem is Bonedog?
   - sentence: My favorite is 'I Go Back To May' by Sharon Olds.
     knowledge:
       correct: I Go Back To May
       incorrectKnowledge: I Go Back To June
-      talkReponse: Your favorite poem is I Go Back To May?
+      talkReponse: '''Do what you are going to do, and I will tell about it.'' I
+        find the poem very relatable, given my parental relations.'
+      question: Your favorite poem is I Go Back To May?

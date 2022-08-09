@@ -19,9 +19,13 @@ MonoBehaviour:
     knowledge:
       correct: are from Seattle
       incorrectKnowledge: are from Portland
-      talkReponse: You are from Seattle?
+      talkReponse: I don't remember much about it, I've visited several times and
+        I don't think I'd like to live there again.
+      question: You are from Seattle?
   - sentence: I'm from a small town in Michigan.
     knowledge:
       correct: are from Michigan
       incorrectKnowledge: are from New Hampshire
-      talkReponse: You are from Michigan?
+      talkReponse: My family still lives there, so I visit quite often. Perhaps you
+        could come with me!
+      question: You are from Michigan?

@@ -18,4 +18,7 @@ MonoBehaviour:
     knowledge:
       correct: Alvvays
       incorrectKnowledge: Always
-      talkReponse: Your favorite band is Alvvays?
+      talkReponse: Don't even get me started. Every single Alvvays song is an absolute
+        banger, they are the pinnacle of synth pop. I could talk about them for hours,
+        and I have.
+      question: Your favorite band is Alvvays?

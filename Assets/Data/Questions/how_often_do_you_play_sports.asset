@@ -18,9 +18,12 @@ MonoBehaviour:
     knowledge:
       correct: soccer
       incorrectKnowledge: football
-      talkReponse: You play soccer?
+      talkReponse: It's just a nice way to get active and spend some time with my
+        friends.
+      question: You play soccer?
   - sentence: I'm not really a sports person.
     knowledge:
       correct: aren't a sports person
       incorrectKnowledge: are a sports person
-      talkReponse: You aren't a sports person?
+      talkReponse: I just don't find it fun, I guess..
+      question: You aren't a sports person?

@@ -18,10 +18,14 @@ MonoBehaviour:
     knowledge:
       correct: worked at Spirit Halloween
       incorrectKnowledge: worked at Phantom Halloween
-      talkReponse: You worked at Spirit Halloween?
+      talkReponse: It was so busy the day before Halloween, the line was about a
+        2 hour wait. Several people offered me money to skip the line!
+      question: You worked at Spirit Halloween?
   - sentence: I didn't actually work the job, but the worst interview I had was at
       a Dairy Queen.
     knowledge:
       correct: interviewed at Dairy Queen
       incorrectKnowledge: interviewed at Diary Queen
-      talkReponse: You interviewed at Dairy Queen?
+      talkReponse: The guy interviewing me was just terrible, he insulted me several
+        times even though I clearly had never been in an interview before..
+      question: You interviewed at Dairy Queen?

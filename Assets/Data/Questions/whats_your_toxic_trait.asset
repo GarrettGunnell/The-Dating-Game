@@ -18,14 +18,19 @@ MonoBehaviour:
     knowledge:
       correct: care too much
       incorrectKnowledge: don't care that much
-      talkReponse: You care too much?
+      talkReponse: No, not actually, I was just making fun of the people that say
+        that in response to the question.
+      question: You care too much?
   - sentence: I can be unintentionally manipulative.
     knowledge:
       correct: a manipulative
       incorrectKnowledge: a cunning
-      talkReponse: You think you're a manipulative person?
+      talkReponse: I learned it from my mother, I've spent a lot of time trying to
+        unlearn it..
+      question: You think you're a manipulative person?
   - sentence: I give up quite quickly sometimes..
     knowledge:
       correct: a self-defeating
       incorrectKnowledge: a self-admiring
-      talkReponse: You consider yourself a self-defeating person?
+      talkReponse: It's all too much sometimes, you know? I'd rather just do nothing.
+      question: You consider yourself a self-defeating person?

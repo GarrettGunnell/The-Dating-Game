@@ -18,19 +18,28 @@ MonoBehaviour:
     knowledge:
       correct: La La Land
       incorrectKnowledge: La La Planet
-      talkReponse: You watched La La Land?
+      talkReponse: I did, I think it's tragic how often we must choose between our
+        careers and those we love.
+      question: You watched La La Land?
   - sentence: I just saw Whiplash.
     knowledge:
       correct: Whiplash
       incorrectKnowledge: Whiptrash
-      talkReponse: You watched Whiplash?
+      talkReponse: I did! Absolute perfection requires absolute sacrifice, wouldn't
+        you agree? I quite enjoy the obsessed artist motif.
+      question: You watched Whiplash?
   - sentence: Yes! I recently watched The Green Knight.
     knowledge:
       correct: The Green Knight
       incorrectKnowledge: The Red Knight
-      talkReponse: You saw The Green Knight?
+      talkReponse: I did, multiple times actually. The ending never fails to make
+        me cry, to see Gawain take responsibility and acknowledge his fallibility
+        is so powerful!
+      question: You saw The Green Knight?
   - sentence: I saw The Lighthouse a few days ago.
     knowledge:
       correct: The Lighthouse
       incorrectKnowledge: The Witch
-      talkReponse: You watched The Lighthouse?
+      talkReponse: I did! I love the promethean allegory, it's quite similar to the
+        situation we're in right now.
+      question: You watched The Lighthouse?

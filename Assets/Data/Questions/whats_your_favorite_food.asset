@@ -18,14 +18,22 @@ MonoBehaviour:
     knowledge:
       correct: fried rice
       incorrectKnowledge: white rice
-      talkReponse: Your favorite food is fried rice?
+      talkReponse: I call it friend rice!
+      question: Your favorite food is fried rice?
   - sentence: I eat pasta nearly every night, it's almost a problem.
     knowledge:
       correct: pasta
       incorrectKnowledge: donda
-      talkReponse: Your favorite food is pasta?
+      talkReponse: So, basically, it's amazing because you have dozens of shapes,
+        and hundreds of sauces and ways to cook them, combined with hundreds of side
+        dishes, sometimes the pasta is the side dish! It's easy to make, so it has
+        a low floor but a high ceiling in terms of skill. It's truly the food for
+        both beginners and the most excellent of chefs.
+      question: Your favorite food is pasta?
   - sentence: I'm kind of poor, so all I ever eat is top ramen.
     knowledge:
       correct: ramen
       incorrectKnowledge: noodles
-      talkReponse: Your favorite food is ramen?
+      talkReponse: I'm getting a little tired of it, but I really love poaching eggs
+        in my ramen.
+      question: Your favorite food is ramen?

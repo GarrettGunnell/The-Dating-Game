@@ -18,10 +18,12 @@ MonoBehaviour:
     knowledge:
       correct: a night
       incorrectKnowledge: a morning
-      talkReponse: You are a night person?
+      talkReponse: It's nice and quiet at night, don't you think?
+      question: You are a night person?
   - sentence: For some reason I'm incapable of sleeping in, so I'm a morning person
       by happenstance.
     knowledge:
       correct: a morning
       incorrectKnowledge: a night
-      talkReponse: You are a morning person?
+      talkReponse: The early bird gets the worm! Or something like that.
+      question: You are a morning person?

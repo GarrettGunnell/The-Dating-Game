@@ -18,19 +18,24 @@ MonoBehaviour:
     knowledge:
       correct: TV On The Radio
       incorrectKnowledge: Radio On The TV
-      talkReponse: Your favorite band name is TV On The Radio?
+      talkReponse: My favorite song of theirs is Staring At The Sun.
+      question: Your favorite band name is TV On The Radio?
   - sentence: I think Mars Argo sounds cool.
     knowledge:
       correct: Mars Argo
       incorrectKnowledge: Saturns Argo
-      talkReponse: Mars Argo is your favorite band name?
+      talkReponse: It's such a shame she hasn't made any music, her songs are so
+        great.
+      question: Mars Argo is your favorite band name?
   - sentence: Ummm... I Monster is a cool band name, but it's a reference.
     knowledge:
       correct: I Monster
       incorrectKnowledge: He, Monster
-      talkReponse: Your favorite band name is I Monster?
+      talkReponse: You should listen to their song Lust for a Vampyr, it bangs.
+      question: Your favorite band name is I Monster?
   - sentence: Gesaffelstein sounds cool.
     knowledge:
       correct: Gesaffelstein
       incorrectKnowledge: Frankenstein
-      talkReponse: Your favorite band name is Gesaffelstein?
+      talkReponse: I've listened to his song Opr more times than I can count.
+      question: Your favorite band name is Gesaffelstein?

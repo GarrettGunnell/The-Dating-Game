@@ -19,4 +19,7 @@ MonoBehaviour:
     knowledge:
       correct: your best friend
       incorrectKnowledge: your worst friend
-      talkReponse: What do you like about your best friend?
+      talkReponse: They were very funny and creative. I respected their artistic
+        vision and wished for their success, but unfortunately they passed away earlier
+        this year..
+      question: What do you like about your best friend?

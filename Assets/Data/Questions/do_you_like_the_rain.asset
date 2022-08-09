@@ -18,4 +18,5 @@ MonoBehaviour:
     knowledge:
       correct: the rain
       incorrectKnowledge: the sun
-      talkReponse: What do you like about the rain?
+      talkReponse: It's very comforting, clear skies on the other hand make me nauseous.
+      question: What do you like about the rain?

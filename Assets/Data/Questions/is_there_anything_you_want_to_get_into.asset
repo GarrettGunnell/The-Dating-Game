@@ -18,14 +18,20 @@ MonoBehaviour:
     knowledge:
       correct: learn an instrument
       incorrectKnowledge: learn to compose
-      talkReponse: You want to learn an instrument?
+      talkReponse: I want to learn piano so I can play all my favorite classical
+        songs, like anything from Chopin!
+      question: You want to learn an instrument?
   - sentence: I want to learn to paint, I think.
     knowledge:
       correct: learn to paint
       incorrectKnowledge: learn to draw
-      talkReponse: You want to learn to paint?
+      talkReponse: I should really start soon, it takes such a long time to learn
+        art.
+      question: You want to learn to paint?
   - sentence: I never really learned how to cook.
     knowledge:
       correct: learn to cook
       incorrectKnowledge: learn to write
-      talkReponse: You want to learn to cook?
+      talkReponse: I've survived off premade meals for too long, I'd like to be able
+        to make my own.
+      question: You want to learn to cook?

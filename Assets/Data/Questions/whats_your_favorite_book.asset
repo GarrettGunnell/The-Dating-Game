@@ -18,15 +18,24 @@ MonoBehaviour:
     knowledge:
       correct: Pale Fire
       incorrectKnowledge: Gale Fire
-      talkReponse: Pale Fire is your favorite book?
+      talkReponse: '''And dreadfully distinct
+
+        Against the dark, a tall white
+        fountain played.'''
+      question: Pale Fire is your favorite book?
   - sentence: Does manga count? 'Oyasumi Punpun' is my favorite piece of literature.
     knowledge:
       correct: Oyasumi Punpun
       incorrectKnowledge: Ohayo Punpun
-      talkReponse: You read Oyasumi Punpun?
+      talkReponse: 'If there were a place lower than here
+
+        it would surely
+        be hell..'
+      question: You read Oyasumi Punpun?
   - sentence: I haven't done much reading since middle school, my favorite back then
       was 'Artemis Fowl'.
     knowledge:
       correct: Artemis Fowl
       incorrectKnowledge: Artemis Foul
-      talkReponse: Your favorite book is Artemis Fowl?
+      talkReponse: It's a shame the movie was so unforgivably terrible.
+      question: Your favorite book is Artemis Fowl?

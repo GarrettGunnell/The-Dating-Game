@@ -18,9 +18,13 @@ MonoBehaviour:
     knowledge:
       correct: don't want to be famous
       incorrectKnowledge: want to be famous
-      talkReponse: You don't want to be famous?
+      talkReponse: Everything celebrities do gets posted all over social media, I
+        could never handle that!
+      question: You don't want to be famous?
   - sentence: Yeah I think it would be fun, I would love the attention.
     knowledge:
       correct: want to be famous
       incorrectKnowledge: don't want to be famous
-      talkReponse: You want to be famous?
+      talkReponse: Everything you say and do gets treated with such high esteem,
+        that sounds nice..
+      question: You want to be famous?

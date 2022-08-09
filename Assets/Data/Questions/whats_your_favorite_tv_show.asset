@@ -18,15 +18,20 @@ MonoBehaviour:
     knowledge:
       correct: Breaking Bad
       incorrectKnowledge: Better Call Saul
-      talkReponse: Your favorite TV show is Breaking Bad?
+      talkReponse: Ever since I watched it years ago I find myself constantly reminiscing
+        on many moments in the show.
+      question: Your favorite TV show is Breaking Bad?
   - sentence: I really enjoyed Hannibal.
     knowledge:
       correct: Hannibal
       incorrectKnowledge: Cannibal
-      talkReponse: Your favorite TV show is Hannibal?
+      talkReponse: Mads Mikkelsen is wonderful in it! The second season is especially
+        great.
+      question: Your favorite TV show is Hannibal?
   - sentence: I don't watch a lot of television, my favorite when I was a kid was
       Spongebob.
     knowledge:
       correct: Spongebob
       incorrectKnowledge: Avatar
-      talkReponse: Your favorite TV show is Spongebob?
+      talkReponse: A timeless classic, wouldn't you agree?
+      question: Your favorite TV show is Spongebob?
