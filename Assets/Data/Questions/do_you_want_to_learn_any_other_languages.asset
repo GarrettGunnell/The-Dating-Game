@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: do_you_want_to_learn_any_other_languages
+  m_EditorClassIdentifier: 
+  sentence: Do you want to learn any other languages?
+  answer:
+  - sentence: I'd love to learn latin.
+    knowledge:
+      correct: learn latin
+      incorrectKnowledge: learn italian
+      talkReponse: You want to learn latin?
+  - sentence: It's a little embarrassing, but I think learning Japanese would be
+      cool.
+    knowledge:
+      correct: learn Japanese
+      incorrectKnowledge: learn Korean
+      talkReponse: You want to learn Japanese?
+  - sentence: Chinese seems like a good idea to learn.
+    knowledge:
+      correct: learn Chinese
+      incorrectKnowledge: learn Japanese
+      talkReponse: You want to learn Chinese?

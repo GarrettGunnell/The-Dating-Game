@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: do_you_like_working_in_a_team
+  m_EditorClassIdentifier: 
+  sentence: Do you like working in a team?
+  answer:
+  - sentence: No, I find it hard to communicate professionally.
+    knowledge:
+      correct: not a team
+      incorrectKnowledge: a team
+      talkReponse: You are not a team person?
+  - sentence: Yes, I like seeing what those around me can come up with.
+    knowledge:
+      correct: a team
+      incorrectKnowledge: not a team
+      talkReponse: You are a team person?

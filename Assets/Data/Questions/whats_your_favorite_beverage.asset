@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_favorite_beverage
+  m_EditorClassIdentifier: 
+  sentence: What's your favorite beverage?
+  answer:
+  - sentence: Nothing beats Mountain Dew Baja Blast.
+    knowledge:
+      correct: Baja Blast
+      incorrectKnowledge: Baja Flash
+      talkReponse: Your favorite beverage is Baja Blast?
+  - sentence: I love tea!
+    knowledge:
+      correct: tea
+      incorrectKnowledge: water
+      talkReponse: Your favorite beverage is tea?
+  - sentence: I just like water.
+    knowledge:
+      correct: water
+      incorrectKnowledge: tea
+      talkReponse: Your favorite beverage is water?

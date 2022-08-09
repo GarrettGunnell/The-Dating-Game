@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: are_you_a_morning_person
+  m_EditorClassIdentifier: 
+  sentence: Are you a morning person?
+  answer:
+  - sentence: No, I hate waking up early. I prefer staying up late.
+    knowledge:
+      correct: a night
+      incorrectKnowledge: a morning
+      talkReponse: You are a night person?
+  - sentence: For some reason I'm incapable of sleeping in, so I'm a morning person
+      by happenstance.
+    knowledge:
+      correct: a morning
+      incorrectKnowledge: a night
+      talkReponse: You are a morning person?

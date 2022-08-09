@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_the_strangest_place_youve_been
+  m_EditorClassIdentifier: 
+  sentence: What's the strangest place you've been?
+  answer:
+  - sentence: There's this town in California called Weed.
+    knowledge:
+      correct: Weed
+      incorrectKnowledge: Hash
+      talkReponse: You've been to Weed?
+  - sentence: There's a place in Oregon called Post, it's literally just a post office.
+    knowledge:
+      correct: Post
+      incorrectKnowledge: Toast
+      talkReponse: You've been to Post?

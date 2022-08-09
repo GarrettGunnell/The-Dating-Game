@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_favorite_song
+  m_EditorClassIdentifier: 
+  sentence: What's your favorite song?
+  answer:
+  - sentence: There's a lot of songs I'd consider my favorite, but if I had to choose,
+      it would be Blue Honey by Lunar Vacation
+    knowledge:
+      correct: Blue Honey
+      incorrectKnowledge: Blue Valentine
+      talkReponse: Your favorite song is Blue Honey?
+  - sentence: I really like The Barrel by Aldous Harding.
+    knowledge:
+      correct: The Barrel
+      incorrectKnowledge: Blue Honey
+      talkReponse: Your favorite song is The Barrel?
+  - sentence: I really like Disorder by Freak Slug.
+    knowledge:
+      correct: Disorder
+      incorrectKnowledge: The Barrel
+      talkReponse: Your favorite song is Disorder?
+  - sentence: Is there any song that can compete with Dancing Queen by ABBA?
+    knowledge:
+      correct: Dancing Queen
+      incorrectKnowledge: Mamma Mia
+      talkReponse: Dancing Queen is your favorite song?

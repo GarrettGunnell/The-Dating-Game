@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: what_do_you_like_doing_with_your_free_time
+  m_EditorClassIdentifier: 
+  sentence: What do you like doing with your free time?
+  answer:
+  - sentence: I love drawing, I just wish I was better at it.
+    knowledge:
+      correct: drawing
+      incorrectKnowledge: painting
+      talkReponse: you like drawing in your free time?
+  - sentence: I spend a lot of time watching YouTube..
+    knowledge:
+      correct: YouTube
+      incorrectKnowledge: Vimeo
+      talkReponse: you watch YouTube in your free time?
+  - sentence: I don't really do anything at all.
+    knowledge:
+      correct: do nothing
+      incorrectKnowledge: do everything
+      talkReponse: You do nothing with your free time?

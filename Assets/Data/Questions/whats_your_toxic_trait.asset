@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_toxic_trait
+  m_EditorClassIdentifier: 
+  sentence: What's your toxic trait?
+  answer:
+  - sentence: To be honest, I care too much.
+    knowledge:
+      correct: care too much
+      incorrectKnowledge: don't care that much
+      talkReponse: You care too much?
+  - sentence: I can be unintentionally manipulative.
+    knowledge:
+      correct: a manipulative
+      incorrectKnowledge: a cunning
+      talkReponse: You think you're a manipulative person?
+  - sentence: I give up quite quickly sometimes..
+    knowledge:
+      correct: a self-defeating
+      incorrectKnowledge: a self-admiring
+      talkReponse: You consider yourself a self-defeating person?

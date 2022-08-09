@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: watched_any_cool_movies_lately
+  m_EditorClassIdentifier: 
+  sentence: Watched any cool movies lately?
+  answer:
+  - sentence: My friend recommended me La La Land.
+    knowledge:
+      correct: La La Land
+      incorrectKnowledge: La La Planet
+      talkReponse: You watched La La Land?
+  - sentence: I just saw Whiplash.
+    knowledge:
+      correct: Whiplash
+      incorrectKnowledge: Whiptrash
+      talkReponse: You watched Whiplash?
+  - sentence: Yes! I recently watched The Green Knight.
+    knowledge:
+      correct: The Green Knight
+      incorrectKnowledge: The Red Knight
+      talkReponse: You saw The Green Knight?
+  - sentence: I saw The Lighthouse a few days ago.
+    knowledge:
+      correct: The Lighthouse
+      incorrectKnowledge: The Witch
+      talkReponse: You watched The Lighthouse?

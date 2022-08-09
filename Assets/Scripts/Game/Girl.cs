@@ -1,13 +1,69 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+[CustomEditor(typeof(Girl))]
+public class GirlEditor:Editor
+{
+    private Questions q = new Questions();
+    private Knowledge k = new Knowledge();
+    public override void OnInspectorGUI()
+    {
+        if (GUILayout.Button("Create Questions Data"))
+        {
+            var girl = (Girl)target;
+
+            List<GoodQuestion> goodQuestions = new List<GoodQuestion>();//girl.questionResponses.Select(q=> CreateGoodQuestion(q, (List<Girl.QuestionResponse>)girl.questionResponses[q])).ToList();
+            foreach (string question in girl.questionResponses.Keys)
+            {
+                goodQuestions.Add(CreateGoodQuestion(question, (List<Girl.QuestionResponse>)girl.questionResponses[question]));
+            }
+        }
+        DrawDefaultInspector();
+    }
+
+    public GoodQuestion CreateGoodQuestion(string sentence, List<Girl.QuestionResponse> responce)
+    { // MyClass is inheritant from ScriptableObject base class
+        GoodQuestion question = CreateInstance<GoodQuestion>();
+        question.sentence = sentence;
+        question.answer = responce.Select(
+            c => new GoodQuestion.AnswerData
+            {
+                sentence = c.response,
+                knowledge = new GoodQuestion.Knowledge
+                {
+                    correct = c.knowledge,
+                    incorrectKnowledge = (string)k.incorrectKnowledge[c.knowledge],
+                    talkReponse = (string)k.knowledgeResponse[c.knowledge]
+                }
+            }).ToArray();
+        // path has to start at "Assets"
+        var unsafeChar = new string[] { "?", ".", "\'", "," };
+        var fileName = sentence.ToLower().Replace(" ", "_");
+        foreach (var c in unsafeChar)
+        {
+            fileName = fileName.Replace(c,"");
+        }
+        string path = $"Assets/Data/Questions/{fileName}.asset";
+        AssetDatabase.CreateAsset(question, path);
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        EditorUtility.FocusProjectWindow();
+        Selection.activeObject = question;
+        return question;
+    }
+}
+#endif
+
 
 public class Girl : MonoBehaviour {
 
-    private Hashtable questionResponses;
-    private Hashtable talkResponses;
+    public Hashtable questionResponses;
+    public Hashtable talkResponses;
 
-    struct QuestionResponse {
+    public struct QuestionResponse {
         public string response;
         public string knowledge;
 
@@ -348,3 +404,5 @@ public class Girl : MonoBehaviour {
         return (string)talkResponses[inquery];
     }
 }
+
+

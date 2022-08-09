@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_the_most_interesting_piece_of_art_youve_seen
+  m_EditorClassIdentifier: 
+  sentence: What's the most interesting piece of art you've seen?
+  answer:
+  - sentence: My favorite painting is Ivan the Terrible and His Son Ivan.
+    knowledge:
+      correct: Ivan the Terrible and His Son Ivan
+      incorrectKnowledge: Ivan the Terrible and His Dad Ivan
+      talkReponse: Your favorite painting is Ivan the Terrible and His Son Ivan?
+  - sentence: Have you seen 'Saturn Devouring His Son'? It's certainly something.
+    knowledge:
+      correct: Saturn Devouring His Son
+      incorrectKnowledge: Jupiter Devouring His Son
+      talkReponse: Your favorite painting is Saturn Devouring His Son?

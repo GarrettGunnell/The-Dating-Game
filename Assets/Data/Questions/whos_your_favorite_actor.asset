@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whos_your_favorite_actor
+  m_EditorClassIdentifier: 
+  sentence: Who's your favorite actor?
+  answer:
+  - sentence: I love Ryan Gosling!
+    knowledge:
+      correct: Ryan Gosling
+      incorrectKnowledge: Ryan Reynolds
+      talkReponse: Your favorite actor is Ryan Gosling?
+  - sentence: I'm a huge fan of Jack Nicholson.
+    knowledge:
+      correct: Jack Nicholson
+      incorrectKnowledge: Jack Crawford
+      talkReponse: Your favorite actor is Jack Nicholson?
+  - sentence: I think Jodie Foster is a huge inspiration.
+    knowledge:
+      correct: Jodie Foster
+      incorrectKnowledge: Anthony Hopkins
+      talkReponse: Your favorite actor is Jodie Foster?

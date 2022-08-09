@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ColorSchemeData", menuName = "ScriptableObjects/ColorSchemeData", order = 1)]
+[CreateAssetMenu(fileName = "ColorSchemeData", menuName = "ScriptableObjects/ColorSchemeData")]
 public class ColorSchemeData : ScriptableObject
 {
     [Serializable]

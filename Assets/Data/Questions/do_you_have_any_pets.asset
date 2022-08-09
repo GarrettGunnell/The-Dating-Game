@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: do_you_have_any_pets
+  m_EditorClassIdentifier: 
+  sentence: Do you have any pets?
+  answer:
+  - sentence: I've got two dogs.
+    knowledge:
+      correct: two dogs
+      incorrectKnowledge: a dog
+      talkReponse: You have two dogs?
+  - sentence: I've got three dogs.
+    knowledge:
+      correct: three dogs
+      incorrectKnowledge: three cats
+      talkReponse: You have three dogs?
+  - sentence: I've got a cat.
+    knowledge:
+      correct: a cat
+      incorrectKnowledge: two cats
+      talkReponse: You have a cat?

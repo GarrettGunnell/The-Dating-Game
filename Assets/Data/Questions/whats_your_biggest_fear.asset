@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_biggest_fear
+  m_EditorClassIdentifier: 
+  sentence: What's your biggest fear?
+  answer:
+  - sentence: I used to have a major fear of bees.
+    knowledge:
+      correct: a fear of bees
+      incorrectKnowledge: a fear of beetles
+      talkReponse: You have a fear of bees?
+  - sentence: Abandonment.
+    knowledge:
+      correct: a fear of abandonment
+      incorrectKnowledge: a fear of loneliness
+      talkReponse: You have a fear of abandonment?

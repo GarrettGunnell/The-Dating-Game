@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_proudest_achievement
+  m_EditorClassIdentifier: 
+  sentence: What's your proudest achievement?
+  answer:
+  - sentence: I got first place in a marathon!
+    knowledge:
+      correct: ran a marathon
+      incorrectKnowledge: ran a 100 meter dash
+      talkReponse: You ran a marathon?
+  - sentence: I have an honors diploma.
+    knowledge:
+      correct: have an honors diploma
+      incorrectKnowledge: have a degree
+      talkReponse: You have an honors diploma?
+  - sentence: I've made a lot of friends.
+    knowledge:
+      correct: made a lot of friends
+      incorrectKnowledge: made a few friends
+      talkReponse: You made a lot of friends?
+  - sentence: I won the science fair in the sixth grade.
+    knowledge:
+      correct: won the science fair
+      incorrectKnowledge: won the spelling bee
+      talkReponse: You won the science fair?

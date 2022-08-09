@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: are_you_on_social_media_a_lot
+  m_EditorClassIdentifier: 
+  sentence: Are you on social media a lot?
+  answer:
+  - sentence: I can't help myself from mindlessly scrolling Twitter.
+    knowledge:
+      correct: Twitter
+      incorrectKnowledge: Facebook
+      talkReponse: You spend a lot of time on Twitter?
+  - sentence: I'm a little obsessed with posting pictures I take on Instagram..
+    knowledge:
+      correct: Instagram
+      incorrectKnowledge: Twitter
+      talkReponse: You spend a lot of time on Instagram?
+  - sentence: No, I tend to stay away from all of that.
+    knowledge:
+      correct: not a social media
+      incorrectKnowledge: a social media
+      talkReponse: You are not a social media person?

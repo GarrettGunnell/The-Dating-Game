@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: do_you_have_a_dream_job
+  m_EditorClassIdentifier: 
+  sentence: Do you have a dream job?
+  answer:
+  - sentence: I always wanted to be a therapist.
+    knowledge:
+      correct: be a therapist
+      incorrectKnowledge: be a psychologist
+      talkReponse: You want to be a therapist?
+  - sentence: I always wanted to be an artist.
+    knowledge:
+      correct: be an artist
+      incorrectKnowledge: be a painter
+      talkReponse: You want to be an artist?
+  - sentence: I always wanted to be a private investigator.
+    knowledge:
+      correct: be a private investigator
+      incorrectKnowledge: be a police officer
+      talkReponse: You want to be a private investigator?
+  - sentence: I've always secretly wanted to be a crime lord.
+    knowledge:
+      correct: be a crime lord
+      incorrectKnowledge: be a mob boss
+      talkReponse: You want to be a crime lord?

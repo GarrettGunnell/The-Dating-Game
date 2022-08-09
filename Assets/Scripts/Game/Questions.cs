@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Questions {
 
-    private HashSet<string> allQuestions;
-    private HashSet<string> askedQuestions;
-    private HashSet<string> badQuestions;
+    public HashSet<string> allQuestions;
+    public HashSet<string> askedQuestions;
+    public HashSet<string> badQuestions;
 
     public Questions() {
         askedQuestions = new HashSet<string>();

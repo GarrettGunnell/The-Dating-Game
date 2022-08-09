@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: whats_your_favorite_book
+  m_EditorClassIdentifier: 
+  sentence: What's your favorite book?
+  answer:
+  - sentence: Probably 'Pale Fire' if I had to choose.
+    knowledge:
+      correct: Pale Fire
+      incorrectKnowledge: Gale Fire
+      talkReponse: Pale Fire is your favorite book?
+  - sentence: Does manga count? 'Oyasumi Punpun' is my favorite piece of literature.
+    knowledge:
+      correct: Oyasumi Punpun
+      incorrectKnowledge: Ohayo Punpun
+      talkReponse: You read Oyasumi Punpun?
+  - sentence: I haven't done much reading since middle school, my favorite back then
+      was 'Artemis Fowl'.
+    knowledge:
+      correct: Artemis Fowl
+      incorrectKnowledge: Artemis Foul
+      talkReponse: Your favorite book is Artemis Fowl?

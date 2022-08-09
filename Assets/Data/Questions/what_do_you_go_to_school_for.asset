@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: what_do_you_go_to_school_for
+  m_EditorClassIdentifier: 
+  sentence: What do you go to school for?
+  answer:
+  - sentence: Right now I'm going to school for history, but it might change!
+    knowledge:
+      correct: history
+      incorrectKnowledge: english
+      talkReponse: You are going to school for history?
+  - sentence: I'm currently studying chemistry, I enjoy it.
+    knowledge:
+      correct: chemistry
+      incorrectKnowledge: biology
+      talkReponse: You are going to school for chemistry?
+  - sentence: I'm trying to become a nurse.
+    knowledge:
+      correct: nursing
+      incorrectKnowledge: medicine
+      talkReponse: You are going to school for nursing?

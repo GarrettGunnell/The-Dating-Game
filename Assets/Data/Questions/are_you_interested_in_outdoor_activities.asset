@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c01f285290a841e0bef94055e93db24, type: 3}
+  m_Name: are_you_interested_in_outdoor_activities
+  m_EditorClassIdentifier: 
+  sentence: Are you interested in outdoor activities?
+  answer:
+  - sentence: No, I definitely prefer staying inside.
+    knowledge:
+      correct: an indoors
+      incorrectKnowledge: an outdoors
+      talkReponse: You are an indoors person?
+  - sentence: Yes, I spend a lot of my time outside.
+    knowledge:
+      correct: an outdoors
+      incorrectKnowledge: an indoors
+      talkReponse: You are an outdoors person?
+  - sentence: I go rock climbing all the time.
+    knowledge:
+      correct: rock climbing
+      incorrectKnowledge: hiking
+      talkReponse: You like going rock climbing?
