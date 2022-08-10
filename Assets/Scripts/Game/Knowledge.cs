@@ -7,8 +7,8 @@ public class Knowledge {
     private HashSet<string> knownKnowledge;
     private HashSet<string> talkedAbout;
 
-    public Hashtable incorrectKnowledge;
-    public Hashtable knowledgeResponse;
+    private Hashtable incorrectKnowledge;
+    private Hashtable knowledgeResponse;
 
     public Knowledge() {
         talkedAbout = new HashSet<string>();

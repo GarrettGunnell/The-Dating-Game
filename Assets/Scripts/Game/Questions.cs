@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 public class Questions {
 
-    public HashSet<string> allQuestions;
-    public HashSet<string> askedQuestions;
-    public HashSet<string> badQuestions;
+    private HashSet<string> allQuestions;
+    private HashSet<string> askedQuestions;
+    private HashSet<string> badQuestions;
 
     public Questions() {
         askedQuestions = new HashSet<string>();

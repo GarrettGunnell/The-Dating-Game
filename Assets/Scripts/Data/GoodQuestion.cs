@@ -7,8 +7,8 @@ public class GoodQuestion:QuestionData
     [Serializable]
     public class AnswerData
     {
-        [SerializeField] public string sentence;
-        [SerializeField] public Knowledge knowledge;
+        [SerializeField] private string sentence;
+        [SerializeField] private Knowledge knowledge;
 
         public string Sentence => sentence;
         public Knowledge Knowlegde => knowledge;
@@ -17,10 +17,10 @@ public class GoodQuestion:QuestionData
     [Serializable]
     public class Knowledge
     {
-        [SerializeField] public string correct;
-        [SerializeField] public string incorrectKnowledge;
-        [SerializeField] public string talkReponse;
-        [SerializeField] public string question;
+        [SerializeField] private string correct;
+        [SerializeField] private string incorrectKnowledge;
+        [SerializeField] private string talkReponse;
+        [SerializeField] private string question;
 
         public string TalkResponse => talkReponse;
         public string Correct => correct;
@@ -28,6 +28,7 @@ public class GoodQuestion:QuestionData
     }
 
 
-    [SerializeField] public AnswerData[] answer;
+    [SerializeField] private AnswerData[] answer;
+    public AnswerData[] Answer =>answer;
 
 }

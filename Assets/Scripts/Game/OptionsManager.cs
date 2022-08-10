@@ -5,8 +5,8 @@ using System.Linq;
 
 public class OptionsManager : MonoBehaviour {
 
-    public DialogueManager dialogueManager;
-    public Girl girl;
+    [SerializeField] private DialogueManager dialogueManager;
+    [SerializeField] private Girl girl;
 
     private Knowledge knowledge;
     private Questions questions;
@@ -23,7 +23,12 @@ public class OptionsManager : MonoBehaviour {
         }
     };
 
-    void Start() {
+    private void Awake()
+    {
+        //todo move question here add Girl Init(questions)
+    }
+
+    private void Start() {
         knowledge = new Knowledge();
         questions = new Questions();
         currentOptions = new List<Option>();
