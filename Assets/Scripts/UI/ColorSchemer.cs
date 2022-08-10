@@ -27,7 +27,7 @@ public class ColorSchemer : MonoBehaviour
         }
     }
 
-    void OnRenderImage(RenderTexture source, RenderTexture destination)
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         var colors = colorSchemes[schemeIndex];
         colorSchemeMat.SetVector("col1", colors.Darker);

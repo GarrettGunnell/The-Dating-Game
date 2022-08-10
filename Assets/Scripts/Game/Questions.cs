@@ -35,11 +35,11 @@ public class Questions {
         return askedQuestions.Contains(q);
     }
 
-    public List<string> getQuestions() {
+    public List<string> GetQuestions() {
         return allQuestions.ToList();
     }
 
-    public List<string> getAskedQuestions() {
+    public List<string> GetAskedQuestions() {
         return askedQuestions.ToList();
     }
 

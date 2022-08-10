@@ -12,7 +12,7 @@ public class ColorSchemeData : ScriptableObject
 
         private Vector4 ToVec4(Color color)
         {
-            Func<float, float> f = (a) => Mathf.Floor(a * 256);
+            static float f(float a) => Mathf.Floor(a * 256);
             return new Vector4(f(color.r), f(color.g), f(color.b), f(color.a));
         }
 

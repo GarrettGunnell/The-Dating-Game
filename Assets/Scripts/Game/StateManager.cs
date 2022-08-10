@@ -13,7 +13,7 @@ public class StateManager : MonoBehaviour {
 
     private AudioSource audioSource;
 
-    void Start() {
+    private void Start() {
         idle = false;
         talking = false;
         
@@ -21,7 +21,7 @@ public class StateManager : MonoBehaviour {
         audioSource.Stop();
     }
 
-    void Update() {
+    private void Update() {
         if (actionNumber >= 36 && idle && !talking) {
             idle = false;
             optionsManager.Win();
@@ -35,13 +35,13 @@ public class StateManager : MonoBehaviour {
                     if (collided && !talking) {
                         if (hit.transform.name == "Talk") {
                             audioSource.Play();
-                            setIdle(false);
+                            SetIdle(false);
                             talking = true;
                             actionNumber++;
                             optionsManager.Talk(actionNumber);
                         } else if (hit.transform.name == "Leave") {
                             audioSource.Play();
-                            setIdle(false);
+                            SetIdle(false);
                             optionsManager.Leave();
                         }
                     } else if (collided && talking) {
@@ -50,7 +50,7 @@ public class StateManager : MonoBehaviour {
 
                             int chosenOption = int.Parse(hit.transform.name.Split(' ')[1]);
                             optionsManager.Choose(chosenOption - 1);
-                            setIdle(false);
+                            SetIdle(false);
                             talking = false;
                         }
                     }
@@ -59,12 +59,12 @@ public class StateManager : MonoBehaviour {
         }
     }
 
-    public void setIdle(bool state) {
+    public void SetIdle(bool state) {
         //Debug.Log("Setting idle to: " + state);
         idle = state;
     }
 
-    public void endGame(bool victory, string reason) {
+    public void EndGame(bool victory, string reason) {
         SceneManager.LoadScene(victory ? "Victory" : "GameOver");
     }
 }

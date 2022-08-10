@@ -29,13 +29,13 @@ public class Girl : MonoBehaviour
         {
             foreach (var a in q.Answer)
             {
-                addQuestionResponse(q.Sentence, a.Sentence, a.Knowlegde.Correct);
-                addTalkResponse(a.Knowlegde.Correct, a.Knowlegde.TalkResponse);
+                AddQuestionResponse(q.Sentence, a.Sentence, a.Knowlegde.Correct);
+                AddTalkResponse(a.Knowlegde.Correct, a.Knowlegde.TalkResponse);
             }
         }
     }
 
-    private void addQuestionResponse(string question, string response, string knowledge)
+    private void AddQuestionResponse(string question, string response, string knowledge)
     {
         QuestionResponse qr = new QuestionResponse(response, knowledge);
 
@@ -49,7 +49,7 @@ public class Girl : MonoBehaviour
         }
     }
 
-    private void addTalkResponse(string knowledge, string response)
+    private void AddTalkResponse(string knowledge, string response)
     {
         talkResponses.Add(knowledge, response);
     }

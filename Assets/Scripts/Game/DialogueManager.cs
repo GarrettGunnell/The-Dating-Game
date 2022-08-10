@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
             if (!optionBoxFinished.Any(x => x == false))
             {
                 populatingOptions = false;
-                stateManager.setIdle(true);
+                stateManager.SetIdle(true);
             }
         }
     }
@@ -80,7 +80,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.0f);
         yield return SayGirl(girlSentence, true);
         yield return new WaitForSecondsRealtime(1.0f);
-        stateManager.endGame(false, endReason);
+        stateManager.EndGame(false, endReason);
     }
 
     public void PopulateOptions(List<OptionsManager.Option> options)
@@ -107,7 +107,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Reset()
     {
-        stateManager.setIdle(true);
+        stateManager.SetIdle(true);
         guyDialogue.text = "";
         girlDialogue.text = "";
         EmptyOptions();
@@ -235,7 +235,7 @@ public class DialogueManager : MonoBehaviour
         yield return SayGirl(girlSentence2);
 
         yield return new WaitForSecondsRealtime(1.0f);
-        stateManager.endGame(true, "Victory!");
+        stateManager.EndGame(true, "Victory!");
     }
 
     private IEnumerator IntroDialogue()
@@ -251,7 +251,7 @@ public class DialogueManager : MonoBehaviour
         yield return SayGirl(girlSentence2);
         yield return new WaitForSecondsRealtime(1.0f);
 
-        stateManager.setIdle(true);
+        stateManager.SetIdle(true);
         guyDialogue.text = "";
         girlDialogue.text = "";
         EmptyOptions();

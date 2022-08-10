@@ -26,19 +26,19 @@ public class Knowledge
         }
     }
 
-    public string generateTalkingPoint(string k)
+    public string GenerateTalkingPoint(string k)
     {
         return (string)knowledgeResponse[k];
     }
 
-    public string generateIncorrectTalkingPoint()
+    public string GenerateIncorrectTalkingPoint()
     {
         if (knownKnowledge.Count == 0)
         {
             return null;
         }
 
-        string k = findKnowledge();
+        string k = FindKnowledge();
         if (!incorrectKnowledge.ContainsKey(k))
             return $"Uh oh! Stinky! There's a bug here! (This answer is wrong) (Debug: {k})";
 
@@ -52,38 +52,38 @@ public class Knowledge
         return correctResponse.Replace(k, incorrectK);
     }
 
-    public string findKnowledge()
+    public string FindKnowledge()
     {
         return knownKnowledge.ElementAt(Random.Range(0, knownKnowledge.Count));
     }
 
-    public bool isKnown(string k)
+    public bool IsKnown(string k)
     {
         return knownKnowledge.Contains(k);
     }
 
-    public void gainKnowledge(string k)
+    public void GainKnowledge(string k)
     {
         knownKnowledge.Add(k);
     }
 
-    public void addTalkedAbout(string k)
+    public void AddTalkedAbout(string k)
     {
         talkedAbout.Add(k);
         knownKnowledge.Remove(k);
     }
 
-    public bool hasBeenTalkedAbout(string k)
+    public bool HasBeenTalkedAbout(string k)
     {
         return talkedAbout.Contains(k);
     }
 
-    public List<string> getTalkedAbout()
+    public List<string> GetTalkedAbout()
     {
         return talkedAbout.ToList();
     }
 
-    public int knowledgeCount()
+    public int KnowledgeCount()
     {
         return knownKnowledge.Count();
     }

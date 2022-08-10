@@ -43,9 +43,9 @@ public class OptionsManager : MonoBehaviour
     {
         List<Option> options = new List<Option>();
 
-        List<string> qs = new List<string>(questions.getQuestions());
-        List<string> askedQs = new List<string>(questions.getAskedQuestions());
-        List<string> talkedAbout = new List<string>(knowledge.getTalkedAbout());
+        List<string> qs = new List<string>(questions.GetQuestions());
+        List<string> askedQs = new List<string>(questions.GetAskedQuestions());
+        List<string> talkedAbout = new List<string>(knowledge.GetTalkedAbout());
         List<string> badQs = new List<string>(questions.getBadQuestions());
 
         qs = qs.OrderBy(x => Random.value).ToList();
@@ -60,24 +60,24 @@ public class OptionsManager : MonoBehaviour
         }
         else if (actionNumber == 2)
         {
-            string k = knowledge.findKnowledge();
-            string r = knowledge.generateTalkingPoint(k);
-            string ik = knowledge.generateIncorrectTalkingPoint();
+            string k = knowledge.FindKnowledge();
+            string r = knowledge.GenerateTalkingPoint(k);
+            string ik = knowledge.GenerateIncorrectTalkingPoint();
 
             options.Add(new Option(r, k));
             options.Add(new Option(ik, null));
         }
         else if (actionNumber < 8)
         {
-            if (Random.value < 0.85f || knowledge.knowledgeCount() == 0)
+            if (Random.value < 0.85f || knowledge.KnowledgeCount() == 0)
             {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
             }
             else
             {
-                string k = knowledge.findKnowledge();
-                string r = knowledge.generateTalkingPoint(k);
+                string k = knowledge.FindKnowledge();
+                string r = knowledge.GenerateTalkingPoint(k);
 
                 options.Add(new Option(r, k));
             }
@@ -88,7 +88,7 @@ public class OptionsManager : MonoBehaviour
                 {
                     if (talkedAbout.Count > 0)
                     {
-                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        options.Add(new Option(knowledge.GenerateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
                         talkedAbout.RemoveAt(0);
                     }
                     else
@@ -106,7 +106,7 @@ public class OptionsManager : MonoBehaviour
                     }
                     else
                     {
-                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        options.Add(new Option(knowledge.GenerateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
                         talkedAbout.RemoveAt(0);
                     }
                 }
@@ -115,7 +115,7 @@ public class OptionsManager : MonoBehaviour
         else
         {
             //Correct Option
-            if (knowledge.knowledgeCount() == 0)
+            if (knowledge.KnowledgeCount() == 0)
             {
                 string q = qs[Random.Range(0, qs.Count)];
                 options.Add(new Option(q, null));
@@ -134,8 +134,8 @@ public class OptionsManager : MonoBehaviour
                 }
                 else
                 {
-                    string k = knowledge.findKnowledge();
-                    string r = knowledge.generateTalkingPoint(k);
+                    string k = knowledge.FindKnowledge();
+                    string r = knowledge.GenerateTalkingPoint(k);
 
                     options.Add(new Option(r, k));
                 }
@@ -149,7 +149,7 @@ public class OptionsManager : MonoBehaviour
                 if (r < 0.25f)
                 {
                     bool add = true;
-                    string incorrectPoint = knowledge.generateIncorrectTalkingPoint();
+                    string incorrectPoint = knowledge.GenerateIncorrectTalkingPoint();
 
                     if (incorrectPoint != null)
                     {
@@ -171,7 +171,7 @@ public class OptionsManager : MonoBehaviour
                 {
                     if (talkedAbout.Count > 0)
                     {
-                        options.Add(new Option(knowledge.generateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
+                        options.Add(new Option(knowledge.GenerateTalkingPoint(talkedAbout[0]), talkedAbout[0]));
                         talkedAbout.RemoveAt(0);
                     }
                 }
@@ -224,7 +224,7 @@ public class OptionsManager : MonoBehaviour
 
             List<string> response = girl.GetQuestionResponse(sentence);
 
-            knowledge.gainKnowledge(response[1]);
+            knowledge.GainKnowledge(response[1]);
             questions.AddAskedQuestion(sentence);
 
             dialogueManager.Converse(sentence, response[0]);
@@ -234,16 +234,16 @@ public class OptionsManager : MonoBehaviour
             string sentence = choice.option;
             string k = choice.knowledge;
 
-            if (knowledge.isKnown(k))
+            if (knowledge.IsKnown(k))
             {
                 string response = girl.GetTalkResponse(k);
-                knowledge.addTalkedAbout(k);
+                knowledge.AddTalkedAbout(k);
 
                 dialogueManager.Converse(sentence, response);
             }
             else
             {
-                if (knowledge.hasBeenTalkedAbout(k))
+                if (knowledge.HasBeenTalkedAbout(k))
                 {
                     dialogueManager.EndGame(sentence, "We already talked about that...", "Talked about the same thing twice.");
                 }
