@@ -10,11 +10,10 @@ public class Questions {
     private HashSet<string> askedQuestions;
     private HashSet<string> badQuestions;
 
-    public Questions(GoodQuestion[] good, QuestionData[] bad) {
+    public Questions(GoodQuestion[] good, QuestionData[] bad = null) {
         askedQuestions = new HashSet<string>();
         allQuestions = new HashSet<string>();
         badQuestions = new HashSet<string>();
-
         foreach (var q in good)
         {
             allQuestions.Add(q.Sentence);
@@ -24,6 +23,8 @@ public class Questions {
         {
             badQuestions.Add(b.Sentence);
         }
+        
+
     }
 
     public void AddAskedQuestion(string q) {
