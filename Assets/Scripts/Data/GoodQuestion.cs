@@ -25,6 +25,7 @@ public class GoodQuestion:QuestionData
         public string TalkResponse => talkReponse;
         public string Correct => correct;
         public string IncorrectKnowledge => incorrectKnowledge;
+        public string Question => question;
     }
 
 

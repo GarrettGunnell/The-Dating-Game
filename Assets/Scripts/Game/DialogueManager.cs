@@ -5,7 +5,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour {
+public class DialogueManager : MonoBehaviour
+{
 
     [Serializable]
     public class CharData
@@ -40,7 +41,8 @@ public class DialogueManager : MonoBehaviour {
 
     private bool populatingOptions = false;
 
-    private void Start() {
+    private void Start()
+    {
 
         optionBoxFinished = new List<bool>();
 
@@ -54,20 +56,25 @@ public class DialogueManager : MonoBehaviour {
         StartCoroutine(IntroDialogue());
     }
 
-    private void Update() {
-        if (populatingOptions) {
-            if (!optionBoxFinished.Any(x => x == false)) {
+    private void Update()
+    {
+        if (populatingOptions)
+        {
+            if (!optionBoxFinished.Any(x => x == false))
+            {
                 populatingOptions = false;
                 stateManager.setIdle(true);
             }
         }
     }
 
-    public void EndGame(string guySentence, string girlSentence, string endReason) {
+    public void EndGame(string guySentence, string girlSentence, string endReason)
+    {
         StartCoroutine(BadEnd(guySentence, girlSentence, endReason));
     }
 
-    private IEnumerator BadEnd(string guySentence, string girlSentence, string endReason) {
+    private IEnumerator BadEnd(string guySentence, string girlSentence, string endReason)
+    {
         yield return new WaitForSecondsRealtime(0.2f);
         yield return SayGuy(guySentence);
         yield return new WaitForSecondsRealtime(1.0f);
@@ -76,13 +83,15 @@ public class DialogueManager : MonoBehaviour {
         stateManager.endGame(false, endReason);
     }
 
-    public void PopulateOptions(List<OptionsManager.Option> options) {
+    public void PopulateOptions(List<OptionsManager.Option> options)
+    {
         uiManager.DisableTalk();
         uiManager.DisableLeave();
         uiManager.EnableBoxes(options.Count);
         optionBoxFinished = Enumerable.Repeat(false, options.Count).ToList();
 
-        for (int i = 0; i < options.Count; ++i) {
+        for (int i = 0; i < options.Count; ++i)
+        {
             Text box = option[i];
             StartCoroutine(FillOption(box, options[i].option, i));
         }
@@ -90,12 +99,14 @@ public class DialogueManager : MonoBehaviour {
         populatingOptions = true;
     }
 
-    public void Converse(string guySentence, string girlSentence) {
+    public void Converse(string guySentence, string girlSentence)
+    {
         uiManager.DisableBoxes(numberOfBoxes);
         StartCoroutine(StartConversation(guySentence, girlSentence));
     }
 
-    private void Reset() {
+    private void Reset()
+    {
         stateManager.setIdle(true);
         guyDialogue.text = "";
         girlDialogue.text = "";
@@ -106,15 +117,18 @@ public class DialogueManager : MonoBehaviour {
         uiManager.IncrementTime();
     }
 
-    public void EmptyOptions() {
-        foreach (Text box in option) {
+    public void EmptyOptions()
+    {
+        foreach (Text box in option)
+        {
             box.text = "";
         }
     }
 
-    private float WaitTime(char letter) {
+    private float WaitTime(char letter)
+    {
         var data = lettersData.FirstOrDefault(c => c.Letter == letter);
-        if(data != default)
+        if (data != default)
         {
             return data.TypeTime;
         }
@@ -157,7 +171,8 @@ public class DialogueManager : MonoBehaviour {
         audioSource.Stop();
     }
 
-    private IEnumerator StartConversation(string guySentence, string girlSentence) {
+    private IEnumerator StartConversation(string guySentence, string girlSentence)
+    {
         yield return new WaitForSecondsRealtime(0.2f);
 
         yield return SayGuy(guySentence);
@@ -168,10 +183,12 @@ public class DialogueManager : MonoBehaviour {
         Reset();
     }
 
-    private IEnumerator FillOption(Text optionBox, string optionText, int optionNum) {
+    private IEnumerator FillOption(Text optionBox, string optionText, int optionNum)
+    {
         optionBox.text = "";
         float fillTime = 1.0f / optionText.Length;
-        foreach (char letter in optionText.ToCharArray()) {
+        foreach (char letter in optionText.ToCharArray())
+        {
             optionBox.text += letter;
             yield return new WaitForSecondsRealtime(fillTime);
         }
@@ -179,13 +196,15 @@ public class DialogueManager : MonoBehaviour {
         optionBoxFinished[optionNum] = true;
     }
 
-    public void Leave() {
+    public void Leave()
+    {
         uiManager.DisableTalk();
         uiManager.DisableLeave();
         StartCoroutine(LeaveConvo());
     }
 
-    private IEnumerator LeaveConvo() {
+    private IEnumerator LeaveConvo()
+    {
         string yourSentence = "Alright, I think I'm going to leave.";
         string girlSentence = "Oh... okay.";
 
@@ -199,13 +218,15 @@ public class DialogueManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public void Win() {
+    public void Win()
+    {
         uiManager.DisableTalk();
         uiManager.DisableLeave();
         StartCoroutine(WinConvo());
     }
 
-    private IEnumerator WinConvo() {
+    private IEnumerator WinConvo()
+    {
         string girlSentence = "Well, the restaurant is about to close. We should probably get going..";
         yield return SayGirl(girlSentence);
         yield return new WaitForSecondsRealtime(1.0f);
@@ -217,7 +238,8 @@ public class DialogueManager : MonoBehaviour {
         stateManager.endGame(true, "Victory!");
     }
 
-    private IEnumerator IntroDialogue() {
+    private IEnumerator IntroDialogue()
+    {
         yield return new WaitForSecondsRealtime(1.0f);
         string girlSentence = "Hey! Thanks for coming.";
 
